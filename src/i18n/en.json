@@ -1,0 +1,997 @@
+{
+  "meta": {
+    "title": "Hyuhyuam Hermitage (Yangyang, Gangwon) | Seaside Buddhist hermitage on Korea's East Sea, the reclining Gwaneum rock & coastal scenery",
+    "description": "The complete guide to Hyuhyuam Hermitage (휴휴암, Hyuhyuam Hermitage): a small Buddhist hermitage on the East Sea shore in Hyeonnam-myeon, Yangyang-gun, Gangwon State. Founded in 1997 by Ven. Hongbeop with a single Myojikjeon Hall (묘적전), it became widely known in 1999 when a natural rock shaped like a reclining Gwaneum (Avalokiteshvara) appeared on the beach. The hermitage holds Myojikjeon, the Darani-gul Dharma Hall (다라니굴법당), the Gwaneum Brahma Bell (관음범종), the Jihye Gwaneum statue and the East Sea Dragon King statue on the seaside hill. Yeonhwa Terrace (연화대), the reclining Gwaneum rock, and the turtle rock together make this a free, open, and free-parking East Sea sunrise spot."
+  },
+  "header": {
+    "siteName": "Hyuhyuam Hermitage (휴휴암)",
+    "home": "Home",
+    "visit": "Explore",
+    "transport": "Transport",
+    "lodging": "Stay",
+    "history": "History",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "map": "Map",
+    "backToHome": "Back to home"
+  },
+  "common": {
+    "changeLanguage": "Change language",
+    "toggleTheme": "Toggle theme"
+  },
+  "nonprofitBanner": {
+    "text": "This is a non-profit independent guide put together by travel enthusiasts, offering the most objective visitor information on Hyuhyuam free of charge, affiliated with no organization.",
+    "dataSource": "All information on this site is cross-checked against public materials from Gangwon State, Yangyang-gun, and the Korea Tourism Organization (VisitKorea), with no commercial endorsements."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "text": "So that every traveler to the Yangyang coast won't miss this East Sea hermitage and the reclining Gwaneum rock, we have gathered scattered official information into this guide — to give you the purest experience of 'by the sea, gazing at the rock, and setting the mind at ease'."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "region": "Gangwon State",
+    "city": "Yangyang-gun",
+    "current": "Hyuhyuam Hermitage"
+  },
+  "stickyNav": {
+    "facts": "Key Facts",
+    "etiquette": "Etiquette",
+    "route": "Half-Day Route",
+    "transport": "Transport",
+    "lodging": "Stay",
+    "visit": "Visit Tips",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Hyuhyuam Hermitage (Yangyang, Gangwon)",
+    "subtitle": "A small Buddhist hermitage on the East Sea shore in Hyeonnam-myeon, Yangyang-gun, Gangwon State. Founded in 1997 by Ven. Hongbeop with a single Myojikjeon Hall (묘적전), it became known in 1999 when a rock shaped like a reclining Gwaneum appeared on the beach. Yeonhwa Terrace, the reclining Gwaneum rock, the turtle rock, and the Jihye Gwaneum statue and East Sea Dragon King statue on the seaside hill together make this a free, open, and free-parking East Sea sunrise spot.",
+    "rating": "4.3 (6,422)",
+    "reviewCount": "6,422 reviews",
+    "hours": "Sunrise to sunset (free admission)",
+    "openMaps": "View location on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "legend": {
+      "quote": "'Hyuhyu' (休休) means 'to rest again and again, setting aside worldly cares.' Ven. Hongbeop gave it this name so that all who come from afar may gently put down their daily worries amid the sea breeze and the sound of the bell.",
+      "attribution": "— The origin of Hyuhyuam Hermitage"
+    },
+    "tags": ["East Sea seaside hermitage", "Reclining Gwaneum rock", "Free admission"],
+    "routeCta": {
+      "label": "Plan your route",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Learn the history",
+      "href": "#history"
+    },
+    "quickFacts": [
+      { "icon": "🛕", "label": "Highlight", "value": "Reclining Gwaneum rock" },
+      { "icon": "🆓", "label": "Admission", "value": "Free" },
+      { "icon": "🌅", "label": "Highlight", "value": "East Sea sunrise" }
+    ],
+    "navCta": { "label": "📍 Get directions", "href": "#transport" },
+    "photoCta": { "label": "📸 Photo spots", "href": "#gallery" },
+    "factsSource": { "label": "Hours & transport per Yangyang-gun official info", "url": "https://tour.yangyang.go.kr" },
+    "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" },
+    "sunsetPlanner": {
+      "eyebrow": "Golden Hour Calculator · Light Tool",
+      "title": "Based on today's sunset, we recommend arriving about 60 minutes earlier to catch the softest diffuse light and the blue hour on the sea — ideal for photographing Yeonhwa Terrace, the reclining Gwaneum rock, and the East Sea Dragon King statue.",
+      "note": "The hermitage faces the open East Sea, with the warmest light from dawn to dusk. On weekends or clear days, allow extra time to avoid crowds.",
+      "seaGlare": "Sunrise tip: Hyuhyuam faces the East Sea and is a popular spot for sea sunrise. The moment the first light touches the reclining Gwaneum rock and Yeonhwa Terrace is the golden window for photography; early winter mornings are cold, so watch the sea breeze.",
+      "arriveLabel": "Arrive by",
+      "blueHourLabel": "Blue hour",
+      "lightCaption": "Light calculated live by Open-Meteo"
+    }
+  },
+  "quickFactsDashboard": {
+    "title": "Hyuhyuam Hermitage at a Glance · Data Board",
+    "subtitle": "A few numbers to read this East Sea hermitage at a glance.",
+    "items": [
+      { "icon": "🛕", "label": "Hermitage / Hermitage", "value": "Founded 1997", "note": "A small seaside hermitage in Yangyang, founded in 1997 by Ven. Hongbeop with the Myojikjeon Hall (묘적전) on the East Sea shore." },
+      { "icon": "⛰️", "label": "Reclining Gwaneum rock / Rock", "value": "Appeared 1999", "note": "In 1999 a natural rock shaped like a reclining Gwaneum (Avalokiteshvara) appeared on the beach, becoming the catalyst for its sanctity and today's most famous landmark." },
+      { "icon": "🌊", "label": "Yeonhwa Terrace / Terrace", "value": "Sea rock", "note": "Yeonhwa Terrace (연화대) is a rocky lookout reaching into the East Sea, forming the coastal scenery together with the reclining Gwaneum rock and the turtle rock." },
+      { "icon": "🗿", "label": "Statues / Statues", "value": "Gwaneum & Dragon King", "note": "The Jihye Gwaneum statue and the East Sea Dragon King statue on the seaside hill carry on the link between the sea and Gwaneum faith." },
+      { "icon": "📍", "label": "Coordinates / Coords", "value": "about 38°04′N, 128°30′E", "note": "Plus Code: XQ69+F2 Yangyang-gun. Address: 3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon State, Korea." },
+      { "icon": "🎟️", "label": "Admission / Admission", "value": "Free", "note": "Free admission with a free parking lot, cared for by resident monks — easy to visit lightly at any time." }
+    ]
+  },
+  "hiddenRules": {
+    "title": "Hermitage Visiting Tips",
+    "subtitle": "Hyuhyuam is seaside, open, and has a religious atmosphere. Sorting out etiquette, safety, and budget in advance turns the experience from a 'check-in rush' into a 'relaxed visit'.",
+    "highlights": [
+      { "icon": "👟", "label": "Footwear & attire", "value": "Remove shoes in halls", "note": "Remove shoes and dress modestly inside halls such as Myojikjeon. Coastal rocks are slippery — wear non-slip shoes, avoid heels, and watch children and seniors." },
+      { "icon": "🚧", "label": "Sea & rocks", "value": "Don't climb railings", "note": "Yeonhwa Terrace and the reclining Gwaneum rock face the East Sea with big waves and slippery rocks. Don't lean on or climb over railings; keep a safe distance from the edge when taking photos." },
+      { "icon": "🌧️", "label": "Weather & habits", "value": "Windbreaker & water", "note": "The sea breeze is strong, hot in summer and cold in winter. Bring a windbreaker and water; on rainy days rocks are slippery, so wear non-slip shoes." }
+    ],
+    "panels": [
+      {
+        "q": "Is a ticket needed for Hyuhyuam?",
+        "a": "The hermitage itself is free and open, with no ticket or reservation needed. The attached parking lot is also free (please follow on-site guidance).",
+        "items": ["The hermitage area is free to enter anytime (daytime recommended).", "The parking lot is free public parking; arrive early for a spot."]
+      },
+      {
+        "q": "Is it convenient with kids or seniors?",
+        "a": "The terrain is gentle and the main paths reach most viewpoints. But the sea side is windy and rocks are slippery — hold children, assist seniors, and walk slowly in strong wind."
+      },
+      {
+        "q": "Can I still go on a rainy day?",
+        "a": "Light rain is fine, but rocks are slippery and the sea breeze is strong — wear non-slip shoes and hold the railings. Follow on-site closure guidance during strong winds or maintenance."
+      }
+    ]
+  },
+  "complianceGuide": {
+    "title": "Hyuhyuam Hermitage · Etiquette & Religious-site Manners",
+    "subtitle": "This is both a visitor's coastal scenery and a religious site where monks and believers practice and pray. Following these rules is double respect for nature, others, and faith.",
+    "rules": [
+      {
+        "badge": "🔇",
+        "title": "Quiet & avoid peak times",
+        "text": "The hermitage is a place of practice. Lower your voice and don't play music aloud. Leave space for the bell, the waves, and those who pause here."
+      },
+      {
+        "badge": "🪞",
+        "title": "Hall manners",
+        "text": "Remove shoes and dress modestly inside the halls. Don't point at statues with a finger during prayer. Check whether photography is allowed and don't photograph practitioners up close."
+      },
+      {
+        "badge": "🚮",
+        "title": "Take your trash with you",
+        "text": "The hermitage is by the sea with limited bins. Bring a small trash bag and take everything with you when you leave — cigarette butts, plastics, and food scraps — keeping the coast and hermitage clean."
+      },
+      {
+        "badge": "🌱",
+        "title": "Protect rocks & coastal ecology",
+        "text": "The reclining Gwaneum rock, Yeonhwa Terrace, and turtle rock are valuable public natural resources. Don't carve or step on them, and don't throw things into the sea."
+      }
+    ]
+  },
+  "higashiyamaRoute": {
+    "title": "Custom Itinerary: Hyuhyuam Half-Day Route",
+    "subtitle": "Not just 'who it's for,' but a walkable half-day route you can follow directly. Centered on coastal rocks and the hermitage, linking the reclining Gwaneum, Yeonhwa Terrace, and the statues.",
+    "steps": [
+      { "title": "[Start] Hermitage gate & Myojikjeon", "meta": "Settle the mind · ~30 min", "text": "Enter slowly through the gate and remove your shoes at Myojikjeon (묘적전) to pray; feel the quiet where the bell and sea breeze meet. Align your pace with the East Sea, then head to the coastal rocks.", "tips": ["Morning and dusk have the best light and fewer crowds."] },
+      { "title": "[Main] Reclining Gwaneum rock", "meta": "Core experience · ~40 min", "text": "Follow the stone path down to the beach to a naturally formed rock shaped like a reclining Gwaneum. The most famous sanctuary at Hyuhyuam and the best vantage for reading 'the sea and Gwaneum faith'.", "tips": ["Rocks are slippery; allow time for photos and keep a safe distance."] },
+      { "title": "[Extend] Yeonhwa Terrace & turtle rock", "meta": "Local story · ~40 min", "text": "Walk out to Yeonhwa Terrace (연화대) reaching into the East Sea. Read the signs about how the coastal rocks formed, collecting natural narrative and Gwaneum faith together.", "tips": ["Rocks are soft; stay on hard ground with company."] },
+      { "title": "[Refuel] Rest & light meal", "meta": "Leisurely refuel · ~40 min", "text": "Hydrate at a rest spot by the hermitage or along the Yangyang coastal road, then look back at the reclining Gwaneum and the horizon, packing sea, rock, and hermitage into one walk.", "tips": ["Supplies are restrained nearby; bring your own water."] },
+      { "title": "[End] Jihye Gwaneum statue or East Sea Dragon King statue", "meta": "Wrap-up · ~60 min+", "text": "If energy allows, visit the Jihye Gwaneum statue and East Sea Dragon King statue on the seaside hill, or extend to nearby Gwangjin Beach. Otherwise return along the stone path, completing the 'hermitage—rock—sea' half-day package.", "tips": ["Light is best after morning; save photos for the end."] }
+    ],
+    "disclaimer": "The route above emphasizes a self-contained loop you can follow as-is. If you only want the reclining Gwaneum, keep the first two segments and treat the statues and rest as optional add-ons."
+  },
+  "intro": {
+    "title": "Getting to Know Hyuhyuam Hermitage",
+    "description": "Hyuhyuam Hermitage (휴휴암, Hyuhyuam Hermitage) is a small Buddhist hermitage on the East Sea shore in Hyeonnam-myeon, Yangyang-gun, Gangwon State, Korea. Founded in 1997 by Ven. Hongbeop with a single Myojikjeon Hall (묘적전), it became widely known in 1999 when a natural rock shaped like a reclining Gwaneum appeared on the beach. The hermitage holds Myojikjeon, the Darani-gul Dharma Hall (다라니굴법당), the Gwaneum Brahma Bell (관음범종), and the Jihye Gwaneum statue (지혜관세음보살상) and East Sea Dragon King statue (동해용왕상) on the seaside hill. Free and with free parking, it is a practice retreat of East Sea sunrise, coastal rocks, and Gwaneum faith.",
+    "visitGuide": {
+      "title": "Visitor Guide",
+      "eyebrow": "Practical Planning",
+      "description": "Hyuhyuam is a free, open seaside hermitage with no gate and no commercial stalls. The ideal approach is rarely 'just wander by day' but to reverse-plan around the light: come at dawn for the soft light on the East Sea sunrise and the reclining Gwaneum rock, or keep the hermitage and coast to yourself on a weekday. Facilities are restrained and the commercial feel is low — which is exactly its charm.",
+      "items": [
+        "Morning or dusk first: coastal light is softest, and the reclining Gwaneum rock and Yeonhwa Terrace frame best.",
+        "Best views are along the seaside of Yeonhwa Terrace and the open rocks in front of the reclining Gwaneum rock.",
+        "From Yangyang-eup or Sokcho, take a city bus to the Gwangjin (광진) area, then walk or taxi about 10–20 minutes to the gate.",
+        "There is little commercial supply inside; water, restrooms, and breaks are best at the entrance or nearby."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Highlights",
+      "items": [
+        "A seaside hermitage founded in 1997 by Ven. Hongbeop, starting with Myojikjeon and free to visit",
+        "The reclining Gwaneum rock, appearing in 1999, is the most famous sanctuary and photo spot",
+        "Yeonhwa Terrace and the turtle rock echo with the Jihye Gwaneum statue and East Sea Dragon King statue",
+        "The Gwaneum Brahma Bell and Darani-gul Dharma Hall carry on the link between sea and Gwaneum faith",
+        "Free admission and free parking, great for East Sea sunrise and coastal scenery"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "Transport & Arrival Guide",
+    "subtitle": "Consolidating arrival in Yangyang, in-city transfers, walking/cycling, parking, and charging info for a clearer Hyuhyuam plan.",
+    "overviewTitle": "After arriving in Yangyang",
+    "overviewText": "Hyuhyuam Hermitage lies on the East Sea shore in Hyeonnam-myeon, Yangyang-gun, Gangwon State — the most iconic seaside hermitage on the Yangyang coast. The easiest public transit is an express bus from Seoul to Yangyang (or a transfer via Sokcho), or a domestic flight to Yangyang Airport. Entering Hyeonnam-myeon, a city bus or taxi from Gwangjin (광진) takes about 10–20 minutes to the gate. Facing the East Sea, you reach the coastal rocks right from the drop-off point.",
+    "overviewText2": "Around Hyuhyuam there is a free parking lot in the coastal greenery. Plan transport, parking, and walking together — especially with seniors, young children, or luggage, parking then walking greatly reduces hassle.",
+    "arrivalTitle": "Remember before departure",
+    "arrivalItems": [
+      "The hermitage is on the Gwangjin beach in Hyeonnam-myeon, Yangyang-gun; about a 10–20 min walk from the Gwangjin living area to the gate.",
+      "It is free, but night lighting is limited; daytime or dusk visits are more comfortable.",
+      "Weekends and clear days draw crowds; avoid peak times. The free lot fills early."
+    ],
+    "modes": [
+      {
+        "label": "Express bus / train (to Yangyang)",
+        "icon": "🚌",
+        "title": "Public transit to Yangyang",
+        "description": "Easiest for most travelers: an express bus from Seoul to Yangyang (or transfer via Sokcho), or train to Donghae/Sokcho then transfer — the classic route to Hyuhyuam.",
+        "details": [
+          "Express bus from Seoul to Yangyang about 2.5–3.5 hours (by route).",
+          "After arrival, bus or taxi to Hyeonnam-myeon Gwangjin about 30–50 minutes.",
+          "Use a T-money / transit card; bus and taxi connect easily."
+        ],
+        "steps": [
+          { "n": "1", "t": "Take an express bus or train to Yangyang/Sokcho." },
+          { "n": "2", "t": "Transfer to bus or taxi to Gwangjin." },
+          { "n": "3", "t": "Walk to the Hyuhyuam gate." }
+        ]
+      },
+      {
+        "label": "City bus (to Gwangjin)",
+        "icon": "🚌",
+        "title": "In-city to the gate",
+        "description": "Flexible and convenient: a city bus from Yangyang-eup or Sokcho to the Gwangjin (광진) area, then walk or taxi to Hyuhyuam.",
+        "details": [
+          "City bus from Yangyang-eup to Gwangjin about 30–50 minutes.",
+          "Then walk or taxi to the gate about 10–20 minutes.",
+          "Buses take T-money; use a map app for real-time arrivals."
+        ],
+        "steps": [
+          { "n": "1", "t": "Take the bus to Gwangjin (광진)." },
+          { "n": "2", "t": "Transfer to walk or taxi to the gate." },
+          { "n": "3", "t": "Follow the stone path to the coastal rocks." }
+        ]
+      },
+      {
+        "label": "Gwangjin side (walk + shuttle)",
+        "icon": "🚉",
+        "title": "The hidden nearby option",
+        "description": "Gwangjin is the closest living area to Hyuhyuam; a short shuttle bus or taxi from the station takes about 10–20 minutes — ideal for light packers who want a first look.",
+        "details": [
+          "Frequent buses in Gwangjin; closest to the hermitage.",
+          "About 10–20 minutes from the stop to the main sights.",
+          "Mornings and weekdays are best to avoid transfers and crowds."
+        ],
+        "steps": [
+          { "n": "1", "t": "Get off at Gwangjin by bus." },
+          { "n": "2", "t": "Transfer to bus or taxi, about 10–20 min." },
+          { "n": "3", "t": "Reach the reclining Gwaneum rock and Yeonhwa Terrace." }
+        ]
+      },
+      {
+        "label": "Driving (parking / charging)",
+        "icon": "🅿️",
+        "title": "Via Donghae-daero · nearby parking",
+        "description": "Good with seniors/children, lots of luggage, or touring the East Coast; the hermitage has a free attached parking lot.",
+        "details": [
+          "Set navigation to 'Hyuhyuam' or address '3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon State'.",
+          "Free attached lot but fills on weekends and holidays.",
+          "Some public lots have EV chargers; drive slowly near the busy beach."
+        ],
+        "steps": [
+          { "n": "1", "t": "Navigate to 'Hyuhyuam'." },
+          { "n": "2", "t": "Park in the attached lot, then walk in." },
+          { "n": "3", "t": "Avoid the 11:00–19:00 peak to save parking time." }
+        ]
+      },
+      {
+        "label": "Taxi / ride-hailing",
+        "icon": "🚕",
+        "title": "Door-to-door",
+        "description": "Most convenient with luggage, seniors/children, or late arrivals.",
+        "details": [
+          "Taxi from Yangyang-eup or Sokcho to Hyuhyuam about 30–50 minutes, metered.",
+          "You'll walk in from near the gate.",
+          "Taxis queue in peak and rainy seasons; reserve via a local app like Kakao T."
+        ],
+        "steps": [
+          { "n": "1", "t": "Call a car via Kakao T or similar." },
+          { "n": "2", "t": "Tell the driver 'Hyuhyuam'." },
+          { "n": "3", "t": "Get off near the gate and walk in." }
+        ]
+      },
+      {
+        "label": "Walk (coastal greenway)",
+        "icon": "🚶",
+        "title": "From Gwangjin to the hermitage",
+        "description": "If you're already in Gwangjin or on the coastal road, walking is the most natural way to observe the sea rocks and hermitage.",
+        "details": [
+          "About a 10–20 minute walk from Gwangjin to the gate.",
+          "Pass coastal trees, reefs, and rocks along the way.",
+          "Flat paths; wear comfortable shoes and watch children and belongings."
+        ]
+      },
+      {
+        "label": "Cycling / coastal walk",
+        "icon": "🚲",
+        "title": "Coastal slow travel",
+        "description": "The most relaxing way to feel the East Sea and the rocks.",
+        "details": [
+          "The East Coast road is flat, connecting the hermitage, reclining Gwaneum rock, and Yeonhwa Terrace on foot.",
+          "Park bikes at designated racks; don't ride into rock or crowded areas.",
+          "About 10–20 minutes from Gwangjin, with the sea light throughout."
+        ]
+      }
+    ],
+    "parking": {
+      "title": "Parking & Charging Overview",
+      "note": "Hyuhyuam has a free attached parking lot. Below are the main options; rates and availability vary by season and time — please follow on-site signs.",
+      "colOption": "Parking option",
+      "colDistance": "Distance",
+      "colPrice": "Price",
+      "options": [
+        { "name": "Hyuhyuam attached lot", "distance": "about 50–200 m (to gate)", "price": "Free public parking, fills in peak season" },
+        { "name": "Gwangjin living-area parking", "distance": "about 300–800 m", "price": "Public / free, more spaces but tight in peak" },
+        { "name": "Nearby street parking", "distance": "about 200–500 m", "price": "Roadside / small lots, few spaces, easier on weekdays" },
+        { "name": "Yangyang-eup transfer lot", "distance": "about 5–10 km", "price": "Transfer discount parking, needs shuttle" },
+        { "name": "Drop-off point (near gate)", "distance": "about 50–100 m", "price": "Short stop only, no spaces" }
+      ],
+      "disclaimer": "Roads near the hermitage congest on holidays and clear days; don't occupy bus or fire lanes for long. EV chargers are mostly in public lots; rates and limits may change — check posted signs."
+    },
+    "driverFaqTitle": "Transport FAQ",
+    "driverFaq": [
+      { "q": "Is there parking near Hyuhyuam?", "a": "The hermitage has a free attached lot within walking distance. It fills easily on weekends and holidays — arrive early or prefer public transport." },
+      { "q": "What is the nearest parking?", "a": "The Hyuhyuam attached lot is about 50–200 m away, closest to the gate; Gwangjin living-area parking is about 300–800 m, more spaces but tight in peak." },
+      { "q": "Is there roadside parking nearby?", "a": "Little. Roads are narrow and congested on holidays; don't park roadside long — use proper lots and public transport." },
+      { "q": "Is driving recommended?", "a": "Unless parking is essential, no. Weekends and clear days congest; walking or public transport is smoother. If driving, park then walk in." },
+      { "q": "Do you recommend public transport?", "a": "Strongly. After express bus or train to Yangyang, transfer to Gwangjin by bus, then walk or taxi about 10–20 min to the gate. Address: 3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon State, Korea." },
+      { "q": "What is the best route?", "a": "For stability and ease, public transport remains optimal: express bus/train to Yangyang, then transfer. If driving is unavoidable, treat parking and shuttle as part of the trip, not 'drive to the door'." }
+    ],
+    "localTipsTitle": "Practical visiting tips",
+    "localTips": [
+      "Mornings and dusk remain golden; set arrival about 60 minutes before sunset for the best sea light on the reclining Gwaneum rock and Yeonhwa Terrace.",
+      "Weekends and clear days draw crowds; with kids or gear, allow buffer and avoid peaks.",
+      "Best pair Hyuhyuam with the reclining Gwaneum rock, Yeonhwa Terrace, and Jihye Gwaneum statue; a single stop underestimates its sea-rock and faith value."
+    ],
+    "mapsCta": "View map & route",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "bestTime": {
+      "title": "Best time to arrive",
+      "text": "Hyuhyuam is reachable by day, but what truly sets the photo ceiling is the dawn East Sea sunrise and the dusk light window. Arrive about 60 minutes before sunset; if weather isn't good for photos, shift focus to hermitage practice or rock viewing."
+    }
+  },
+  "officialManagement": {
+    "title": "About this seaside hermitage",
+    "text": "Hyuhyuam Hermitage lies on the East Sea shore in Hyeonnam-myeon, Yangyang-gun, Gangwon State — a small Buddhist hermitage founded in 1997 by Ven. Hongbeop. Starting with Myojikjeon (묘적전), it became known in 1999 when the reclining Gwaneum rock appeared on the beach. Maintained and operated by resident monks, it is a coastal pure land where believers pray, travelers practice, and families visit, and one of Yangyang's city cards of 'sea, rock, and faith'."
+  },
+  "humanities": {
+    "title": "People & Place: From Ven. Hongbeop to the Reclining Gwaneum",
+    "subtitle": "Putting Ven. Hongbeop's founding, the appearance of the reclining Gwaneum rock, the natural formation of coastal rocks, and Gwaneum faith on one timeline is how you truly understand why this hermitage is more than 'a pretty rock'."
+  },
+  "knowledge": {
+    "title": "History & Origins of Hyuhyuam Hermitage",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Ven. Hongbeop and the founding of the hermitage (1997)",
+        "content": "Hyuhyuam Hermitage was founded in 1997 by Ven. Hongbeop. It began with a single Myojikjeon Hall (묘적전), taken as a pure practice retreat on the East Sea shore in keeping with the monastic meaning of his Dharma name. 'Hyuhyu' (休休) is drawn from the old meaning 'to rest again and again, setting aside worldly cares'."
+      },
+      {
+        "id": "name",
+        "title": "The name 'Hyuhyu' and toponym memory",
+        "content": "'Hyuhyu' (휴휴) doubles the character 'rest' to emphasize repeated rest and complete letting-go. The Gwangjin area of Hyeonnam-myeon, Yangyang-gun, has long been an East Sea fishing village and coastal beauty; the hermitage name meshes toponym, sea color, and practice on the same rock."
+      },
+      {
+        "id": "reclining",
+        "title": "The appearance of the reclining Gwaneum rock (1999)",
+        "content": "In 1999, a natural rock shaped like a reclining Gwaneum (Avalokiteshvara) — the 'reclining Gwaneum (누운 관세음보살)' — appeared on the beach in front of the hermitage. This discovery became the catalyst for its sanctity, lifting Hyuhyuam from a small retreat to a coastal sanctuary visited by believers and travelers. Today the reclining Gwaneum rock is its most famous landmark."
+      },
+      {
+        "id": "yeonhwa",
+        "title": "Yeonhwa Terrace and coastal rocks",
+        "content": "Yeonhwa Terrace (연화대) is a rocky lookout reaching into the East Sea, forming the coastal scenery together with the reclining Gwaneum rock and the turtle rock (거북바위). Sea erosion and weathering carved these fantastical rocks over eons, making Hyuhyuam both a religious site and an open-air sea-rock museum."
+      },
+      {
+        "id": "faith",
+        "title": "Gwaneum faith and the yellow croaker legend",
+        "content": "Hyuhyuam carries on the deep link between the East Sea and Gwaneum faith. A legend tied to the 'yellow croaker (황어떼)' is passed down locally: the protection of the sea and Gwaneum was believed to guard the catch and the peace of the land, and fishermen revered the sea and embraced Buddhism. Such legends may not appear in official histories, but they let the public sense how this land was imagined and cherished — exactly the value a non-profit science guide should amplify."
+      },
+      {
+        "id": "halls",
+        "title": "Myojikjeon · Darani-gul · Gwaneum Brahma Bell",
+        "content": "Inside the hermitage, Myojikjeon (묘적전) is the core hall, alongside the Darani-gul Dharma Hall (다라니굴법당) carved into the rock and the hanging Gwaneum Brahma Bell (관음범종). The bell with the waves is Hyuhyuam's most iconic soundscape and a medium linking believers' prayers and travelers' peace."
+      },
+      {
+        "id": "statues",
+        "title": "Jihye Gwaneum statue and East Sea Dragon King statue",
+        "content": "On the seaside hill stands the Jihye Gwaneum statue (지혜관세음보살상), looking down at the waves, and near the shore the East Sea Dragon King statue (동해용왕상) is enshrined, carrying on the folk faith of 'revering the sea and praying for peace.' The two statues echo the reclining Gwaneum rock, weaving a spatial narrative of 'mountain, sea, and Gwaneum' as one."
+      },
+      {
+        "id": "sea",
+        "title": "East Sea ecology and coastal environment",
+        "content": "Hyuhyuam faces the East Sea (동해); the shore is sea-eroded rock with a little sedimentary land. It is a natural classroom to observe gulls and tides, a model of coexistence between people and nature from a religious sanctuary to a coastal ecosystem.",
+        "cards": [
+          {
+            "title": "Rock shore base",
+            "text": "Long sea erosion and weathering carved the reclining Gwaneum rock, Yeonhwa Terrace, and turtle rock; gentle rock shores and stone paths approach the sea without harming ecology."
+          },
+          {
+            "title": "Signature species: East Sea waterbirds and intertidal life",
+            "text": "The shore is habitat for gulls, plovers, and other waterbirds and intertidal shellfish and crabs, most active at dawn and dusk, echoing the 'life-protecting (호생)' spirit of Gwaneum faith."
+          },
+          {
+            "title": "Sea-watching tip",
+            "text": "Morning or evening is when the sea color and bird shadows are most vivid. Stand quietly on Yeonhwa Terrace to observe the rise and fall of the tide and the feeding of waterbirds."
+          }
+        ],
+        "fieldNote": {
+          "title": "Observation tip",
+          "text": "First take in the whole outline of the East Sea from a high point of the hermitage, then go down to the rock shore to see the intertidal zone and rocks up close. Distance shows the overall form; close view reveals the sea-erosion mechanism."
+        },
+        "academicNote": {
+          "title": "Academic note",
+          "text": "This section is a science overview based on the hermitage's public interpretation and on-site features. For stricter geological and ecological classification, rely on official materials, on-site signs, and academic research."
+        }
+      },
+      {
+        "id": "legend",
+        "title": "Coastal legends (local oral tradition)",
+        "content": "About the reclining Gwaneum rock and the yellow croaker, a local oral tradition tied to 'the protection of the sea god' is passed down: it is said Gwaneum transformed into a rock to protect those who go to sea, and in years of good catch people came to give thanks. Such legends may not appear in official histories, but they let the public sense how this sea was imagined and cherished — exactly the value a non-profit science guide should amplify."
+      }
+    ],
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "Hyuhyuam is more than coastal rocks — it is an open-air classroom of practice memory and maritime faith: from Ven. Hongbeop's founding and the appearance of the reclining Gwaneum rock to Yeonhwa Terrace, the Jihye Gwaneum statue, and the East Sea Dragon King statue, the story of land and faith is written on the same East Sea shore."
+    }
+  },
+  "sitePlaques": {
+    "title": "Reading the On-site Signs & Interpretation",
+    "subtitle": "When you visit Hyuhyuam, what's worth reading slowly is often not the check-in board but the official signs explaining 'why this rock is here'.",
+    "locationLabel": "On-site location",
+    "intro": "The readings below are based on the founding history, reclining Gwaneum rock, Yeonhwa Terrace, and Gwaneum Brahma Bell signs set up by Yangyang-gun and the hermitage, translating information visible on-site but not always read into accessible English science notes.",
+    "items": [
+      {
+        "id": "monument",
+        "badge": "Hermitage history sign",
+        "title": "Hyuhyuam & its founding",
+        "koTitle": "휴휴암 창건 안내",
+        "koTitleZh": "Hyuhyuam founding guide",
+        "location": "Hermitage gate entrance",
+        "body": "These signs state the key background — the meaning of Hyuhyuam as an East Sea hermitage and its founding relationship with Ven. Hongbeop. Reading the hints is lesson one in using this sea-rock landmark."
+      },
+      {
+        "id": "signboard",
+        "badge": "Reclining Gwaneum guide (KO/EN)",
+        "title": "Reclining Gwaneum rock",
+        "koTitle": "누운 관세음보살 안내",
+        "koTitleZh": "Reclining Gwaneum guide",
+        "location": "Coastal rock area",
+        "body": "The guide repeatedly emphasizes the sanctity of the reclining Gwaneum rock and reminds visitors that this rock is half natural sea erosion, half believers' Gwaneum imagination. It clearly explains 'why it is a sanctuary'."
+      },
+      {
+        "id": "wooden",
+        "badge": "Yeonhwa Terrace interpretation",
+        "title": "Yeonhwa Terrace & coastal rocks",
+        "koTitle": "연화대 안내",
+        "koTitleZh": "Yeonhwa Terrace guide",
+        "location": "Yeonhwa Terrace viewpoint",
+        "body": "The map explains 'why this is a coastal vantage'. East Sea erosion carved Yeonhwa Terrace and the turtle rock; seen with the reclining Gwaneum rock, the hermitage's design logic becomes clear — practice and sea rocks coexist."
+      },
+      {
+        "id": "dongporu",
+        "badge": "Gwaneum Brahma Bell marker",
+        "title": "Gwaneum Brahma Bell & Dharma Hall",
+        "koTitle": "관음범종 안내",
+        "koTitleZh": "Gwaneum Brahma Bell guide",
+        "location": "Dharma Hall plaza",
+        "body": "Erected by the hermitage, it marks the practice relationship among Myojikjeon, the Darani-gul Dharma Hall, and the Gwaneum Brahma Bell, echoing the 'sea and Gwaneum' motif. It reminds every visitor: this green rock connects the quietest faith experience."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "From the emerald waves of the East Sea, the reclining Gwaneum rock, to the sea-eroded scenery of Yeonhwa Terrace — see the visual beauty of Hyuhyuam Hermitage.",
+    "photoAlt": "Hyuhyuam Hermitage (Yangyang, Gangwon)",
+    "photoAlts": [
+      "Panorama of Hyuhyuam, hermitage and East Sea in one frame.",
+      "Quiet shore at dawn, perfect for slow rock-detail shots.",
+      "Reclining Gwaneum rock in golden dusk light, mirror-like water.",
+      "Close-up of Yeonhwa Terrace rocks and railings, full of seaside feeling.",
+      "Overhead shot: East Sea ripples below your feet and rocks across.",
+      "High vantage: hermitage and coastal greenery as landscape.",
+      "Open view from Yeonhwa Terrace, sea horizon stretching ahead.",
+      "Warm family stroll through the hermitage, ideal for slow family visits.",
+      "Blue-and-white guide signs echoing the sea theme.",
+      "Stone path as a leading line, framing rocks and sky together.",
+      "Seaside of Yeonhwa Terrace, one of the best photo spots.",
+      "Jihye Gwaneum statue in the distance, with the East Sea view.",
+      "Warm rocks at dusk, western afterglow gilding the stone.",
+      "Yeonhwa Terrace and sea together, best from dawn to dusk.",
+      "Statue as a landscape subject, echoing the faith theme.",
+      "High panorama packing 'hermitage—rock—sea' in one frame.",
+      "Hermitage lights and shore at night, a quiet coastline.",
+      "Warm-toned rock shore, a religious space gently embraced by nature.",
+      "Night-lit railings and stone path, a golden photo combo.",
+      "East Sea sunrise, first light spreading across the rock.",
+      "Turtle rock and coastal reefs, the fun of sea-eroded landforms.",
+      "Close-up of the East Sea Dragon King statue, carrying on folk sea faith."
+    ],
+    "viewAll": "View location on Google Maps",
+    "showMore": "Show more photos",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
+  },
+  "reviews": {
+    "title": "Visitor Reviews",
+    "declaration": "Visitor feedback is available on Google Maps (external link).",
+    "featuredTitle": "Visitor Quotes",
+    "featuredSubtitle": "A few short lines that capture the spirit of Hyuhyuam Hermitage.",
+    "moreReviews": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "featured": [
+      {
+        "text": "Walking the stone path slowly, with the East Sea ripples at your feet — that seaside calm is special, and at dusk the light makes it feel like floating on the water.",
+        "source": "Independent traveler · Seoul"
+      },
+      {
+        "text": "A free and open seaside hermitage, steps from the reclining Gwaneum rock — the most underrated corner of the Yangyang coast.",
+        "source": "Photography enthusiast · Chuncheon"
+      },
+      {
+        "text": "Walking the stone path with my child, he watched the rocks and heard the Gwaneum story; even my parents walked easily.",
+        "source": "Family · Yangyang"
+      }
+    ],
+    "items": [
+      {
+        "name": "Minjun",
+        "date": "May 2026",
+        "rating": 5,
+        "text": "Visited at dawn; the backlit reclining Gwaneum rock is so photogenic, and the moment by the sea was completely silent — strongly recommend sunrise, best light."
+      },
+      {
+        "name": "Seoyeon",
+        "date": "Apr 2026",
+        "rating": 5,
+        "text": "Yeonhwa Terrace's terrain is healing; about 15 min from Gwangjin, sea breeze is strong so dress warm."
+      },
+      {
+        "name": "Jihun",
+        "date": "Mar 2026",
+        "rating": 4,
+        "text": "Worth it as a free religious site; weekends are crowded — weekdays or mornings are more comfortable."
+      },
+      {
+        "name": "Ha-eun",
+        "date": "Feb 2026",
+        "rating": 5,
+        "text": "About 15 min by bus from Gwangjin to the gate; the coastal rocks along the way are pleasant for a half-day stroll."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "How to Get There",
+    "subtitle": "3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon-do, Korea (Plus Code: XQ69+F2) · Tel +82 33-671-0093",
+    "openMaps": "Open in Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
+  },
+  "footer": {
+    "siteName": "Hyuhyuam Hermitage (Yangyang, Gangwon)",
+    "rights": "© 2026 Hyuhyuam Hermitage Guide — an independent non-profit visitor-information project. All rights reserved.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "So that every traveler to the Yangyang coast won't miss this East Sea hermitage and the reclining Gwaneum rock, we have gathered scattered official information into this guide — to give you the purest experience of 'by the sea, gazing at the rock, and setting the mind at ease'."
+    },
+    "legalLinksTitle": "Privacy & Terms",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "officialResourcesTitle": "Official & Reference Resources",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "officialLinksList": [
+      { "name": "Korea Tourism Organization (VisitKorea)", "url": "https://chinese.visitkorea.or.kr" },
+      { "name": "Gangwon State Tourism", "url": "https://www.gangwon.to" },
+      { "name": "Yangyang-gun Culture & Tourism", "url": "https://tour.yangyang.go.kr" },
+      { "name": "Yangyang-gun Government", "url": "https://www.yangyang.go.kr" },
+      { "name": "Gangwon State Government", "url": "https://state.gwd.go.kr" }
+    ],
+    "disclaimer": "This website is an independent non-profit visitor-information project. We are not affiliated with any government agency or official organization.",
+    "dataSource": "Information cited on this site is cross-checked against public materials from Gangwon State, Yangyang-gun, and the Korea Tourism Organization (VisitKorea), with no commercial endorsements.",
+    "dataSourceLabel": "Data Source"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Information Collection",
+        "content": "We do not normally actively collect users' personal identity information. Any information you provide via contact forms or email will be kept strictly confidential."
+      },
+      {
+        "heading": "2. Use of Information",
+        "content": "Information we collect is used solely to provide, maintain, and improve our services and to communicate with you. We will not sell or share your personal information with third parties for marketing purposes."
+      },
+      {
+        "heading": "3. Cookies & Tracking",
+        "content": "We use cookies and similar tracking technologies to record activity on the site and store certain information. You can instruct your browser to refuse all cookies or to alert you when a cookie is sent."
+      },
+      {
+        "heading": "4. Data Security",
+        "content": "Your data security matters to us. We take commercially acceptable measures to protect your personal data, though no internet transmission is 100% secure."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Acceptance of Terms",
+        "content": "By accessing and using this website, you agree to be bound by these Terms of Service. If you disagree with any part, you may not use the service."
+      },
+      {
+        "heading": "2. Use of Service",
+        "content": "This website is an independent non-profit visitor-information project. The information provided is for general informational purposes only. You agree to use the website responsibly and lawfully."
+      },
+      {
+        "heading": "3. Intellectual Property",
+        "content": "All content on this website, including text, images, and logos, unless otherwise noted, is the property of the site owner. Unauthorized use, reproduction, or distribution is strictly prohibited."
+      },
+      {
+        "heading": "4. Limitation of Liability",
+        "content": "We are not liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use this website or the information it contains."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie Settings",
+    "description": "Manage your cookie preferences.",
+    "essential": {
+      "title": "Strictly Necessary Cookies",
+      "description": "Required for basic website functions.",
+      "badge": "Always active"
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "Help us understand how visitors interact with the site."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "Used to track visitors across websites."
+    },
+    "save": "Save preferences",
+    "saved": "Preferences saved!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Practical information about Hyuhyuam Hermitage's facilities, history, and visit planning.",
+    "amenities": {
+      "title": "Nearby Facilities",
+      "items": [
+        { "icon": "🅿️", "label": "Parking", "value": "On-site free parking lot" },
+        { "icon": "🚻", "label": "Restrooms", "value": "Hermitage entrance & public toilets" },
+        { "icon": "🔌", "label": "Fuel / Charging", "value": "EV chargers in public lot" },
+        { "icon": "♿", "label": "Accessibility", "value": "Reachable via flat stone path" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transport & Infrastructure",
+        "items": [
+          {
+            "q": "Is there parking, and what does it cost?",
+            "a": "The hermitage has an on-site free parking lot within walking distance. It fills easily on weekends and holidays — arrive early or prefer public transport."
+          },
+          {
+            "q": "Are wheelchairs or strollers allowed?",
+            "a": "Hyuhyuam has a flat stone path; wheelchairs and strollers can reach most viewpoints via the main path. But the seafront side is windy and the rocks slippery — stay on hard ground with company."
+          },
+          {
+            "q": "Are there restrooms or food inside?",
+            "a": "As an open religious site, restrooms and light snacks concentrate at the entrance rest area and nearby; resupply water and food there before entering the hermitage."
+          },
+          {
+            "q": "Is there fuel or EV charging nearby?",
+            "a": "The public lot has EV chargers; traditional gas stations line Yangyang-eup and the Donghae (East Coast) highway — self-drivers can refuel on the way into town."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "History & Science",
+        "items": [
+          {
+            "q": "What does the name 'Hyuhyuam' mean?",
+            "a": "'Hyuhyu (휴휴)' doubles the character 'hyu (rest)', meaning 'rest again and again, set down worldly toil'. The hermitage was founded in 1997 by Venerable Hongbeop (홍법스님), named so that travelers may rest their hearts in the sea breeze."
+          },
+          {
+            "q": "What is its special natural and cultural value?",
+            "a": "Hyuhyuam is not a man-made theme park but turns a stretch of East Sea rocky coast into a public coastal space uniting Avalokiteśvara faith, sea cliffs, the Reclining Avalokiteśvara sanctuary, and a quiet retreat hermitage. The cliffs, Buddhist bell, and sea colors form a low-impact, high-empathy design — one of Yangyang's city cards of 'sea and faith'."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planning & Tickets",
+        "items": [
+          {
+            "q": "Is a ticket required?",
+            "a": "Hyuhyuam itself is free and open, with no walls or gate, and no ticket or reservation needed — visit anytime (please respect the religious site and avoid late-night noise)."
+          },
+          {
+            "q": "How long does a visit take?",
+            "a": "A relaxed walk takes about 1–2 hours (including sea cliffs and photo stops); allow half a day if you also visit the Wisdom Avalokiteśvara statue, the Dragon King statue, and the Gwangjin area."
+          },
+          {
+            "q": "Can I go in bad weather?",
+            "a": "Yes — the hermitage is open space, visitable in any weather. But rocks are slippery and the sea breeze strong in rain; take wind and slip precautions, wear non-slip shoes, and watch the weather."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Nearby Connections",
+        "items": [
+          {
+            "q": "What else is worth visiting nearby?",
+            "a": "From Hyuhyuam you can link the Reclining Avalokiteśvara rock, Yeonhwadae (Lotus Terrace), the Wisdom Avalokiteśvara statue, and Gwangjin Beach into a half-day 'hermitage—rock—sea' coastal culture route, extendable to Yangyang-eup and Sokcho."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Explore More of Yangyang",
+    "attractionsTitle": "Official & Reference Resources",
+    "toursTitle": "Recommended Experiences",
+    "attractions": [
+      { "name": "Korea Tourism Organization (VisitKorea)", "url": "https://www.visitkorea.or.kr" },
+      { "name": "Gangwon State Tourism", "url": "https://www.gangwon.to" },
+      { "name": "Yangyang-gun Culture & Tourism", "url": "https://tour.yangyang.go.kr" },
+      { "name": "Yangyang-gun Government", "url": "https://www.yangyang.go.kr" },
+      { "name": "Gangwon State Government", "url": "https://state.gwd.go.kr" }
+    ],
+    "tours": [
+      { "name": "Korea Tourism Organization (VisitKorea)", "url": "https://www.visitkorea.or.kr" },
+      { "name": "Gangwon State Tourism", "url": "https://www.gangwon.to" },
+      { "name": "Yangyang-gun Tourism", "url": "https://tour.yangyang.go.kr" }
+    ]
+  },
+  "scienceArt": {
+    "title": "Hermitage & Sea: Rocks, Faith & the East Sea",
+    "subtitle": "Look past the surface 'pretty' to find what's truly rare about this hermitage: it is at once a coastal religious site, an Avalokiteśvara faith, and an open-air sea-rock classroom.",
+    "scienceMuseum": {
+      "name": "Hyuhyuam & the Avalokiteśvara Faith",
+      "role": "The faith story hidden in the rocks",
+      "highlight": "Hyuhyuam's hardest core is both visible and invisible. Visible are the Reclining Avalokiteśvara rock and Yeonhwadae's sea views; invisible is the Avalokiteśvara faith and pilgrims' wish to rest. Visitors see the landscape; the faithful see Avalokiteśvara placed on this East Sea shore as a local text.",
+      "points": [
+        "Core: Avalokiteśvara faith, sea-rock symbols, and coastal geography light up this East Sea.",
+        "Key: a religious site turned into a low-impact, high-empathy retreat classroom.",
+        "Meaning: it upgrades the 'coastal green lung' into a faith template the public can pilgrimage to."
+      ],
+      "ctaLabel": "Visit Yangyang Tourism ↗",
+      "ctaUrl": "https://tour.yangyang.go.kr"
+    },
+    "artMuseum": {
+      "name": "Natural symbols in the rocks",
+      "role": "Hyuhyuam's cultural symbol",
+      "highlight": "The Reclining Avalokiteśvara rock, Yeonhwadae, and the Wisdom Avalokiteśvara statue, together with the East Sea, form Hyuhyuam's identity system: reading instantly as Yangyang, as the East Sea, and as a gentle, transparent coastal aesthetic. From the cliffside to the bell and sea, this contrast makes it one of the East Coast's most memorable images.",
+      "points": [
+        "Imagery: rock, sea, and statue form a strong identity.",
+        "Status: one of the East Coast's most photogenic coastal hermitages.",
+        "Narrative: it translates the religious theme into a publicly felt aesthetic."
+      ],
+      "ctaLabel": "Visit Gangwon Tourism ↗",
+      "ctaUrl": "https://www.gangwon.to"
+    }
+  },
+  "outdoorMuseum": {
+    "title": "Photography & Photo Guide: Hyuhyuam's Best Spots",
+    "subtitle": "As the East Coast's most recognizable coastal hermitage, a few structured spots and times greatly improve your photos' usefulness and beauty.",
+    "items": [
+      {
+        "id": "sunrise",
+        "icon": "🌅",
+        "name": "Yeonhwadae · cliffside sea-rock view",
+        "location": "Yeonhwadae viewing area",
+        "background": "From dawn to dusk, the East Sea ripples at your feet in the classic 'stone path—sea' composition; the rocks silhouette beautifully backlit.",
+        "points": [
+          "Use the stone path as a leading line toward the sea.",
+          "Crouch low to layer rock and water for a steadier frame."
+        ],
+        "badge": { "value": "Dawn", "label": "Best shot" }
+      },
+      {
+        "id": "bridge",
+        "icon": "🌉",
+        "name": "Reclining Avalokiteśvara rock · coastal overlook",
+        "location": "Coastal rock area",
+        "background": "From the seafront side, frame 'stone path + East Sea + Reclining Avalokiteśvara rock' together — Hyuhyuam's most recognizable spot.",
+        "points": [
+          "Side light on the rocks at dawn is softest.",
+          "Watch your step and crowds; don't enter closed areas for composition."
+        ],
+        "badge": { "value": "All day", "label": "Most accessible" }
+      },
+      {
+        "id": "sea",
+        "icon": "🪷",
+        "name": "Wisdom Avalokiteśvara & Dragon King statues",
+        "location": "Hillside by the sea",
+        "background": "The statues' colors against the East Sea are the hermitage's most atmospheric window; paired with the Reclining Avalokiteśvara rock, morning light on the statues sparks the imagination.",
+        "points": [
+          "Shoot in blue hour; sky and sea colors balance best.",
+          "Leave large warm sky with the statue silhouettes."
+        ],
+        "badge": { "value": "Dawn/Dusk", "label": "Most atmospheric" }
+      },
+      {
+        "id": "night",
+        "icon": "🌃",
+        "name": "Night lights",
+        "location": "Hermitage toward the coast",
+        "background": "After dark, the hermitage and trail lights glow; Hyuhyuam reflects a river of lights — ideal for closing long-exposure night shots and coastal portraits.",
+        "points": [
+          "Use lights as a leading line toward the distance.",
+          "Raise ISO or use stabilization for night frames."
+        ],
+        "badge": { "value": "Night", "label": "Best layers" }
+      }
+    ]
+  },
+  "education": {
+    "title": "Why is this Yangyang's coastal landmark?",
+    "subtitle": "What's most worth learning about Hyuhyuam isn't 'it got prettier' but how it re-integrated a stretch of East Sea rocky coast into the public's Avalokiteśvara faith while keeping reverence for nature.",
+    "points": [
+      {
+        "title": "A coastal sanctuary still used by believers",
+        "text": "Hyuhyuam isn't a 'hide the sea and done' case, but a model that activates retreat memory through religious-space design and turns it into shared place.",
+        "items": [
+          "Believers give daily prayer and travelers give quiet retreat to this sea-rock and bell.",
+          "Religious space and the coast coexist long-term."
+        ]
+      },
+      {
+        "title": "Writing faith ethics into visitor behavior",
+        "text": "Signs, stone path, and guide systems aren't just navigation but let every visitor, while using the space, casually respect the religious site and others.",
+        "items": [
+          "Visitors are guided to stay on low-impact paths.",
+          "Viewing experience and retreat life don't sacrifice each other."
+        ]
+      },
+      {
+        "title": "Translating faith memory into public aesthetics",
+        "text": "Hyuhyuam didn't erase the faith background but, through statues, rocks, and signage, lets the public sense what this land has been through while visiting.",
+        "items": [
+          "Story depth and viewing experience complete in one place.",
+          "Exactly the value a non-profit science site should amplify."
+        ]
+      }
+    ]
+  },
+  "plantGuide": {
+    "title": "Hyuhyuam's Four-Season Sea Colors",
+    "subtitle": "Look past the 'pretty rocks' to find what's truly rare about Hyuhyuam: it turns a stretch of East Sea rocky coast into an open-air coastal classroom that changes with the seasons.",
+    "comparison": [
+      {
+        "icon": "🌸",
+        "badge": "Spring sea colors",
+        "name": "New green & sea mist",
+        "summary": "Spring is the first season to wake at Hyuhyuam. New green along the shore weaves with sea mist, paired with clear spring sea colors, forming the East Coast's brightest rocky-coast palette.",
+        "points": [
+          "Bloom roughly March–May as temperatures rise, coastal trees turn green.",
+          "Sea mist often shrouds the rocks at dawn, distant and pure.",
+          "Paired with sea reflections, most springtime energetic."
+        ]
+      },
+      {
+        "icon": "🍂",
+        "badge": "Autumn sea colors",
+        "name": "High sky & clear sea",
+        "summary": "Autumn is the hermitage's most popular season. The sky is high and clouds thin, the sea a clear blue, and the Reclining Avalokiteśvara rock and Yeonhwadae stand out crisply backlit.",
+        "points": [
+          "Roughly September–November, peak in crisp autumn.",
+          "Sea breeze is fresh, good for slow walks.",
+          "With the statue and sea, a clear autumn image."
+        ]
+      }
+    ],
+    "seasonTitle": "Seasonal Highlights",
+    "seasonSubtitle": "One coast, four tempers. Below, the scenes most worth expecting each season.",
+    "seasons": [
+      {
+        "icon": "🌱",
+        "badge": "SPRING",
+        "name": "Spring · New green & sea mist",
+        "summary": "As it warms, coastal trees turn green and sea mist drifts — the best season for retreat and morning shots.",
+        "highlights": [
+          "New green lines the stone path.",
+          "Sea mist and rocks form an ink-wash mood.",
+          "Calm sea at dawn, clearest reflections."
+        ]
+      },
+      {
+        "icon": "🌿",
+        "badge": "SUMMER",
+        "name": "Summer · Blue sea & sea breeze",
+        "summary": "Midsummer sea colors are richest; shaded coastal trees make it a cool stroll and good for seabirds.",
+        "highlights": [
+          "Stone path shaded, more comfortable feel.",
+          "Avoid midday sun; mornings and dusk.",
+          "Tidal-zone life active, good for slow watching."
+        ]
+      },
+      {
+        "icon": "🍁",
+        "badge": "AUTUMN",
+        "name": "Autumn · High sky & clear sea",
+        "summary": "The year's most popular season. High sky and clear blue sea dye the rocky coast into a transparent palette.",
+        "highlights": [
+          "Reclining Avalokiteśvara rock outline clearest backlit.",
+          "Sea breeze fresh, highest photo rate.",
+          "Softest dusk light, good for slow shots."
+        ]
+      },
+      {
+        "icon": "❄️",
+        "badge": "WINTER",
+        "name": "Winter · Quiet Coast",
+        "summary": "After foliage falls, the coast is more open and quiet — a crisp season for East Sea sunrise and cold-front clouds.",
+        "highlights": [
+          "Morning mist and cold clouds over the sea, distant and pure.",
+          "Clear-day sunrise gold on water, best for slow shots.",
+          "Dress warm and mind the seafront wind."
+        ]
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who Should Come? Upgrade Segment Guides to Custom Itineraries",
+    "subtitle": "Not just 'you'll like it,' but directly telling you how to walk, where to go first, and which Yangyang nodes to link.",
+    "resonanceLabel": "Resonance: ",
+    "routeLabel": "Recommended module: ",
+    "tipLabel": "Tip: ",
+    "items": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "Families",
+        "resonance": "Free, open, flat stone path — kids can watch the sea cliffs, hear the Reclining Avalokiteśvara story, and easily reach the Wisdom Avalokiteśvara statue along the flat side.",
+        "tip": "Spend energy on photo stops, not on crowding; mind the sea breeze."
+      },
+      {
+        "icon": "📷",
+        "group": "Photographers & Couples",
+        "resonance": "Dawn East Sea sunrise and the stone path backlit are Yangyang's most romantic frames, with very high hit rate.",
+        "tip": "Count arrival, return, and light into the plan so composition isn't beaten by on-site pace."
+      },
+      {
+        "icon": "🌿",
+        "group": "Faith & Ecology Lovers",
+        "resonance": "As a faith-and-nature sample, the Avalokiteśvara faith, sea-rock geology, tidal-zone life, and gull watching are worth a close look.",
+        "tip": "Avoid the most crowded weekends; choose dawn or a weekday afternoon to really observe details."
+      },
+      {
+        "icon": "🗺️",
+        "group": "First-time Visitors to Korea",
+        "resonance": "Without going far, experience Korean Buddhist hermitage culture and the East Sea marine ecology near Yangyang and Sokcho; link buses, taxis, and local food — an ideal start to the 'sea and faith' theme.",
+        "tip": "If you can pick only one Yangyang spot, Hyuhyuam opens the 'rock and sea' theme best."
+      }
+    ]
+  },
+  "lodging": {
+    "title": "Lodging Guide: Stay Close, or Stay Convenient",
+    "subtitle": "Yangyang is a small East Coast city where 'sea, mountains, and fishing villages' coexist. We don't recommend specific hotels but help you parse two lodging patterns to choose what fits.",
+    "scenarioTitle": "Two choices, how to choose",
+    "options": [
+      {
+        "icon": "🌳",
+        "name": "Hyeonnam-myeon / Gwangjin area",
+        "role": "Closest to hermitage & sea",
+        "highlight": "Staying in Hyeonnam-myeon or Gwangjin (廣津) puts you a short distance from Hyuhyuam, the Reclining Avalokiteśvara rock, and Yeonhwadae; the dawn East Sea sunrise and sea breeze suit travelers best. Ideal for those focused on 'sea stroll + hermitage' with high convenience needs.",
+        "commute": "Commute: to the hermitage about 10–20 min walk or bus. Walking is easy on the legs, good for dawn seaside.",
+        "points": [
+          "Coast 10–20 min by walk or bus, most convenient.",
+          "Sea, snacks, and sea rocks extremely rich.",
+          "More choices, usually better value."
+        ]
+      },
+      {
+        "icon": "🏙️",
+        "name": "Yangyang-eup / Sokcho area",
+        "role": "Best for food & hub",
+        "highlight": "Staying in Yangyang-eup or Sokcho puts the intercity bus terminal, commercial districts, and food alleys at your door — ideal for 'East Sea + transfer' travelers who head to Hyuhyuam by bus or car by day.",
+        "commute": "Commute: bus about 30–50 minutes. Good for self-drivers or independent travelers wanting absolute convenience.",
+        "points": [
+          "High-speed hub and districts at hand, good for transfers.",
+          "Food, cafes, night markets extremely rich.",
+          "To Hyuhyuam by bus or short drive about 30–50 minutes."
+        ]
+      }
+    ],
+    "peakTitle": "Peak-season warning",
+    "peak": "Yangyang's summer vacation season and clear weekends tighten rooms and raise prices as East Coast tourists flood in. Book weeks ahead; if booking near holidays, expand the range to Sokcho, Gangneung, etc., and travel by train or car.",
+    "tipsTitle": "Lodging tips",
+    "tips": [
+      "For sunrise and sea shots: prefer Hyeonnam-myeon / Gwangjin, walk to the hermitage at dawn.",
+      "For convenience and food: choose Yangyang-eup / Sokcho, walk and dine at hand.",
+      "Before booking, confirm breakfast, parking, and EV chargers (key for self-drivers).",
+      "Peak seasons and holidays need advance planning to avoid no rooms or high prices."
+    ]
+  }
+}
