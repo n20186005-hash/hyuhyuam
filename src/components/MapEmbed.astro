@@ -23,10 +23,20 @@ const embedUrl = 'https://www.google.com/maps?q=%ED%9C%B4%ED%9C%B4%EC%95%94&outp
       ></iframe>
     </div>
 
-    <div class="text-center mt-8">
+    <div class="text-center mt-8 flex flex-wrap justify-center gap-3">
       <a href={m.mapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-white" style="background: var(--accent);">
         📍 {m.openMaps}
       </a>
+      {m.naverUrl && (
+        <a href={m.naverUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-white" style="background: #03C75A;">
+          📍 {m.openNaver}
+        </a>
+      )}
+      {m.kakaoUrl && (
+        <a href={m.kakaoUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-[#3a1d1d]" style="background: #FEE500;">
+          📍 {m.openKakao}
+        </a>
+      )}
     </div>
   </div>
 </section>

@@ -79,6 +79,14 @@ const planner = h.sunsetPlanner ?? {};
                 🌊 {planner.seaGlare}
               </p>
             )}
+            {planner.tideTip && (
+              <p class="text-xs sm:text-sm mt-2 text-white/75 leading-relaxed">
+                ⚠️ {planner.tideTip}
+                {planner.tideUrl && (
+                  <a href={planner.tideUrl} target="_blank" rel="noopener noreferrer" class="underline decoration-white/40 underline-offset-2 hover:text-white ml-1">KHOA 潮汐表 ↗</a>
+                )}
+              </p>
+            )}
             <svg class="mt-3 w-full h-10" viewBox="0 0 320 40" preserveAspectRatio="none" aria-hidden="true" style="display:block;">
               <defs>
                 <linearGradient id="lightWave" x1="0" y1="0" x2="1" y2="0">
@@ -118,10 +126,20 @@ const planner = h.sunsetPlanner ?? {};
       </a>
     </div>
 
-    <div class="mt-5">
+    <div class="mt-5 flex flex-wrap justify-center gap-3">
       <a href={h.mapsUrl} target="_blank" rel="noopener noreferrer" class="hero-maps-link">
         {h.openMaps}
       </a>
+      {h.naverUrl && (
+        <a href={h.naverUrl} target="_blank" rel="noopener noreferrer" class="hero-maps-link">
+          {h.openNaver}
+        </a>
+      )}
+      {h.kakaoUrl && (
+        <a href={h.kakaoUrl} target="_blank" rel="noopener noreferrer" class="hero-maps-link">
+          {h.openKakao}
+        </a>
+      )}
     </div>
   </div>
 
