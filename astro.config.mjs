@@ -6,8 +6,8 @@ export default defineConfig({
   site: 'https://hyuhyuam.com',
   output: 'static',
   i18n: {
-    defaultLocale: 'zh',
-    locales: ['zh', 'en', 'ja', 'ko'],
+    defaultLocale: 'ko',
+    locales: ['ko', 'zh', 'en', 'ja'],
     routing: {
       prefixDefaultLocale: true,
     },

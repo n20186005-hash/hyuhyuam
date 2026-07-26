@@ -42,7 +42,7 @@ export function buildAlternates(path = ''): Record<string, string> {
     en: mk('en'),
     ja: mk('ja'),
     ko: mk('ko'),
-    xDefault: mk('zh'),
+    xDefault: mk('ko'),
   };
 }
 
