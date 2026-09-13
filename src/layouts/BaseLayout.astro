@@ -4,42 +4,69 @@ import Header from '../components/Header.astro';
 import NoticeBanner from '../components/NoticeBanner.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl, buildAlternates, htmlLangAttr, getI18n } from '../i18n/ui';
-import { ogLocale, siteConfig } from '../config';
+import { ogLocale, siteConfig, attraction } from '../config';
 
 interface Props {
   title: string;
   description: string;
   path?: string;
+  /** 隐私政策、条款、Cookie 设置等页面对旅客无搜索价值，设为 true 阻止收录 */
+  noindex?: boolean;
 }
 
-const { title, description, path = '' } = Astro.props;
+const { title, description, path = '', noindex = false } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
 const canonical = alts[lang] ?? alts.zh;
 const { messages } = getI18n(Astro.url);
-const attractionName = messages.header?.siteName ?? messages.footer?.siteName ?? messages.meta.title;
+
+const heroImageUrl = `${siteConfig.baseUrl}${attraction.heroImage}`;
+const heroImageAlt = `${attraction.fullName} - Main view in ${attraction.city}, ${attraction.country}`;
+const localName = attraction.localNames[lang as keyof typeof attraction.localNames] ?? attraction.fullName;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
-  name: attractionName,
+  '@id': attraction.entityId,
+  name: attraction.fullName,
+  alternateName: [
+    attraction.shortName,
+    localName,
+    `${localName} (${attraction.fullName})`,
+    `${attraction.city} ${attraction.fullName}`,
+  ].filter((v, i, a) => Boolean(v) && a.indexOf(v) === i),
   description: messages.meta.description,
   url: canonical,
-  image: 'https://hyuhyuam.com/gallery/hyuhyuam-hermitage-1.jpg',
+  mainEntityOfPage: canonical,
+  image: [
+    heroImageUrl,
+    `${siteConfig.baseUrl}/gallery/hyuhyuam-hermitage-6.jpg`,
+    `${siteConfig.baseUrl}/gallery/hyuhyuam-hermitage-14.jpg`,
+  ],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '3-16 Gwangjin 2-gil, Hyeonnam-myeon',
-    addressLocality: 'Yangyang-gun',
-    addressRegion: 'Gangwon-do',
-    addressCountry: 'KR',
+    streetAddress: attraction.streetAddress,
+    addressLocality: attraction.city,
+    addressRegion: attraction.region,
+    postalCode: attraction.postalCode,
+    addressCountry: attraction.countryCode,
   },
-  telephone: '+82-33-671-0093',
+  telephone: attraction.telephone,
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 38.0739,
-    longitude: 128.4983,
+    latitude: attraction.latitude,
+    longitude: attraction.longitude,
   },
+  hasMap: attraction.mapsShareUrl,
+  isAccessibleForFree: true,
+  publicAccess: true,
+  containedInPlace: [
+    { '@type': 'AdministrativeArea', name: attraction.township },
+    { '@type': 'AdministrativeArea', name: attraction.city },
+    { '@type': 'AdministrativeArea', name: attraction.region },
+    { '@type': 'Country', name: attraction.country },
+  ],
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -48,7 +75,6 @@ const jsonLd = {
       closes: '23:59',
     },
   ],
-  isAccessibleForFree: true,
   offers: [
     {
       '@type': 'Offer',
@@ -60,10 +86,15 @@ const jsonLd = {
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.3',
-    reviewCount: '6422',
+    ratingValue: String(attraction.ratingValue),
+    reviewCount: String(attraction.reviewCount),
   },
-  sameAs: ['https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7'],
+  sameAs: [
+    attraction.mapsShareUrl,
+    attraction.govtTourismUrl,
+    'https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2fac7b80-b616-431d-9e0f-13649ce8b14f',
+    'https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/locIntrdnList.do?vcontsId=75151',
+  ],
 };
   const breadcrumbLd = (() => {
     const bc = messages.breadcrumb;
@@ -71,9 +102,9 @@ const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: bc.home, item: `${siteConfig.baseUrl}/${lang}` },
-        { '@type': 'ListItem', position: 2, name: bc.region, item: `${siteConfig.baseUrl}/${lang}#overview` },
-        { '@type': 'ListItem', position: 3, name: bc.city, item: `${siteConfig.baseUrl}/${lang}#transport` },
+        { '@type': 'ListItem', position: 1, name: bc.home, item: `${siteConfig.baseUrl}/${lang}/` },
+        { '@type': 'ListItem', position: 2, name: bc.region, item: `${siteConfig.baseUrl}/${lang}/#overview` },
+        { '@type': 'ListItem', position: 3, name: bc.city, item: `${siteConfig.baseUrl}/${lang}/#transport` },
         { '@type': 'ListItem', position: 4, name: bc.current, item: canonical },
       ],
     };
@@ -87,6 +118,7 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="zh" href={alts.zh} />
     <link rel="alternate" hreflang="en" href={alts.en} />
@@ -98,12 +130,31 @@ const jsonLd = {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={attraction.fullName} />
     <meta property="og:locale" content={ogLocale[lang] ?? lang} />
-    <meta property="og:image" content="https://hyuhyuam.com/gallery/hyuhyuam-hermitage-1.jpg" />
+    {Object.entries(ogLocale)
+      .filter(([l]) => l !== lang)
+      .map(([, value]) => <meta property="og:locale:alternate" content={value} />)}
+    <meta property="og:image" content={heroImageUrl} />
+    <meta property="og:image:alt" content={heroImageAlt} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://hyuhyuam.com/gallery/hyuhyuam-hermitage-1.jpg" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={heroImageUrl} />
+    <meta name="twitter:image:alt" content={heroImageAlt} />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f2015" />
+    <meta name="application-name" content={attraction.fullName} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content={attraction.shortName} />
+    <link rel="apple-touch-icon" href="/icons/icon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
 
     <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
@@ -140,5 +191,14 @@ const jsonLd = {
       <slot />
     </main>
     <Footer />
+
+    <script is:inline>
+      // PWA: register the service worker for offline shell support
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+      }
+    </script>
   </body>
 </html>

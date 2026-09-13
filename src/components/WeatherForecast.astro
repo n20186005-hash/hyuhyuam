@@ -1,0 +1,595 @@
+---
+import { getI18n } from '../i18n/ui';
+import { ADVICE_IDS } from '../lib/advice';
+import {
+  fetchWeatherSnapshot,
+  weatherCodeIcon,
+  weatherCodeTable,
+  weatherCodeText,
+  type WeatherLang,
+  type WeatherPayload,
+} from '../lib/weather';
+import { fetchTideSnapshot, type TidePayload } from '../lib/tide';
+
+const { lang, messages } = getI18n(Astro.url);
+const w = messages.weather ?? {};
+const localeMap: Record<string, string> = {
+  ko: 'ko-KR',
+  zh: 'zh-CN',
+  en: 'en-US',
+  ja: 'ja-JP',
+};
+const locale = localeMap[lang] ?? 'en-US';
+
+/** 构建期快照：让静态 HTML 自带一份完整气象与海况信息（无脚本亦可阅读） */
+const snapshot: WeatherPayload | null = await fetchWeatherSnapshot();
+const tide: TidePayload | null = await fetchTideSnapshot();
+
+/**
+ * 文案字典：建议键 → 当前语言文案。
+ * 服务端渲染与浏览器端刷新共用同一份字典，因此刷新后文案不会跳变。
+ */
+const rawTexts = (w.adviceTexts ?? {}) as Record<string, string>;
+const texts: Record<string, string> = {};
+for (const id of ADVICE_IDS) texts[id] = rawTexts[id] ?? '';
+
+const advice = snapshot?.advice ?? null;
+const alerts = advice?.alerts ?? [];
+const outfits = advice?.outfits ?? [];
+const plans = advice?.plans ?? [];
+const items = advice?.items ?? [];
+const summary = advice?.summary ?? null;
+const coast = tide?.advice?.coast ?? [];
+
+const cur = snapshot?.current;
+const today = snapshot?.today ?? null;
+const week = snapshot?.days?.slice(1, 8) ?? [];
+const next12 = snapshot?.next24?.pop?.slice(0, 12) ?? [];
+const codeTable = weatherCodeTable((lang as WeatherLang) ?? 'en');
+const sea = tide?.sea ?? null;
+
+const val = (v: number | null | undefined, suffix = '') =>
+  v === null || v === undefined ? '—' : `${Math.round(v)}${suffix}`;
+const dec1 = (v: number | null | undefined, suffix = '') =>
+  v === null || v === undefined ? '—' : `${Math.round(v * 10) / 10}${suffix}`;
+const lv = (v: number | null | undefined) => (v === null || v === undefined ? '—' : String(v));
+
+const fmtDay = (iso: string) => {
+  const d = new Date(`${iso}T12:00:00+09:00`);
+  if (Number.isNaN(d.getTime())) return iso;
+  return new Intl.DateTimeFormat(locale, {
+    timeZone: 'Asia/Seoul',
+    weekday: 'short',
+    month: 'numeric',
+    day: 'numeric',
+  }).format(d);
+};
+
+/**
+ * 上游返回的是不带时区偏移的韩国本地时间（如 2026-09-13T20:00），
+ * 直接 new Date() 会按浏览者所在时区解析，导致时差。这里显式按 KST 解析。
+ */
+const kstDate = (iso: string): Date | null => {
+  const plain = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(iso) && !/[Zz]|[+-]\d{2}:\d{2}$/.test(iso);
+  const d = new Date(plain ? `${iso}+09:00` : iso);
+  return Number.isNaN(d.getTime()) ? null : d;
+};
+
+const fmtClock = (iso: string) => {
+  const d = kstDate(iso);
+  if (!d) return '—';
+  return new Intl.DateTimeFormat(locale, {
+    timeZone: 'Asia/Seoul',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  }).format(d);
+};
+
+const clientDict = {
+  texts,
+  codes: codeTable,
+};
+---
+
+<section id="weather" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-8">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{w.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{w.subtitle}</p>
+    </div>
+
+    <!-- 风险提醒：有风险才显示，同时置顶 -->
+    <div
+      id="wx-alert-box"
+      class="wx-alert-box rounded-2xl px-5 py-4 mb-6"
+      hidden={alerts.length === 0}
+    >
+      <p class="text-xs font-semibold tracking-[0.16em] mb-3" style="color: #ef4444;">{w.alertsTitle}</p>
+      <ul class="wx-list" id="wx-alerts">
+        {alerts.map((a) => (
+          <li class={`wx-chip wx-${a.tone}`}>
+            <span aria-hidden="true">{a.icon}</span>
+            <span>{texts[a.id]}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <p
+      id="wx-alert-none"
+      class="wx-noalert rounded-2xl px-5 py-3 mb-6 text-sm"
+      hidden={alerts.length > 0}
+    >
+      ✅ {w.noAlert}
+    </p>
+
+    <div class="grid lg:grid-cols-[1fr_1.35fr] gap-6">
+      <div class="space-y-5">
+        <!-- 实时观测 -->
+        <article class="rounded-3xl p-6 md:p-7 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <p class="text-xs uppercase tracking-[0.2em] mb-4" style="color: var(--text-muted);">{w.nowLabel}</p>
+
+          <div class="flex items-center gap-5">
+            <span class="text-5xl sm:text-6xl leading-none" aria-hidden="true" data-w="icon">
+              {cur ? weatherCodeIcon(cur.code, cur.isDay) : '🌡️'}
+            </span>
+            <div class="min-w-0">
+              <p class="font-display text-4xl sm:text-5xl font-semibold leading-none" style="color: var(--text-primary);">
+                <span data-w="temp">{val(cur?.temp)}</span><span class="text-2xl align-top">°C</span>
+              </p>
+              <p class="mt-2 text-base" style="color: var(--text-secondary);" data-w="text">
+                {cur ? weatherCodeText(cur.code, (lang as WeatherLang) ?? 'en') : w.placeholder}
+              </p>
+            </div>
+          </div>
+
+          <dl class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+            <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+              <dt class="text-xs" style="color: var(--text-muted);">{w.popNow}</dt>
+              <dd class="mt-1 font-semibold text-lg" style="color: var(--text-primary);">
+                <span data-w="pop">{val(today?.pop)}</span>%
+              </dd>
+            </div>
+            <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+              <dt class="text-xs" style="color: var(--text-muted);">{w.windLevel}</dt>
+              <dd class="mt-1 font-semibold text-lg" style="color: var(--text-primary);">
+                <span data-w="windlevel">{lv(cur?.windLevel)}</span>{w.levelUnit}
+                <span class="block text-xs font-normal mt-0.5" style="color: var(--text-muted);">
+                  <span data-w="wind">{val(cur?.wind)}</span> km/h
+                </span>
+              </dd>
+            </div>
+            <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+              <dt class="text-xs" style="color: var(--text-muted);">{w.gust}</dt>
+              <dd class="mt-1 font-semibold text-lg" style="color: var(--text-primary);">
+                <span data-w="gust">{val(cur?.gust)}</span> km/h
+              </dd>
+            </div>
+            <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+              <dt class="text-xs" style="color: var(--text-muted);">{w.feels}</dt>
+              <dd class="mt-1 font-semibold text-lg" style="color: var(--text-primary);">
+                <span data-w="feels">{val(cur?.feels)}</span>°C
+              </dd>
+            </div>
+          </dl>
+
+          <p class="mt-5 text-xs" style="color: var(--text-muted);">
+            {w.updatedLabel} <span data-w="updated">{snapshot ? fmtClock(snapshot.updatedAt) : '—'}</span>
+          </p>
+        </article>
+
+        <!-- 海边即时提示：本景点是礁石海岸，浪高与潮时比气温更决定「能不能下去」 -->
+        <article
+          class="rounded-3xl p-6 md:p-7 border"
+          id="wx-coast-card"
+          style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+          hidden={coast.length === 0}
+        >
+          <h3 class="font-semibold text-lg mb-1" style="color: var(--text-primary);">{w.coastTitle}</h3>
+          <p class="text-xs mb-3" style="color: var(--text-muted);">
+            <span data-w="coastwave">🌊 {dec1(sea?.waveHeight, ' m')}</span>
+            <span class="mx-2">·</span>
+            <span data-w="coastsst">🌡️ {dec1(sea?.sst, '°C')}</span>
+          </p>
+          <ul class="wx-list" id="wx-coast">
+            {coast.map((a) => (
+              <li class={`wx-chip wx-${a.tone}`}>
+                <span aria-hidden="true">{a.icon}</span>
+                <span>{texts[a.id]}</span>
+              </li>
+            ))}
+          </ul>
+          <a href="#tide" class="inline-block mt-4 text-sm underline underline-offset-4" style="color: var(--accent);">{w.coastLink}</a>
+        </article>
+      </div>
+
+      <div class="space-y-5">
+        <!-- 出行建议：命中条件的才出现，不堆无关信息 -->
+        <div class="rounded-3xl p-6 md:p-7 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <h3 class="font-semibold text-lg mb-3" style="color: var(--text-primary);">{w.adviceTitle}</h3>
+          <p
+            id="wx-summary"
+            class={`wx-summary ${summary ? `wx-${summary.tone}` : ''}`}
+            data-w="summary"
+          >
+            {summary ? `${summary.icon} ${texts[summary.id]}` : w.placeholder}
+          </p>
+
+          <div class="mt-5" data-advice-block="outfits" hidden={outfits.length === 0}>
+            <p class="text-xs font-semibold tracking-[0.12em] mb-2" style="color: var(--text-muted);">{w.outfitsTitle}</p>
+            <ul class="wx-list" id="wx-outfits">
+              {outfits.map((a) => (
+                <li class={`wx-chip wx-${a.tone}`}>
+                  <span aria-hidden="true">{a.icon}</span>
+                  <span>{texts[a.id]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="mt-5" data-advice-block="plans" hidden={plans.length === 0}>
+            <p class="text-xs font-semibold tracking-[0.12em] mb-2" style="color: var(--text-muted);">{w.plansTitle}</p>
+            <ul class="wx-list" id="wx-plans">
+              {plans.map((a) => (
+                <li class={`wx-chip wx-${a.tone}`}>
+                  <span aria-hidden="true">{a.icon}</span>
+                  <span>{texts[a.id]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="mt-5" data-advice-block="items" hidden={items.length === 0}>
+            <p class="text-xs font-semibold tracking-[0.12em] mb-2" style="color: var(--text-muted);">{w.itemsTitle}</p>
+            <ul class="wx-list" id="wx-items">
+              {items.map((a) => (
+                <li class={`wx-chip wx-${a.tone}`}>
+                  <span aria-hidden="true">{a.icon}</span>
+                  <span>{texts[a.id]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- 今日关键指标 -->
+        <div class="rounded-3xl p-6 md:p-7 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <h3 class="font-semibold text-lg mb-4" style="color: var(--text-primary);">{w.todayTitle}</h3>
+          <dl class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {[
+              { k: 'sunrise', label: w.sunrise },
+              { k: 'sunset', label: w.sunset },
+              { k: 'uv', label: w.uvMax },
+              { k: 'popmax', label: w.popMax },
+              { k: 'rain', label: w.rainSum },
+              { k: 'windmax', label: w.windMax },
+            ].map((item) => (
+              <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+                <dt class="text-xs" style="color: var(--text-muted);">{item.label}</dt>
+                <dd class="mt-1 font-semibold" style="color: var(--text-primary);" data-w={item.k}>
+                  {item.k === 'sunrise'
+                    ? today?.sunrise || '—'
+                    : item.k === 'sunset'
+                      ? today?.sunset || '—'
+                      : item.k === 'uv'
+                        ? val(today?.uv)
+                        : item.k === 'popmax'
+                          ? `${val(today?.pop)}%`
+                          : item.k === 'rain'
+                            ? `${val(today?.precip)} mm`
+                            : val(today?.wind, ' km/h')}
+                </dd>
+              </div>
+            ))}
+          </dl>
+
+          <div class="mt-6">
+            <p class="text-xs mb-2" style="color: var(--text-muted);">{w.next12Title}</p>
+            <div class="flex items-end gap-1 h-16" id="weather-pop-strip" aria-hidden="true">
+              {(next12.length ? next12 : Array.from({ length: 12 }, () => 0)).map((p) => (
+                <span
+                  class="flex-1 rounded-t"
+                  data-pop={p}
+                  style={`height: ${Math.max(3, Math.min(100, p))}%; background: color-mix(in srgb, var(--accent) ${Math.max(20, Math.min(90, p))}%, transparent);`}
+                ></span>
+              ))}
+            </div>
+          </div>
+
+          <p class="mt-5 text-xs leading-relaxed" style="color: var(--text-muted);">{w.footnote}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 未来一周 -->
+    <div class="mt-10">
+      <h3 class="font-semibold text-xl mb-4" style="color: var(--text-primary);">{w.daysTitle}</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-3" id="weather-days">
+        {(week.length ? week : Array.from({ length: 7 }, () => null)).map((day, i) => (
+          <article class="rounded-2xl p-4 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);" data-day={i}>
+            <p class="text-xs" style="color: var(--text-muted);" data-k="date">
+              {day ? fmtDay(day.date) : '—'}
+            </p>
+            <p class="mt-2 text-2xl" aria-hidden="true" data-k="icon">
+              {day ? weatherCodeIcon(day.code) : '🌡️'}
+            </p>
+            <p class="mt-1 text-sm min-h-10" style="color: var(--text-secondary);" data-k="text">
+              {day ? codeTable[day.code] ?? weatherCodeText(day.code, (lang as WeatherLang) ?? 'en') : w.placeholder}
+            </p>
+            <p class="mt-2 font-semibold" style="color: var(--text-primary);">
+              <span data-k="tmax">{day ? val(day.tMax) : '—'}</span>° / <span class="font-normal" style="color: var(--text-muted);" data-k="tmin">{day ? val(day.tMin) : '—'}</span>°
+            </p>
+            <p class="mt-2 text-xs" style="color: var(--text-muted);">
+              ☂️ <span data-k="pop">{day ? val(day.pop) : '—'}</span>% · UV <span data-k="uv">{day ? val(day.uv) : '—'}</span>
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" id="wx-i18n" is:inline set:html={JSON.stringify(clientDict)}></script>
+  <script is:inline>
+    (function () {
+      var daysHost = document.getElementById('weather-days');
+      var dict = { texts: {}, codes: {} };
+      try {
+        dict = JSON.parse(document.getElementById('wx-i18n').textContent || '{}');
+      } catch (e) {
+        /* 字典缺失时保留服务端渲染结果 */
+      }
+      var T = dict.texts || {};
+      var CODES = dict.codes || {};
+
+      var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+      function esc(v) {
+        return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) {
+          return ESC[c];
+        });
+      }
+      function setHook(key, value) {
+        var el = document.querySelector('[data-w="' + key + '"]');
+        if (el) el.textContent = value;
+      }
+      function setText(scope, key, value) {
+        var el = scope.querySelector('[data-k="' + key + '"]');
+        if (el) el.textContent = value;
+      }
+      function round(v) {
+        return typeof v === 'number' && isFinite(v) ? String(Math.round(v)) : '—';
+      }
+      function dec1(v) {
+        return typeof v === 'number' && isFinite(v) ? String(Math.round(v * 10) / 10) : '—';
+      }
+      function level(v) {
+        return typeof v === 'number' && isFinite(v) ? String(v) : '—';
+      }
+      function iconFor(code, isDay) {
+        if (code === 0) return isDay === false ? '🌙' : '☀️';
+        if (code === 1) return isDay === false ? '🌙' : '🌤️';
+        if (code === 2) return isDay === false ? '☁️' : '⛅';
+        if (code === 3) return '☁️';
+        if (code === 45 || code === 48) return '🌫️';
+        if (code >= 51 && code <= 57) return '🌦️';
+        if (code >= 61 && code <= 67) return '🌧️';
+        if (code >= 71 && code <= 77) return '🌨️';
+        if (code >= 80 && code <= 82) return '🌧️';
+        if (code >= 85 && code <= 86) return '🌨️';
+        if (code >= 95) return '⛈️';
+        return '🌡️';
+      }
+      // 上游时间不带时区偏移，需显式按 KST 解析，否则会随浏览者时区产生偏差
+      function kstDate(iso) {
+        if (!iso) return null;
+        var plain =
+          /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(iso) && !/[Zz]|[+-]\d{2}:\d{2}$/.test(iso);
+        var d = new Date(plain ? iso + '+09:00' : iso);
+        return isNaN(d.getTime()) ? null : d;
+      }
+      function clock(iso) {
+        var d = kstDate(iso);
+        if (!d) return '—';
+        try {
+          return new Intl.DateTimeFormat(document.documentElement.lang || undefined, {
+            timeZone: 'Asia/Seoul',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+          }).format(d);
+        } catch (e) {
+          return iso.slice(11, 16) || '—';
+        }
+      }
+      function dayLabel(iso) {
+        var d = new Date(iso + 'T12:00:00+09:00');
+        if (isNaN(d.getTime())) return iso;
+        try {
+          return new Intl.DateTimeFormat(document.documentElement.lang || undefined, {
+            timeZone: 'Asia/Seoul',
+            weekday: 'short',
+            month: 'numeric',
+            day: 'numeric',
+          }).format(d);
+        } catch (e) {
+          return iso;
+        }
+      }
+
+      /** 用文案键重建一组建议；空数组时连标题一起隐藏，不留空白块 */
+      function renderGroup(id, list) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var wrap = el.closest ? el.closest('[data-advice-block]') : null;
+        if (!list || !list.length) {
+          el.innerHTML = '';
+          el.hidden = true;
+          if (wrap) wrap.hidden = true;
+          return;
+        }
+        el.hidden = false;
+        if (wrap) wrap.hidden = false;
+        el.innerHTML = list
+          .map(function (a) {
+            return (
+              '<li class="wx-chip wx-' +
+              esc(a.tone) +
+              '"><span aria-hidden="true">' +
+              esc(a.icon) +
+              '</span><span>' +
+              esc(T[a.id] || '') +
+              '</span></li>'
+            );
+          })
+          .join('');
+      }
+
+      function renderAdvice(advice) {
+        if (!advice) return;
+        var alerts = advice.alerts || [];
+        var box = document.getElementById('wx-alert-box');
+        var none = document.getElementById('wx-alert-none');
+        if (box) box.hidden = alerts.length === 0;
+        if (none) none.hidden = alerts.length > 0;
+        renderGroup('wx-alerts', alerts);
+        renderGroup('wx-outfits', advice.outfits);
+        renderGroup('wx-plans', advice.plans);
+        renderGroup('wx-items', advice.items);
+
+        var sum = document.getElementById('wx-summary');
+        if (sum && advice.summary && advice.summary.id) {
+          sum.textContent = advice.summary.icon + ' ' + (T[advice.summary.id] || '');
+          sum.className = 'wx-summary wx-' + advice.summary.tone;
+        }
+      }
+
+      function renderWeather(data) {
+        if (!data || !data.ok) return;
+        var cur = data.current || {};
+        var today = data.today || {};
+
+        setHook('icon', iconFor(cur.code, cur.isDay));
+        setHook('temp', round(cur.temp));
+        setHook('text', CODES[cur.code] || '');
+        setHook('feels', round(cur.feels));
+        setHook('wind', round(cur.wind));
+        setHook('windlevel', level(cur.windLevel));
+        setHook('gust', round(cur.gust));
+        setHook('updated', clock(data.updatedAt));
+        setHook('pop', round(today.pop));
+        setHook('sunrise', today.sunrise || '—');
+        setHook('sunset', today.sunset || '—');
+        setHook('uv', round(today.uv));
+        setHook('popmax', round(today.pop) + '%');
+        setHook('rain', round(today.precip) + ' mm');
+        setHook('windmax', round(today.wind) + ' km/h');
+
+        renderAdvice(data.advice);
+
+        var bars = document.querySelectorAll('#weather-pop-strip [data-pop]');
+        var pops = (data.next24 && data.next24.pop) || [];
+        Array.prototype.forEach.call(bars, function (bar, i) {
+          var p = typeof pops[i] === 'number' ? pops[i] : 0;
+          bar.style.height = Math.max(3, Math.min(100, p)) + '%';
+          bar.style.background =
+            'color-mix(in srgb, var(--accent) ' + Math.max(20, Math.min(90, p)) + '%, transparent)';
+        });
+
+        var cards = daysHost.querySelectorAll('[data-day]');
+        var list = (data.days || []).slice(1, 8);
+        Array.prototype.forEach.call(cards, function (card, i) {
+          var d = list[i];
+          if (!d) return;
+          setText(card, 'date', dayLabel(d.date));
+          setText(card, 'icon', iconFor(d.code, true));
+          setText(card, 'text', CODES[d.code] || '');
+          setText(card, 'tmax', round(d.tMax));
+          setText(card, 'tmin', round(d.tMin));
+          setText(card, 'pop', round(d.pop));
+          setText(card, 'uv', round(d.uv));
+        });
+      }
+
+      function renderCoast(data) {
+        if (!data || !data.ok) return;
+        var sea = data.sea || {};
+        setHook('coastwave', '🌊 ' + dec1(sea.waveHeight) + ' m');
+        setHook('coastsst', '🌡️ ' + dec1(sea.sst) + '°C');
+        var advice = data.advice || {};
+        renderGroup('wx-coast', advice.coast);
+        var card = document.getElementById('wx-coast-card');
+        if (card) card.hidden = !(advice.coast && advice.coast.length);
+      }
+
+      function load(url, handler) {
+        fetch(url, { headers: { accept: 'application/json' } })
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+          })
+          .then(handler)
+          .catch(function () {});
+      }
+
+      function loadAll() {
+        // 尾斜杠必须保留：astro.config.mjs 设了 trailingSlash: 'always'，
+        // 不带尾斜杠的 /api/weather 不会命中路由，会直接 404。
+        load('/api/weather/', renderWeather);
+        load('/api/tide/', renderCoast);
+      }
+
+      loadAll();
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) loadAll();
+      });
+    })();
+  </script>
+</section>
+
+<style is:global>
+    .wx-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .wx-chip {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      padding: 0.42rem 0.8rem;
+      border-radius: 0.9rem;
+      border: 1px solid transparent;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+    .wx-good {
+      background: color-mix(in srgb, #10b981 13%, transparent);
+      border-color: color-mix(in srgb, #10b981 34%, transparent);
+    }
+    .wx-caution {
+      background: color-mix(in srgb, #f59e0b 14%, transparent);
+      border-color: color-mix(in srgb, #f59e0b 36%, transparent);
+    }
+    .wx-risk {
+      background: color-mix(in srgb, #ef4444 15%, transparent);
+      border-color: color-mix(in srgb, #ef4444 40%, transparent);
+    }
+    .wx-alert-box {
+      background: color-mix(in srgb, #ef4444 8%, var(--card-bg));
+      border: 1px solid color-mix(in srgb, #ef4444 30%, transparent);
+      border-left: 4px solid #ef4444;
+    }
+    .wx-noalert {
+      background: color-mix(in srgb, #10b981 8%, transparent);
+      border: 1px solid color-mix(in srgb, #10b981 26%, transparent);
+      color: var(--text-secondary);
+    }
+    .wx-summary {
+      padding: 0.6rem 0.9rem;
+      border-radius: 0.9rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  </style>

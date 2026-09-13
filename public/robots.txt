@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# 接口返回 JSON，无搜索价值
+Disallow: /api/
+
+# 法律页面（隐私政策 / 条款 / Cookie 设置）已用 noindex 处理，
+# 这里不再用 Disallow 屏蔽，以便搜索引擎读到 noindex 并传递站内权重。
+Sitemap: https://hyuhyuam.com/sitemap-index.xml

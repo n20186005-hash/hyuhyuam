@@ -1,0 +1,52 @@
+---
+import { getI18n } from '../i18n/ui';
+import { attraction } from '../config';
+
+const { messages } = getI18n(Astro.url);
+const e = messages.entityGuide ?? {};
+const chain: string[] = e.breadcrumb ?? [];
+const blocks = [
+  { title: e.aboutTitle, body: e.aboutText },
+  { title: e.locationTitle, body: e.locationText },
+  { title: e.landmarksTitle, body: e.landmarksText },
+  { title: e.historyTitle, body: e.historyText },
+].filter((b) => Boolean(b.title));
+---
+
+<section id="entity-guide" class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-5xl mx-auto px-4">
+    {e.eyebrow && (
+      <p class="text-xs uppercase tracking-[0.22em] text-center mb-3" style="color: var(--accent);">{e.eyebrow}</p>
+    )}
+    {e.intro && (
+      <p class="text-base sm:text-lg leading-relaxed mb-8 text-center max-w-3xl mx-auto" style="color: var(--text-secondary);">{e.intro}</p>
+    )}
+
+    {chain.length > 0 && (
+      <nav aria-label={e.breadcrumbLabel ?? 'Geographic hierarchy'} class="mb-10">
+        <ol class="flex flex-wrap justify-center items-center gap-x-2 gap-y-2 text-sm sm:text-base">
+          {chain.map((item, i) => (
+            <>
+              <li class="px-3 py-1 rounded-full border" style="border-color: var(--border-color); color: var(--text-primary); background: var(--card-bg);">{item}</li>
+              {i < chain.length - 1 && <li aria-hidden="true" style="color: var(--accent);">→</li>}
+            </>
+          ))}
+        </ol>
+      </nav>
+    )}
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {blocks.map((b) => (
+        <article class="rounded-2xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <h2 class="font-display text-xl sm:text-2xl font-semibold mb-3" style="color: var(--text-primary);">{b.title}</h2>
+          <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{b.body}</p>
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-8 text-center text-sm" style="color: var(--text-muted);">
+      {e.coordsLabel}: {attraction.latitude}, {attraction.longitude} ·{' '}
+      <a href={attraction.mapsShareUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2" style="color: var(--accent);">{e.mapsLabel}</a>
+    </p>
+  </div>
+</section>

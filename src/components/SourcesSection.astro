@@ -1,0 +1,44 @@
+---
+import { getI18n } from '../i18n/ui';
+import { attraction } from '../config';
+
+const { messages } = getI18n(Astro.url);
+const s = messages.sources ?? {};
+const items: Array<{ name: string; url: string }> = s.items ?? [];
+---
+
+<section id="sources" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{s.title}</h2>
+    <p class="text-center text-base sm:text-lg mb-8" style="color: var(--text-secondary);">{s.subtitle}</p>
+
+    <div class="rounded-2xl border p-6 sm:p-8" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+      <div class="flex flex-wrap items-center gap-3 mb-5">
+        <span class="text-xs px-3 py-1 rounded-full" style="background: var(--bg-tertiary); color: var(--text-secondary);">
+          {s.reviewedLabel}: {s.reviewedValue}
+        </span>
+      </div>
+
+      <h3 class="font-semibold mb-3" style="color: var(--text-primary);">{s.listTitle}</h3>
+      <ul class="space-y-2 text-sm sm:text-base">
+        {items.map((it) => (
+          <li class="flex gap-2">
+            <span class="shrink-0" aria-hidden="true" style="color: var(--accent);">↗</span>
+            <a href={it.url} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 break-words hover:opacity-70" style="color: var(--accent);">{it.name}</a>
+          </li>
+        ))}
+      </ul>
+
+      <p class="mt-6 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
+        {s.officialNoteText}{' '}
+        <a href={attraction.govtTourismUrl} target="_blank" rel="noopener noreferrer" class="font-medium underline underline-offset-2" style="color: var(--accent);">
+          {s.officialLinkLabel ?? attraction.govtTourismName}
+        </a>.
+      </p>
+
+      {s.independenceNote && (
+        <p class="mt-3 text-xs leading-relaxed" style="color: var(--text-muted);">{s.independenceNote}</p>
+      )}
+    </div>
+  </div>
+</section>

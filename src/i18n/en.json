@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Hyuhyuam Hermitage (Yangyang, Gangwon) | Seaside Buddhist hermitage on Korea's East Sea, the reclining Gwaneum rock & coastal scenery",
-    "description": "The complete guide to Hyuhyuam Hermitage (휴휴암, Hyuhyuam Hermitage): a small Buddhist hermitage on the East Sea shore in Hyeonnam-myeon, Yangyang-gun, Gangwon State. Founded in 1997 by Ven. Hongbeop with a single Myojikjeon Hall (묘적전), it became widely known in 1999 when a natural rock shaped like a reclining Gwaneum (Avalokiteshvara) appeared on the beach. The hermitage holds Myojikjeon, the Darani-gul Dharma Hall (다라니굴법당), the Gwaneum Brahma Bell (관음범종), the Jihye Gwaneum statue and the East Sea Dragon King statue on the seaside hill. Yeonhwa Terrace (연화대), the reclining Gwaneum rock, and the turtle rock together make this a free, open, and free-parking East Sea sunrise spot."
+    "title": "Hyuhyuam Hermitage Yangyang | Ocean Temple & Free Entry",
+    "description": "Plan a visit to Hyuhyuam Hermitage (휴휴암) in Yangyang, Gangwon: the reclining Gwaneum rock, Jihye Gwaneum statue and East Sea sunrise. Free entry."
   },
   "header": {
     "siteName": "Hyuhyuam Hermitage (휴휴암)",
@@ -38,6 +38,12 @@
     "facts": "Key Facts",
     "etiquette": "Etiquette",
     "route": "Half-Day Route",
+    "weather": "Weather",
+    "tide": "Tide",
+    "climate": "Season Strategy",
+    "routes": "Routes by Type",
+    "services": "Facilities",
+    "responsibility": "Visitor Duties",
     "transport": "Transport",
     "lodging": "Stay",
     "visit": "Visit Tips",
@@ -46,11 +52,13 @@
   "hero": {
     "title": "Hyuhyuam Hermitage (Yangyang, Gangwon)",
     "subtitle": "A small Buddhist hermitage on the East Sea shore in Hyeonnam-myeon, Yangyang-gun, Gangwon State. Founded in 1997 by Ven. Hongbeop with a single Myojikjeon Hall (묘적전), it became known in 1999 when a rock shaped like a reclining Gwaneum appeared on the beach. Yeonhwa Terrace, the reclining Gwaneum rock, the turtle rock, and the Jihye Gwaneum statue and East Sea Dragon King statue on the seaside hill together make this a free, open, and free-parking East Sea sunrise spot.",
-    "rating": "4.3 (6,422)",
-    "reviewCount": "6,422 reviews",
+    "ratingTemplate": "{rating} ({count})",
+    "reviewCountTemplate": "{count} reviews",
+    "ratingSourceLabel": "Google Maps",
+    "ratingSourceTemplate": "Rating and review count source: {source} visitor reviews",
     "hours": "Sunrise to sunset (free admission)",
     "openMaps": "View location on Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "legend": {
       "quote": "'Hyuhyu' (休休) means 'to rest again and again, setting aside worldly cares.' Ven. Hongbeop gave it this name so that all who come from afar may gently put down their daily worries amid the sea breeze and the sound of the bell.",
       "attribution": "— The origin of Hyuhyuam Hermitage"
@@ -80,7 +88,7 @@
       "seaGlare": "Sunrise tip: Hyuhyuam faces the East Sea and is a popular spot for sea sunrise. The moment the first light touches the reclining Gwaneum rock and Yeonhwa Terrace is the golden window for photography; early winter mornings are cold, so watch the sea breeze.",
       "arriveLabel": "Arrive by",
       "blueHourLabel": "Blue hour",
-      "lightCaption": "Light calculated live by Open-Meteo"
+      "lightCaption": "Light calculated live from today's sunrise and sunset"
     }
   },
   "quickFactsDashboard": {
@@ -329,7 +337,7 @@
       "Best pair Hyuhyuam with the reclining Gwaneum rock, Yeonhwa Terrace, and Jihye Gwaneum statue; a single stop underestimates its sea-rock and faith value."
     ],
     "mapsCta": "View map & route",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "bestTime": {
       "title": "Best time to arrive",
       "text": "Hyuhyuam is reachable by day, but what truly sets the photo ceiling is the dawn East Sea sunrise and the dusk light window. Arrive about 60 minutes before sunset; if weather isn't good for photos, shift focus to hermitage practice or rock viewing."
@@ -493,7 +501,7 @@
     ],
     "viewAll": "View location on Google Maps",
     "showMore": "Show more photos",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
   },
   "reviews": {
     "title": "Visitor Reviews",
@@ -501,7 +509,7 @@
     "featuredTitle": "Visitor Quotes",
     "featuredSubtitle": "A few short lines that capture the spirit of Hyuhyuam Hermitage.",
     "moreReviews": "View on Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "featured": [
       {
         "text": "Walking the stone path slowly, with the East Sea ripples at your feet — that seaside calm is special, and at dusk the light makes it feel like floating on the water.",
@@ -547,7 +555,377 @@
     "title": "How to Get There",
     "subtitle": "3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon-do, Korea (Plus Code: XQ69+F2) · Tel +82 33-671-0093",
     "openMaps": "Open in Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
+  },
+  "entityGuide": {
+    "eyebrow": "Destination entity · Geographic identity",
+    "intro": "Welcome to Hyuhyuam Hermitage (휴휴암 · 休休庵), widely recognized as the central seaside Gwaneum sanctuary of Yangyang-gun. Located on the East Sea coast of Hyeonnam-myeon, Yangyang-gun, Gangwon-do, South Korea, it serves as a primary hub for travelers visiting the region.",
+    "breadcrumbLabel": "Geographic hierarchy",
+    "breadcrumb": ["Hyuhyuam Hermitage", "Yangyang-gun", "Gangwon-do", "South Korea"],
+    "aboutTitle": "About Hyuhyuam Hermitage",
+    "aboutText": "Hyuhyuam Hermitage is a small Buddhist hermitage on Korea's East Sea coast, named to mean 'rest again and again, setting aside worldly cares'. It is both a place of Gwaneum (Avalokitesvara) devotion and a coastal hideaway for sunrise and sea-rock scenery, with free admission and free parking.",
+    "locationTitle": "Location & How to Visit 휴휴암 in Yangyang-gun",
+    "locationText": "Hyuhyuam Hermitage is located at 3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon-do, South Korea (postal code 25056), at latitude 37.9610° N, longitude 128.7684° E, right beside the Donghaean Bicycle Path. It is easily reached by car along the East Sea coastal road, with free parking on site; by public transport, take a bus to the 'Hyuhyuam' stop and walk a few minutes.",
+    "landmarksTitle": "Landmarks & Attractions Around 휴휴암",
+    "landmarksText": "When visiting Hyuhyuam Hermitage, visitors can easily explore surrounding historical landmarks and points of interest, including Hajodae Pavilion and Naksan Temple, and cycle the Donghaean Bicycle Path along the Yangyang coast.",
+    "historyTitle": "History & Significance of Hyuhyuam Hermitage",
+    "historyText": "Hyuhyuam Hermitage was founded in 1997 by Ven. Hongbeop with only the Myojikjeon Hall. In 1999 a natural rock resembling a reclining Gwaneum appeared on the beach, bringing the hermitage wider fame; the Dharani Cave hall, the Gwaneum bell, the Jihye Gwaneum statue and the East Sea Dragon King statue followed, making it a seaside sanctuary where Gwaneum devotion meets coastal rock scenery.",
+    "coordsLabel": "Coordinates",
+    "mapsLabel": "View Hyuhyuam Hermitage on Google Maps"
+  },
+  "sources": {
+    "title": "Sources & Editorial Standards",
+    "subtitle": "Every place name, location, transport and history detail on this page is cross-checked against the public sources below and cited to reinforce expertise (E-E-A-T).",
+    "reviewedLabel": "Last reviewed",
+    "reviewedValue": "September 2026",
+    "listTitle": "Authoritative sources",
+    "items": [
+      { "name": "Korea Tourism Organization (VisitKorea) — Hyuhyuam Hermitage (휴휴암) official page", "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2fac7b80-b616-431d-9e0f-13649ce8b14f" },
+      { "name": "VisitKorea (English) — Gangwon Hyuhyuam Hermitage", "url": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/locIntrdnList.do?vcontsId=75151" },
+      { "name": "Yangyang-gun Culture & Tourism (official)", "url": "https://tour.yangyang.go.kr/pub/pleasure_ramantic.do" },
+      { "name": "Yangyang-gun Government (official)", "url": "https://www.yangyang.go.kr" },
+      { "name": "Gangwon State Tourism (official)", "url": "https://www.gangwon.to" },
+      { "name": "OpenStreetMap — Hyuhyuam coordinates & road-name address", "url": "https://www.openstreetmap.org/node/4340592290" },
+      { "name": "Google Maps — Hyuhyuam visitor rating and review count", "url": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6" }
+    ],
+    "officialNoteText": "For official updates and regional tourism information, visit",
+    "officialLinkLabel": "the Yangyang-gun Official Tourism Portal",
+    "independenceNote": "This guide is an independent, non-profit visitor-information project and is not affiliated with any government agency or official organization; external links are provided for reference only."
+  },
+  "weather": {
+    "title": "Live Weather & 7-Day Forecast",
+    "subtitle": "Check today's temperature, rain probability, wind and UV before you set out. A seaside hermitage feels cooler and windier than inland.",
+    "nowLabel": "Hyuhyuam right now",
+    "feels": "Feels like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "gust": "Gusts",
+    "updatedLabel": "Updated",
+    "adviceTitle": "Today's advice",
+    "alertsTitle": "Risk alerts",
+    "noAlert": "No weather risk alerts right now — today's plan can go ahead.",
+    "outfitsTitle": "What to wear",
+    "plansTitle": "How to plan the day",
+    "itemsTitle": "What to bring",
+    "coastTitle": "On the shore right now",
+    "coastLink": "See tide and rock-safety detail →",
+    "popNow": "Rain chance",
+    "windLevel": "Wind force",
+    "levelUnit": " Bft",
+    "adviceTexts": {
+      "summary-good": "Good weather — a fine day to be out",
+      "summary-caution": "The weather may shift, check once more before you set out",
+      "summary-risk": "Poor weather — consider adjusting your plans",
+      "alert-thunder": "⚠️ Thunderstorms. Stay away from trees, sea rocks and summits; water activities will most likely close",
+      "alert-wind": "⚠️ Strong winds. Keep clear of signs and shore rocks; sea-going trips will most likely stop",
+      "alert-rain": "⚠️ Heavy rain. Avoid valleys and low ground; boats and cable cars may stop running",
+      "alert-snow": "⚠️ Heavy snow. Roads get wet and icy — take care hiking and driving",
+      "alert-heat": "⚠️ Extreme heat. Avoid the midday sun and drink water often",
+      "alert-cold": "⚠️ Very cold. Dress for warmth and watch for ice on rock slabs and stone steps",
+      "alert-fog": "⚠️ Poor visibility. Not a day for sea or mountain views; ferries and flights may be delayed",
+      "outfit-mild": "Settled weather — ordinary clothing is enough",
+      "outfit-light": "Mild — light, breathable clothing works well",
+      "outfit-heat": "Warm — light breathable clothes, and cover up against the sun",
+      "outfit-rain": "Rain expected — a waterproof shell or rain jacket",
+      "outfit-wind": "Strong wind — wear a windproof layer and skip loose long skirts",
+      "outfit-layer": "Big day-night swing — bring a layer you can add or remove",
+      "outfit-warm": "Cool mornings and evenings — pack an extra jacket",
+      "outfit-cold": "Cold — wear a warm coat",
+      "plan-good": "Clear weather — great for being outdoors",
+      "plan-photo": "Soft light — ideal for photos, with no harsh sun",
+      "plan-sunrise": "Good visibility, right for sunrise and sunset views",
+      "plan-rain-possible": "Rain is likely. Postpone hiking and shore plans, and favour indoor stops",
+      "plan-rain-light": "Light rain — outdoor stops will feel less worthwhile",
+      "plan-rain-heavy": "Outdoor plans are not advised; boats and cable cars may stop, so head for indoor sights",
+      "plan-wind": "Strong wind — shore boats and open-air attractions may suspend service",
+      "plan-wind-strong": "Gales — sea and high-altitude attractions will most likely close",
+      "plan-thunder": "Thunderstorms — do not hike, swim in the sea or shelter under trees",
+      "plan-fog": "Poor visibility — not a day for sea views",
+      "plan-heat": "Hot — avoid midday and shorten time outdoors",
+      "plan-cold": "Cold — keep outdoor time short and warm up indoors",
+      "item-raincoat": "Rain jacket (skip the long umbrella in strong wind)",
+      "item-umbrella": "Umbrella",
+      "item-foldable": "Folding umbrella",
+      "item-sunscreen": "Sunscreen",
+      "item-sunglasses": "Sunglasses",
+      "item-hat": "Sun hat",
+      "item-water": "Plenty of drinking water",
+      "item-coat-thick": "Warm coat",
+      "item-jacket": "Light jacket",
+      "item-mask": "Face mask",
+      "item-grip-shoes": "Grippy shoes — rock slabs and stone steps are wet",
+      "coast-calm": "Calm sea — the rock area is fine to explore",
+      "coast-low-tide": "Around low tide now — the best window to go down and see the intertidal zone",
+      "coast-high-tide": "The tide is coming in. Do not linger below the rocks, and set your turnaround time first",
+      "coast-swell-caution": "Swell running — stay away from the rock edges and wet patches",
+      "coast-swell-risk": "High waves — stay off the base of the sea rocks and away from the wash zone",
+      "coast-cold-water": "Water is cold — not suitable for going in"
+    },
+    "todayTitle": "Today's key figures",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "uvMax": "Peak UV",
+    "popMax": "Max rain chance",
+    "rainSum": "Expected rainfall",
+    "windMax": "Max wind speed",
+    "next12Title": "Rain probability, next 12 hours",
+    "daysTitle": "Next 7 days",
+    "footnote": "Forecasts change through the day. Check on-site notices and official weather warnings too, and keep off the shore when swell or typhoon warnings are in force.",
+    "placeholder": "Loading"
+  },
+  "climateStrategy": {
+    "title": "Season-by-Season Visit Strategy",
+    "subtitle": "Weather, sea conditions and wildlife observation in one table. Use the 30-year climate normals to decide what to prepare and what to watch for each season.",
+    "columns": {
+      "period": "Season",
+      "weather": "Weather",
+      "water": "Sea & water quality",
+      "wildlife": "Wildlife",
+      "tip": "Visit strategy"
+    },
+    "seasons": [
+      {
+        "icon": "🌱",
+        "season": "Spring",
+        "months": "Mar–May",
+        "weather": "Average 5–17°C with only 50–90mm of rain, and dry. Large day–night temperature swings, frequent coastal gusts, and elevated wildfire-risk ratings.",
+        "water": "Sea temperature 9–15°C, too cold for long immersion. Large tidal range exposes a wide intertidal zone, and clear days give the best horizontal visibility of the year.",
+        "wildlife": "Winter migrants move north and waders pause here. Fresh leaves emerge on coastal trees and intertidal shellfish and crabs resume activity.",
+        "tip": "A windbreaker and grippy shoes are essential. Early morning is best for backlit rock photography and intertidal observation."
+      },
+      {
+        "icon": "☀️",
+        "season": "Summer",
+        "months": "Jun–Aug",
+        "weather": "Average 20–27°C. Rain peaks for the year during the late-June to late-July monsoon (200–350mm), followed by heatwaves and tropical nights. Typhoon and swell season.",
+        "water": "Sea temperature 20–26°C, the warmest of the year and suitable for swimming, but typhoon swell and rip-current risk rise at the same time. Turbidity increases briefly after heavy rain.",
+        "wildlife": "Intertidal life is at its most active and gull numbers increase. Rich fish stocks mean busy nearshore fishing activity.",
+        "tip": "Water, a hat and sun protection are essential against heatstroke. Stay off the rock base during warnings, and visit early morning to avoid both crowds and heat."
+      },
+      {
+        "icon": "🍂",
+        "season": "Autumn",
+        "months": "Sep–Nov",
+        "weather": "Average 11–23°C. Clear, dry and dry-rainfall-light, with the best visibility of the year. Wide day–night range, and winds strengthen after October.",
+        "water": "Sea temperature 16–24°C, with September the most comfortable month. From October wave heights build and coastal swell becomes frequent, making rock access harder.",
+        "wildlife": "Migratory birds begin arriving and intertidal communities are stable. Abundant seaweed makes this the best window for coastal ecology observation.",
+        "tip": "The most comfortable period of the year and well suited to families. Daylight shortens, so arriving an hour before sunset is recommended."
+      },
+      {
+        "icon": "❄️",
+        "season": "Winter",
+        "months": "Dec–Feb",
+        "weather": "Average -4–6°C. Cold continental winds and heavy snow on the east coast, with a lower wind-chill feel. Many clear days with good visibility.",
+        "water": "Sea temperature 7–12°C, the lowest of the year. High waves and possible ice on shore sections mean extra care near the rocks.",
+        "wildlife": "Winter migrants concentrate along the east coast, making it easy to watch waterbirds resting on the rocks. Intertidal activity slows markedly.",
+        "tip": "Insulation and windproofing are the priority. Sunrise comes later so a later start is fine, and early January offers the sharpest sunrise views of the year."
+      }
+    ],
+    "bestLabel": "Best time to go",
+    "bestText": "Balancing comfort and access, May and September–October are the most reliable. Sunrise viewing clusters from November to February, while swimming and ecology observation peak in July–August, so pick the season by purpose.",
+    "normalsLabel": "Reference data",
+    "normalsText": "Weather follows the 1991–2020 30-year normals under the WMO framework, verified against KMA station records. Sea and water conditions reference normal sea temperatures and tidal trends from Korea Hydrographic and Oceanographic Agency public data. Year-to-year variation is large, so always defer to the forecast for your travel date.",
+    "sourceNote": "※ Normals are long-term averages and do not predict the weather on any specific day. Check the day's official warnings and on-site notices as well."
+  },
+  "routePlanner": {
+    "title": "Three Routes Matched to Who You Bring",
+    "subtitle": "The same place asks different things: safety and restrooms with children, light and timing for photographers, and gentle gradients and short distances for visitors with limited mobility. Here are three routes plus half-day and full-day itineraries.",
+    "audienceTitle": "Routes by visitor type",
+    "gearLabel": "Pack · ",
+    "tipLabel": "Caution · ",
+    "audiences": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "Families with children",
+        "duration": "About 2 hours",
+        "intensity": "Low",
+        "forWhom": "Built to shorten walking distance and prioritise safety and rest, centred on sections where a stroller can roll.",
+        "steps": [
+          "Enter the free open area from the car park along flat ground.",
+          "In front of Myojikjeon, briefly explain temple etiquette and the meaning of 'Hyuhyu' to the children.",
+          "Walk only as far as the Reclining Gwaneum Rock viewpoint; do not descend to the base of the rocks.",
+          "Snack in the shaded rest area and carry out every piece of rubbish."
+        ],
+        "gear": "Hats, water, spare clothes, non-slip shoes",
+        "tip": "Stone steps become extremely slippery when wet. Hold children's hands and keep them on the railing side."
+      },
+      {
+        "icon": "📷",
+        "group": "Photography & nature watching",
+        "duration": "About 4–5 hours",
+        "intensity": "Moderate",
+        "forWhom": "A light-driven route for shooting the sea rocks and coastline around sunrise, blue hour and backlight windows.",
+        "steps": [
+          "Arrive 60 minutes before sunrise and claim a tripod position facing Yeonhwadae.",
+          "Meter right after sunrise and shoot the Reclining Gwaneum Rock and the East Sea Dragon King statue in sequence.",
+          "Spend the morning on close-ups of the intertidal zone and rock textures.",
+          "Tidy gear in the shade at midday, then reset for blue hour 60 minutes before sunset."
+        ],
+        "gear": "Tripod, ND and CPL filters, lens cleaning kit, windproof jacket",
+        "tip": "Sea spray and salt soil lenses quickly. Always check lens and sensor after shooting on the coast."
+      },
+      {
+        "icon": "♿",
+        "group": "Visitors with limited mobility",
+        "duration": "About 1 hour 30 minutes",
+        "intensity": "Minimal",
+        "forWhom": "A step-light, accessible-oriented route that minimises gradient and stairs and prioritises vehicle access and rest points.",
+        "steps": [
+          "Park in the car area adjacent to the hermitage and walk only a short flat stretch.",
+          "Enjoy the view toward the Statue of Wisdom Gwaneum from the courtyard in front of Myojikjeon.",
+          "Rest fully on a shaded bench, listening to the sea and the temple bell.",
+          "On the way back, take the gentler detour instead of the stairs."
+        ],
+        "gear": "Cane or walking aid, sun protection, water",
+        "tip": "Rock surfaces are uneven. Move with a companion and, on wet days, plan around the flat sections only."
+      }
+    ],
+    "itineraryTitle": "General recommended itineraries",
+    "halfDay": {
+      "title": "Half-day route",
+      "duration": "About 3 hours",
+      "summary": "A compact baseline route covering the key sights and coastal views in a short window. Good for a first visit or when combining with other plans.",
+      "steps": [
+        { "time": "0:00", "text": "Park, read the overview board at the entrance and decide your route." },
+        { "time": "0:20", "text": "Visit Myojikjeon and the Gwaneum bell, and learn the hermitage's history and the meaning of 'Hyuhyu'." },
+        { "time": "0:50", "text": "Observe the coastal sea rocks from Yeonhwadae and the Reclining Gwaneum Rock viewpoint." },
+        { "time": "1:50", "text": "Walk slowly past the Statue of Wisdom Gwaneum and the East Sea Dragon King statue." },
+        { "time": "2:30", "text": "Rest in the cluster of seaside cafés and eateries, then take a short look at the nearby beach." }
+      ],
+      "note": "Weekends between 10am and 2pm are busiest. Just after sunrise, or two hours before sunset, is comparatively quiet."
+    },
+    "fullDay": {
+      "title": "Full-day route",
+      "duration": "About 7 hours",
+      "summary": "A route linking Hyuhyuam with Yangyang's beaches, harbour and forest roads. Best if you want coastal walking and ecology observation in one day.",
+      "steps": [
+        { "time": "0:00", "text": "Arrive 60 minutes before sunrise and watch it from Yeonhwadae." },
+        { "time": "1:30", "text": "After breakfast, tour the halls and sea-rock sections at an easy pace." },
+        { "time": "3:30", "text": "Follow the East Coast bicycle path and coastal road to a nearby beach." },
+        { "time": "5:00", "text": "Look around the harbour area's fishing-port scenery and seafood-market-type shopping streets." },
+        { "time": "6:00", "text": "Wait for sunset on a forest or beach trail, then head to your accommodation." }
+      ],
+      "note": "Reorder freely depending on your transport. If using public buses, check the last departure time first."
+    },
+    "footnote": "※ These are suggested routes. Adjust for on-site closures, weather warnings and sunset times. We do not designate any specific business."
+  },
+  "visitorServices": {
+    "title": "Visitor Facilities & Nearby Infrastructure",
+    "subtitle": "Practical questions — are there restrooms, where do I park, where can I eat — answered by facility type.",
+    "neutralityLabel": "Neutral guidance · ",
+    "neutralityText": "This is a non-profit information site. We do not recommend or advertise any specific business. The notes below describe what type of facility you can expect; actual operation, prices and opening hours vary by the time of your visit.",
+    "groups": [
+      {
+        "icon": "🚻",
+        "name": "Basic conveniences",
+        "items": [
+          { "icon": "🚻", "name": "Restrooms", "type": "Public facility", "expect": "Public restrooms are provided inside the hermitage and at the adjacent parking area. In winter, pipe freezing can limit some facilities.", "tip": "Carrying wet wipes and tissues is handy." },
+          { "icon": "🅿️", "name": "Parking", "type": "Free open parking", "expect": "Free parking is available near the hermitage. Peak-season weekends often fill early and the access lane is narrow.", "tip": "Arriving before 10am is recommended; drive slowly on the access lane." },
+          { "icon": "🚰", "name": "Drinking water & rest", "type": "Basic facility", "expect": "Some rest areas and water points are provided, but year-round operation is not guaranteed.", "tip": "Bringing your own water bottle is the safest option." },
+          { "icon": "🗑️", "name": "Waste disposal", "type": "Carry-in, carry-out", "expect": "General rubbish bins are not plentiful in the coastal and temple areas.", "tip": "Make it a rule to carry out all of your own waste." }
+        ]
+      },
+      {
+        "icon": "🍽️",
+        "name": "Food, lodging & shopping",
+        "items": [
+          { "icon": "🍜", "name": "Restaurant district type", "type": "Seafood and Korean food cluster", "expect": "Within a 10–20 minute drive there is a fishing-village cluster of raw-fish restaurants, Korean eateries and noodle shops. Opening varies with the season.", "tip": "Weekend lunch hours can mean long waits, so eat early." },
+          { "icon": "☕", "name": "Cafés & bakeries type", "type": "Ocean-view cafés", "expect": "Cafés facing the sea and small bakeries are distributed along the coastal road.", "tip": "Table turnover slows just after sunset." },
+          { "icon": "🛒", "name": "Convenience stores & marts type", "type": "Small-format shops", "expect": "Convenience stores and small-to-mid supermarkets in the town centre and main beach areas stock water, snacks and basic supplies.", "tip": "Shops are sparse in the coastal strip, so buy ahead." },
+          { "icon": "🛏️", "name": "Lodging type", "type": "Pension, homestay, hotel, camping", "expect": "Pensions, homestays and small hotels cluster near the coast, with auto-camping grounds nearby. Staying close to the shore helps for sunrise.", "tip": "Book early in peak season; rates fluctuate widely." }
+        ]
+      },
+      {
+        "icon": "🧭",
+        "name": "Accessibility, safety & connectivity",
+        "items": [
+          { "icon": "♿", "name": "Accessible routes", "type": "Partially accessible", "expect": "Flat sections after vehicle access are reasonably wheelchair- and stroller-friendly, but the rock and stone-step sections have level changes and gradients.", "tip": "Movement is easier with a companion." },
+          { "icon": "⛽", "name": "Fuel & EV charging", "type": "Vehicle energy", "expect": "Petrol stations are located in the town centre and along the national road, with EV charging points in some areas.", "tip": "Chargers may have queues or faults, so top up before you arrive." },
+          { "icon": "🚌", "name": "Bus stops", "type": "Local and intercity buses", "expect": "Local buses serve stops near the hermitage and connect with intercity services toward Yangyang town and Sokcho.", "tip": "Headways are long, so check the round-trip timetable in advance." },
+          { "icon": "🆘", "name": "Emergency & mobile coverage", "type": "Safety network", "expect": "Emergency calls go to 119 and 112, and the nearby town has medical facilities and pharmacies. Mobile signal can be weak in parts of the coastal strip.", "tip": "Calls may drop on the rocks, so agree on a meeting point with your group." }
+        ]
+      }
+    ],
+    "footnote": "※ Whether facilities operate, and their prices and hours, depend on the season and operator. We do not designate any specific business; check on-site notices when you visit."
+  },
+  "visitorResponsibility": {
+    "title": "Coastal Science You Should Know, and Your Responsibilities",
+    "subtitle": "East-coast sea rocks are beautiful and genuinely hazardous. Understanding why the natural processes behave as they do reduces accidents and keeps this place intact for longer.",
+    "scienceTitle": "Coastal safety science",
+    "science": [
+      { "icon": "🌊", "title": "Swell and rip currents", "text": "The East Sea is frequently affected by long-period swell generated far offshore. Even on a clear, calm-looking day a large wave can suddenly sweep the rock slabs, and rip currents can form at swimming areas. Stay out from beneath the rocks during warnings, and if caught in a rip current, swim parallel to the shoreline to escape." },
+      { "icon": "🪨", "title": "Slippery rock surfaces", "text": "Coastal rock has been polished by waves and salt, and friction drops sharply when it is wet. Tidal range can also submerge the route you walked in on. Check the low-tide time and never descend beneath the rocks alone." },
+      { "icon": "☀️", "title": "UV and solar exposure", "text": "Reflection off the sea greatly increases UV exposure. The UV index can be high even on cloudy days, so bring sunscreen, a hat and sunglasses, and rest in the shade at midday. In summer, watch for heatstroke and dehydration." },
+      { "icon": "🐦", "title": "Distance when watching wildlife", "text": "The shore is a resting place for waterbirds and a habitat for intertidal life. Approaching drains birds' energy, and handling shellfish and crabs disturbs their habitat. Keep at least 5 metres away and do not move or touch living things." }
+    ],
+    "dutyTitle": "Visitor responsibilities",
+    "duties": [
+      { "icon": "🗑️", "title": "Carry out all your rubbish", "text": "Bins are insufficient here. Left-behind waste washes into the sea and directly harms marine life." },
+      { "icon": "🚫", "title": "Do not collect rocks or intertidal life", "text": "Do not take stones, shells or seaweed, and do not damage the rock faces. Damaged coastal landforms take a long time to recover." },
+      { "icon": "🍞", "title": "Do not feed wildlife", "text": "Feeding gulls and other animals creates dependence on people and spreads disease." },
+      { "icon": "🛕", "title": "Observe temple etiquette and quiet", "text": "Hyuhyuam is a place of practice, not a tourist attraction. Keep quiet in the halls and refrain from photography during services." },
+      { "icon": "🚁", "title": "Drone and photography rules", "text": "Drone flight may be restricted around temple and heritage areas. Respect portrait rights when photographing people, and follow any no-photography notices." },
+      { "icon": "🔥", "title": "No smoking or open fires", "text": "In dry seasons a single spark can start a wildfire. Do not smoke or cook outside designated areas." }
+    ],
+    "pledgeLabel": "A one-line pledge",
+    "pledgeText": "Leave no trace, leave the view as it is, and take your rubbish with you. Keep those three and Hyuhyuam's shore will look the same for the next visitor."
+  },
+  "tide": {
+    "eyebrow": "Tide & sea state",
+    "title": "Tide Height and the Low-Tide Window",
+    "subtitle": "The East Sea has a small tidal range, but the tide level decides whether you can walk below the sea rocks. Check the current level and the next high and low before you head down.",
+    "nowTitle": "Current tide level",
+    "siteLabel": "Offshore at Hyuhyuam",
+    "cmUnit": "cm",
+    "rising": "Rising",
+    "falling": "Falling",
+    "steady": "Slack",
+    "nextHigh": "Next high tide",
+    "nextLow": "Next low tide",
+    "hoursUnit": "h",
+    "minutesUnit": "min",
+    "afterPrefix": "in ",
+    "afterSuffix": "",
+    "chartTitle": "Tide height, next 48 hours",
+    "chartNow": "Now",
+    "eventHigh": "High",
+    "eventLow": "Low",
+    "eventsTitle": "High and low tide times",
+    "colKind": "Type",
+    "colTime": "Time",
+    "colHeight": "Level",
+    "mslNote": "※ Tide levels are modelled estimates relative to mean sea level (MSL) and are shown in 1 cm steps. Actual sea level shifts with air pressure, wind and swell, so these figures must not be used for navigation or surveying.",
+    "daysTitle": "Daily tidal range",
+    "dayRangeLabel": "Range",
+    "rangeTrendTitle": "Range trend",
+    "spring": "Toward spring tide",
+    "neap": "Toward neap tide",
+    "steadyTrend": "Steady",
+    "rangeTrendNote": "If the range grows over the coming days the coast is heading for spring tides; if it shrinks, for neap tides. Spring tides expose the most and rise the most, making them the best window for intertidal features, but the water also comes in fastest.",
+    "seaTitle": "Sea state",
+    "waveHeight": "Wave height",
+    "wavePeriod": "Period",
+    "waveDir": "Direction",
+    "sst": "Surface temp",
+    "seaNote": "※ Wave height, period, direction and water temperature are modelled values for the nearby sea grid. Local swell and rip currents are not resolved by the grid, so judge the waves on site.",
+    "windowTitle": "When to go down — the low-tide window",
+    "windowText": "The one to two hours around low tide, when the water is furthest out, are the window for observing the intertidal zone and walking to the base of the sea rocks. From an hour before high tide the water returns, so set your turnaround time first and never let the way you came in get cut off. Tide times shift about 50 minutes later each day, so yesterday's hour is not today's.",
+    "safetyTitle": "Tide safety essentials",
+    "safety": [
+      "Check the low tide and the following high tide together, and set your turnaround time first.",
+      "If waves exceed 1 m, or swell or wind-wave warnings are in force, stay off the base of the rocks even at low tide.",
+      "Wet rock loses friction sharply — keep one hand free for a rail or handhold.",
+      "Do not go down alone, and tell a companion your return time and meeting point."
+    ],
+    "scienceTitle": "Tide science",
+    "science": [
+      { "icon": "🌙", "title": "A cycle driven by the Moon", "text": "Tides are the periodic rise and fall of the sea caused by the gravitational pull of the Moon and the Sun. The Moon's tidal force is about 2.2 times the Sun's, so the Moon sets the rhythm, and high tide at a given place arrives about 50 minutes later each day. That is why some days bring two high tides and others only one." },
+      { "icon": "🌊", "title": "Why the East Sea range is small", "text": "The East Sea is almost landlocked, and an amphidromic point near its centre makes the tidal wave rotate around it and cancel its own amplitude. The range on Korea's east coast is therefore only 20–40 cm, incomparably smaller than the 400–900 cm of the west coast. Even a small range still moves water vertically, and it determines how much of the intertidal zone is exposed." },
+      { "icon": "🔭", "title": "Spring and neap tides", "text": "At new and full moon the solar and lunar pulls line up and the range peaks — a spring tide. At the first and last quarters the two forces act at right angles and the range is smallest — a neap tide. The cycle runs about two weeks, and the range trend above reads the coming days to judge which phase you are in." },
+      { "icon": "⚠️", "title": "When tide meets swell", "text": "A long-period swell arriving at high tide pushes the real water level far above the tide table and over the rock slabs. Conversely, high pressure with an offshore wind can hold the level down. Treat the table as guidance and read the actual wave height and period on site first." }
+    ],
+    "footnote": "※ Tide and sea-state figures are modelled estimates for the nearby sea and refresh about every 15 minutes. Weather warnings and on-site conditions can differ from them, so always defer to the notices on site.",
+    "placeholder": "Loading"
   },
   "footer": {
     "siteName": "Hyuhyuam Hermitage (Yangyang, Gangwon)",
@@ -562,7 +940,7 @@
     "cookies": "Cookie Settings",
     "officialResourcesTitle": "Official & Reference Resources",
     "mapsLabel": "Google Maps →",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "officialLinksList": [
       { "name": "Korea Tourism Organization (VisitKorea)", "url": "https://chinese.visitkorea.or.kr" },
       { "name": "Gangwon State Tourism", "url": "https://www.gangwon.to" },
@@ -570,6 +948,7 @@
       { "name": "Yangyang-gun Government", "url": "https://www.yangyang.go.kr" },
       { "name": "Gangwon State Government", "url": "https://state.gwd.go.kr" }
     ],
+    "imageCopyright": "Image credits: all images displayed on this website remain the property and copyright of their respective photographers.",
     "disclaimer": "This website is an independent non-profit visitor-information project. We are not affiliated with any government agency or official organization.",
     "dataSource": "Information cited on this site is cross-checked against public materials from Gangwon State, Yangyang-gun, and the Korea Tourism Organization (VisitKorea), with no commercial endorsements.",
     "dataSourceLabel": "Data Source"

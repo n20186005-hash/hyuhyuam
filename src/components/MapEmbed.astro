@@ -1,8 +1,9 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { attraction } from '../config';
 const { messages } = getI18n(Astro.url);
 const m = messages.mapSection;
-const embedUrl = 'https://www.google.com/maps?q=%ED%9C%B4%ED%9C%B4%EC%95%94&output=embed';
+const embedUrl = attraction.mapsEmbedSrc;
 ---
 
 <section id="map" class="section-padding" style="background: var(--bg-secondary);">

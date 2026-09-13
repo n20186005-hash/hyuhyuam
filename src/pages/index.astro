@@ -1,13 +1,17 @@
 ---
-const target = '/ko';
+// 根路径只承担「入口跳转」职责，真正的首页是 /ko/。
+// 这里不再输出可被收录的内容：给出 canonical + noindex，
+// 避免 / 与 /ko/ 被当成两个页面重复收录（GSC 中 www / http 变体同理）。
+const target = '/ko/';
 ---
 
 <!doctype html>
 <html lang="ko-KR">
   <head>
     <meta charset="utf-8" />
+    <meta name="robots" content="noindex, follow" />
     <meta http-equiv="refresh" content={`0; url=${target}`} />
-    <link rel="canonical" href="https://hyuhyuam.com/ko" />
+    <link rel="canonical" href="https://hyuhyuam.com/ko/" />
     <title>休休庵（Hyuhyuam Hermitage · 휴휴암）· 韩国江原特别自治道襄阳郡 · 东海之滨的佛教庵庙与奇岩观音</title>
   </head>
   <body>

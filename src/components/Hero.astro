@@ -1,7 +1,20 @@
 ---
-import { getI18n } from '../i18n/ui';
+import { getI18n, fillTemplate } from '../i18n/ui';
+import { attraction } from '../config';
 const { messages } = getI18n(Astro.url);
 const h = messages.hero;
+// 评分与评价数统一取自 src/config.ts：页面可见文案必须与 JSON-LD 的
+// aggregateRating 完全一致，否则会被判定为标记与内容不符。更新数值只需改 config.ts。
+const reviewCount = attraction.reviewCount.toLocaleString('en-US');
+const ratingText = fillTemplate(h.ratingTemplate ?? '{rating} ({count})', {
+  rating: attraction.ratingValue,
+  count: reviewCount,
+});
+const reviewCountText = fillTemplate(h.reviewCountTemplate ?? '{count}', { count: reviewCount });
+// 评分是第三方平台访客评价的汇总，不是本站自采，需紧邻评分明示来源并给出可核实的外链
+const ratingSourceText = fillTemplate(h.ratingSourceTemplate ?? 'Rating source: {source}', {
+  source: h.ratingSourceLabel ?? attraction.ratingSourceName,
+});
 const facts = h.quickFacts ?? [];
 const factsSource = h.factsSource ?? {};
 const live = h.liveInfo ?? {};
@@ -11,9 +24,14 @@ const planner = h.sunsetPlanner ?? {};
 <section id="overview" class="relative min-h-[84vh] sm:min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
   <div class="absolute inset-0" style={`background-image: linear-gradient(rgba(15,32,21,0.55), rgba(15,32,21,0.62)), url('/gallery/hyuhyuam-hermitage-1.jpg'); background-size: cover; background-position: center;`}></div>
   <div class="relative z-10 px-4 sm:px-6 py-16 sm:py-20 max-w-4xl w-full animate-fade-in-up">
-    <span class="inline-flex max-w-full flex-wrap items-center justify-center gap-1 px-3 py-1 mb-5 rounded-full text-xs sm:text-sm font-medium" style="background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(4px);">
-      ⭐ {h.rating} · {h.reviewCount}
+    <span class="inline-flex max-w-full flex-wrap items-center justify-center gap-1 px-3 py-1 mb-2 rounded-full text-xs sm:text-sm font-medium" style="background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(4px);">
+      ⭐ {ratingText} · {reviewCountText}
     </span>
+    <p class="mb-6 text-xs leading-relaxed" style="color: rgba(255,255,255,0.72);">
+      <a href={attraction.ratingSourceUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-white" style="color: inherit;">
+        {ratingSourceText}
+      </a>
+    </p>
 
     <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
       {h.title}
@@ -152,7 +170,7 @@ const planner = h.sunsetPlanner ?? {};
       if (!weatherEl || !sunsetEl) return;
 
       var url =
-        'https://api.open-meteo.com/v1/forecast?latitude=38.0739&longitude=128.4983&current=temperature_2m,weather_code&daily=sunset&timezone=Asia/Seoul';
+        'https://api.open-meteo.com/v1/forecast?latitude=37.9610367&longitude=128.768413&current=temperature_2m,weather_code&daily=sunset&timezone=Asia/Seoul';
 
       function weatherText(code, lang) {
         if (lang === 'ja') {

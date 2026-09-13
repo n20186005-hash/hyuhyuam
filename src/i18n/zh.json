@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "休休庵（Hyuhyuam Hermitage · 휴휴암）| 韩国江原特别自治道襄阳郡 · 东海之滨的佛教庵庙、卧观音奇岩与海岸秘境",
-    "description": "休休庵（휴휴암，Hyuhyuam Hermitage）完全指南：坐落于韩国江原特别自治道襄阳郡县南面东海之滨的小型佛教庵庙。1997 年由洪法法师（홍법스님）创建，以妙寂殿（묘적전）为起点，因 1999 年在海边发现「卧观音」奇岩而声名远播。庵内现存妙寂殿、陀罗尼窟法堂、观音梵钟、海边山丘上的智慧观音像与东海龙王像，临海奇岩莲华台（연화대）与卧观音岩、龟岩相映成趣。这里免费开放、免费停车，是观赏东海日出、海岸奇岩与观音信仰的静修秘境。"
+    "title": "韩国襄阳休休庵 | 东海海边寺庙、卧观音奇岩与免费入场指南",
+    "description": "江原道襄阳休休庵（휴휴암）旅游指南：东海海边的佛教庵庙，看卧观音奇岩、智慧观音像与日出海景。免费入场，附交通、开放时间与拍摄机位。"
   },
   "header": {
     "siteName": "休休庵（휴휴암）",
@@ -38,19 +38,27 @@
     "facts": "硬核数据",
     "etiquette": "文明游览",
     "route": "半日路线",
+    "weather": "天气",
+    "tide": "潮汐",
+    "climate": "季度策略",
+    "routes": "定制路线",
+    "services": "访客设施",
+    "responsibility": "访客责任",
     "transport": "交通",
     "lodging": "住宿",
     "visit": "游览贴士",
     "faq": "问答"
   },
   "hero": {
-    "title": "休休庵（휴휴암 · Hyuhyuam Hermitage）",
+    "title": "休休庵（휴휴암 · Hyuhyuam Hermitage）· 襄阳郡",
     "subtitle": "坐落于韩国江原特别自治道襄阳郡县南面东海之滨的小庵。1999 年海边惊现形如卧观音的天然奇岩，自此成为一方静修圣地。这里临海奇岩林立——莲华台、卧观音岩、龟岩与海边山丘上的智慧观音像、东海龙王像遥相呼应，免费开放、免费停车，是观赏东海日出与海岸秘境的绝佳去处。",
-    "rating": "4.3（6,422）",
-    "reviewCount": "6,422 条评价",
+    "ratingTemplate": "{rating}（{count}）",
+    "reviewCountTemplate": "{count} 条评价",
+    "ratingSourceLabel": "Google 地图",
+    "ratingSourceTemplate": "评分与评价数来源：{source}用户评价",
     "hours": "日出至日落（免费开放）",
     "openMaps": "Google 地图",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "openNaver": "Naver Map",
     "naverUrl": "https://map.naver.com/p/search/휴휴암",
     "openKakao": "Kakao Map",
@@ -114,7 +122,7 @@
       "tideUrl": "http://www.khoa.go.kr",
       "arriveLabel": "建议抵达",
       "blueHourLabel": "蓝调时刻",
-      "lightCaption": "光影由 Open-Meteo 实时计算"
+      "lightCaption": "光影按当日日出与日落实时计算"
     }
   },
   "quickFactsDashboard": {
@@ -529,7 +537,7 @@
       "休休庵最好与卧观音岩、莲华台、智慧观音像串联，单点停留反而容易低估它的海岩与信仰价值。"
     ],
     "mapsCta": "查看地图与路线",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "bestTime": {
       "title": "最佳到达时刻",
       "text": "休休庵白天可达，但真正决定照片上限的是清晨东海日出与黄昏的光影窗口。建议把抵达时间设在日落前 60 分钟左右；若天气不利于拍照，再把行程重心转向庵院静修或奇岩远眺。"
@@ -693,7 +701,7 @@
     ],
     "viewAll": "在 Google 地图上查看位置",
     "showMore": "显示更多照片",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
   },
   "reviews": {
     "title": "游客评价",
@@ -701,7 +709,7 @@
     "featuredTitle": "访客金句",
     "featuredSubtitle": "几句最能概括休休庵气质的短句。",
     "moreReviews": "在 Google 地图上查看",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "featured": [
       {
         "text": "沿着海岸石径慢慢走，脚下就是东海的波光，那种临海的安静太特别了，黄昏的光一打简直像漂在海面上。",
@@ -747,11 +755,381 @@
     "title": "如何到达",
     "subtitle": "3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon-do, 韩国（Plus Code：XQ69+F2）· 电话 +82 33-671-0093",
     "openMaps": "Google 地图",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "openNaver": "Naver Map",
     "naverUrl": "https://map.naver.com/p/search/휴휴암",
     "openKakao": "Kakao Map",
     "kakaoUrl": "https://map.kakao.com/link/search/휴휴암"
+  },
+  "entityGuide": {
+    "eyebrow": "景点实体 · 地理归属声明",
+    "intro": "欢迎来到休休庵（Hyuhyuam Hermitage，韩文 휴휴암）——被广泛视为襄阳郡最具代表性的临海观音圣地。它位于韩国江原特别自治道襄阳郡县南面的东海之滨，是到访本地区旅客的核心目的地之一。",
+    "breadcrumbLabel": "地理归属层级",
+    "breadcrumb": ["休休庵（Hyuhyuam Hermitage）", "襄阳郡 Yangyang-gun", "江原特别自治道 Gangwon-do", "韩国 South Korea"],
+    "aboutTitle": "关于休休庵（About Hyuhyuam Hermitage）",
+    "aboutText": "休休庵（휴휴암 · Hyuhyuam Hermitage）是位于韩国东海岸的一座小型佛教庵庙，以「歇了又歇、放下尘劳」为名。它既是观音信仰的道场，也是临海观日出、赏奇岩的海岸秘境，免费开放、免费停车。",
+    "locationTitle": "位置与到访方式（Location & How to Visit 휴휴암）",
+    "locationText": "休休庵位于韩国江原特别自治道襄阳郡县南面广津2街 3-16（邮编 25056），地理坐标为北纬 37.9610°、东经 128.7684°，紧邻东海自行车道。自驾沿东海岸公路可直达，庵前设有免费停车场；公共交通可乘巴士至 휴휴암 站，步行数分钟即达。",
+    "landmarksTitle": "休休庵周边的地标与景点（Landmarks & Attractions Around 휴휴암）",
+    "landmarksText": "到访休休庵时，旅客可顺道探访周边众多历史地标与名胜，包括河赵台（Hajodae）与洛山寺（Naksan Temple），并可沿东海自行车道骑行，饱览襄阳海岸风光。",
+    "historyTitle": "休休庵的历史与意义（History & Significance of Hyuhyuam Hermitage）",
+    "historyText": "休休庵由洪法法师于 1997 年创建，最初仅有妙寂殿。1999 年，海边一尊形如卧观音的天然奇岩被发现，使庵庙声名远播；此后陆续建成陀罗尼窟法堂、观音梵钟、智慧观音像与东海龙王像，成为今日融合观音信仰与海岸奇岩景观的静修圣地。",
+    "coordsLabel": "地理坐标",
+    "mapsLabel": "在 Google 地图中查看休休庵"
+  },
+  "sources": {
+    "title": "资料来源与编辑准则（Sources & Editorial Standards）",
+    "subtitle": "本页的地名、位置、交通与历史信息，均对照以下公开资料交叉核实，并标注来源以增强专业性（E-E-A-T）。",
+    "reviewedLabel": "最后核实时间",
+    "reviewedValue": "2026 年 9 月",
+    "listTitle": "权威参考来源",
+    "items": [
+      { "name": "韩国观光公社 VisitKorea — 休休庵（휴휴암）官方介绍页", "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2fac7b80-b616-431d-9e0f-13649ce8b14f" },
+      { "name": "韩国观光公社 VisitKorea（英文站）— Gangwon Hyuhyuam Hermitage", "url": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/locIntrdnList.do?vcontsId=75151" },
+      { "name": "襄阳郡官方文化观光门户（Yangyang-gun Culture & Tourism）", "url": "https://tour.yangyang.go.kr/pub/pleasure_ramantic.do" },
+      { "name": "襄阳郡厅官方政务网（Yangyang-gun Government）", "url": "https://www.yangyang.go.kr" },
+      { "name": "江原特别自治道官方观光网（Gangwon State Tourism）", "url": "https://www.gangwon.to" },
+      { "name": "OpenStreetMap — 休休庵坐标与道路名地址", "url": "https://www.openstreetmap.org/node/4340592290" },
+      { "name": "Google 地图 — 休休庵访客评分与评价数", "url": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6" }
+    ],
+    "officialNoteText": "如需官方最新开放信息与地区旅游资讯，请访问",
+    "officialLinkLabel": "襄阳郡官方文化观光门户",
+    "independenceNote": "本指南为独立、非营利的游客信息项目，与任何政府机构或官方组织均无隶属关系；所有外链仅供参考。"
+  },
+  "weather": {
+    "title": "实时天气与一周预报",
+    "subtitle": "出发前先确认当日气温、降水概率、风力与紫外线。海边庵院比内陆体感更凉、风更大。",
+    "nowLabel": "休休庵当前",
+    "feels": "体感",
+    "humidity": "湿度",
+    "wind": "风速",
+    "gust": "阵风",
+    "updatedLabel": "更新于",
+    "adviceTitle": "今日出行建议",
+    "alertsTitle": "风险提醒",
+    "noAlert": "当前无气象风险提示，可按原计划出行。",
+    "outfitsTitle": "出行穿搭",
+    "plansTitle": "游玩安排",
+    "itemsTitle": "随身物品",
+    "coastTitle": "海边即时提示",
+    "coastLink": "查看潮汐与礁石安全 →",
+    "popNow": "降水概率",
+    "windLevel": "风力",
+    "levelUnit": "级",
+    "adviceTexts": {
+      "summary-good": "天气不错，适合出门",
+      "summary-caution": "天气有变化，出门前再确认一次",
+      "summary-risk": "天气不佳，建议调整行程",
+      "alert-thunder": "⚠️ 有雷雨，不要在树下、海边礁石或山顶停留，水上项目大概率关闭",
+      "alert-wind": "⚠️ 大风天气，远离广告牌与海边礁石，海上项目大概率停运",
+      "alert-rain": "⚠️ 降雨较强，避开山谷与低洼地带，游船、缆车可能停运",
+      "alert-snow": "⚠️ 降雪较强，路面湿滑易结冰，登山与自驾请谨慎",
+      "alert-heat": "⚠️ 高温天气，避开正午外出，注意补水防暑",
+      "alert-cold": "⚠️ 气温很低，注意保暖防冻，礁石与石阶可能结冰",
+      "alert-fog": "⚠️ 能见度差，不适合看海看山，轮渡与航班可能延误",
+      "outfit-mild": "天气平稳，常规穿着即可",
+      "outfit-light": "天气偏暖，轻薄透气的衣物更舒服",
+      "outfit-heat": "气温偏高，穿轻薄透气衣物，做好防晒",
+      "outfit-rain": "有雨，建议穿防水外套或带雨衣",
+      "outfit-wind": "风力偏大，穿防风外套，不建议宽松长裙",
+      "outfit-layer": "昼夜温差大，备一件外套方便增减",
+      "outfit-warm": "早晚偏凉，建议多带一件外套",
+      "outfit-cold": "气温偏低，穿厚外套注意防寒",
+      "plan-good": "天气晴好，适合户外游览",
+      "plan-photo": "光线柔和，很适合拍照，也不怕暴晒",
+      "plan-sunrise": "能见度好，适合看日出日落",
+      "plan-rain-possible": "降水概率较高，户外爬山与海边游玩建议延后，优先室内景点",
+      "plan-rain-light": "有小雨，露天项目体验会打折扣",
+      "plan-rain-heavy": "不建议户外游玩，游船、缆车可能停运，优先博物馆等室内景点",
+      "plan-wind": "风偏大，海边游船与露天项目可能停航停运",
+      "plan-wind-strong": "大风，海上与高空项目大概率关闭",
+      "plan-thunder": "有雷雨，不要登山、海边戏水或在树下避雨",
+      "plan-fog": "能见度差，不适合观景看海",
+      "plan-heat": "气温偏高，避开正午时段，缩短户外游玩时间",
+      "plan-cold": "气温偏低，缩短户外停留，多进室内取暖",
+      "item-raincoat": "雨衣（风大时不要用长柄伞）",
+      "item-umbrella": "雨伞",
+      "item-foldable": "折叠伞",
+      "item-sunscreen": "防晒霜",
+      "item-sunglasses": "墨镜",
+      "item-hat": "遮阳帽",
+      "item-water": "充足饮用水",
+      "item-coat-thick": "厚外套",
+      "item-jacket": "薄外套",
+      "item-mask": "口罩",
+      "item-grip-shoes": "防滑鞋（礁石与石阶湿滑）",
+      "coast-calm": "海况平稳，礁石区可以正常活动",
+      "coast-low-tide": "正值低潮前后，是下礁石、看潮间带的好时段",
+      "coast-high-tide": "正在涨潮，礁石下方不要久留，先定好返程时间",
+      "coast-swell-caution": "有涌浪，礁石边缘与湿滑处不要靠近",
+      "coast-swell-risk": "浪高较大，不要下到奇岩下方，远离礁石与浪区",
+      "coast-cold-water": "水温偏低，不建议下水"
+    },
+    "todayTitle": "今日指标",
+    "sunrise": "日出",
+    "sunset": "日落",
+    "uvMax": "紫外线峰值",
+    "popMax": "最大降水概率",
+    "rainSum": "预计降水量",
+    "windMax": "最大风速",
+    "next12Title": "未来 12 小时降水概率",
+    "daysTitle": "未来 7 天",
+    "footnote": "预报随时更新。请同时留意现场告示与气象特报；出现涌浪或台风警报时请勿靠近海岸。",
+    "placeholder": "读取中"
+  },
+  "climateStrategy": {
+    "title": "季度游览策略表",
+    "subtitle": "把气象、海况与野生观察整理在同一张表里。以 30 年常年气候值为基准，判断每个季节该准备什么、该关注什么。",
+    "columns": {
+      "period": "季节",
+      "weather": "气象",
+      "water": "海况与水质",
+      "wildlife": "野生动物",
+      "tip": "游览策略"
+    },
+    "seasons": [
+      {
+        "icon": "🌱",
+        "season": "春季",
+        "months": "3–5 月",
+        "weather": "平均 5–17℃，降水 50–90mm，偏少且干燥。昼夜温差大，海岸阵风频繁。干燥天气使森林火险等级升高。",
+        "water": "水温 9–15℃，偏低，不适合长时间入水。潮差较大，潮间带露出的范围广；晴日水平能见度为全年最佳。",
+        "wildlife": "冬候鸟北迁，鸻鹬类短暂停留。海岸树木萌发新叶，潮间带贝类与蟹类开始活动。",
+        "tip": "防风外套与防滑鞋必备。上午早段适合拍摄奇岩逆光，也适合观察潮间带。"
+      },
+      {
+        "icon": "☀️",
+        "season": "夏季",
+        "months": "6–8 月",
+        "weather": "平均 20–27℃。6 月下旬至 7 月下旬为雨季，降水达到全年最高（200–350mm），随后为高温与热带夜，并受台风与涌浪影响。",
+        "water": "水温 20–26℃，为全年最高，适合戏水，但台风涌浪与离岸流风险同时升高。降雨后浊度会短期上升。",
+        "wildlife": "潮间带生物最为活跃，海鸥数量增加。渔业资源丰富，捕捞活动频繁。",
+        "tip": "防中暑必备饮水、帽子与防晒。特报期间勿下到奇岩下方；清晨到访可同时避开人潮与高温。"
+      },
+      {
+        "icon": "🍂",
+        "season": "秋季",
+        "months": "9–11 月",
+        "weather": "平均 11–23℃。晴朗干燥、降水少，能见度为全年最佳。昼夜温差大，10 月以后风力增强。",
+        "water": "水温 16–24℃，9 月为全年最舒适。10 月起浪高上升、海岸涌浪频繁，礁石区域通行变难。",
+        "wildlife": "候鸟开始抵达，潮间带生物相稳定。海藻丰富，是观察海岸生态的最佳时期。",
+        "tip": "全年舒适度最高，适合家庭出行。但日照时间变短，建议日落前 1 小时抵达。"
+      },
+      {
+        "icon": "❄️",
+        "season": "冬季",
+        "months": "12–2 月",
+        "weather": "平均 -4–6℃。寒冷大陆性风与东海岸大雪，体感更低。晴天较多，能见度良好。",
+        "water": "水温 7–12℃，为全年最低。浪高大，海岸可能出现结冰路段，接近礁石须格外小心。",
+        "wildlife": "冬候鸟集中停栖于东海岸，便于观察在礁石上休息的水鸟。潮间带生物活动明显减弱。",
+        "tip": "防寒与防风装备是关键。日出时间较晚，可稍晚出发；1 月初的日出视野全年最清晰。"
+      }
+    ],
+    "bestLabel": "最佳时段",
+    "bestText": "综合舒适度与可达性，5 月与 9–10 月最稳定。日出观赏集中在 11 月至次年 2 月，戏水与生态观察集中在 7–8 月，建议按目的选择季节。",
+    "normalsLabel": "基准资料",
+    "normalsText": "气象采用世界气象组织（WMO）口径的 1991–2020 年 30 年常年值，并以韩国气象厅观测值核对；海况与水质参考韩国国立海洋调查院公开资料的常年水温与潮汐趋势。年际差异较大，实际出行请以当次预报为准。",
+    "sourceNote": "※ 常年值为长期平均，并不预测某一天的天气。请同时查看当日气象特报与现场告示。"
+  },
+  "routePlanner": {
+    "title": "按同行者定制的三条动线",
+    "subtitle": "同一个地方，带孩子时关注安全与卫生间，拍照时关注光线与时间，行动不便时关注坡度与距离。以下给出三条动线，以及半日与全日通用行程。",
+    "audienceTitle": "按人群动线",
+    "gearLabel": "准备 · ",
+    "tipLabel": "注意 · ",
+    "audiences": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "亲子家庭",
+        "duration": "约 2 小时",
+        "intensity": "低强度",
+        "forWhom": "以缩短步行距离、优先安全与休息为原则，围绕婴儿车可通行区间设计。",
+        "steps": [
+          "从停车场沿平坦路段进入免费开放区域。",
+          "在妙寂殿前向孩子简短说明庵院礼仪与「休休」的含义。",
+          "只走到卧观音岩观景点，不下到礁石下方。",
+          "在有遮阴的休息区吃点心，垃圾全部带走。"
+        ],
+        "gear": "帽子、饮水、备用衣物、防滑鞋",
+        "tip": "石阶遇水极为湿滑。请牵住孩子的手，沿护栏内侧行走。"
+      },
+      {
+        "icon": "📷",
+        "group": "摄影与自然观察",
+        "duration": "约 4–5 小时",
+        "intensity": "中强度",
+        "forWhom": "围绕日出、蓝调时刻与逆光等光线时段，拍摄奇岩与海岸线的动线。",
+        "steps": [
+          "日出前 60 分钟抵达，先占据莲华台方向的三脚架位置。",
+          "日出后立即测光，依次拍摄卧观音岩与东海龙王像。",
+          "上午观察潮间带与礁石纹理，做近距离特写。",
+          "正午在遮阴处整理器材，日落前 60 分钟再准备蓝调时刻。"
+        ],
+        "gear": "三脚架、ND/CPL 滤镜、镜头清洁用品、防风外套",
+        "tip": "海风与盐分强，镜头易脏。海岸拍摄后务必检查镜头与传感器。"
+      },
+      {
+        "icon": "♿",
+        "group": "行动不便的访客",
+        "duration": "约 1 小时 30 分",
+        "intensity": "最低强度",
+        "forWhom": "尽量减少坡度与台阶，优先考虑车辆可达与休息点，以无障碍为核心的动线。",
+        "steps": [
+          "把车停在紧邻庵院的停车区，只走一段短平路。",
+          "在妙寂殿前庭院观赏朝向智慧观音像的景观。",
+          "在有遮阴的长椅听海与钟声，充分休息。",
+          "返程时改走坡缓的绕行路线，避开台阶。"
+        ],
+        "gear": "手杖或助行器、防晒用品、饮水",
+        "tip": "礁石段路面不平整。请与陪同人员同行；雨天以平地路段为主规划。"
+      }
+    ],
+    "itineraryTitle": "通用推荐行程",
+    "halfDay": {
+      "title": "半日行程",
+      "duration": "约 3 小时",
+      "summary": "在短时间内高效率涵盖核心看点与海岸视野的基础行程，适合首次到访或与其他安排同行。",
+      "steps": [
+        { "time": "0:00", "text": "停车后在庵院入口查看整体导览牌，确定动线。" },
+        { "time": "0:20", "text": "参观妙寂殿与观音梵钟，了解庵院沿革与「休休」的含义。" },
+        { "time": "0:50", "text": "在莲华台与卧观音岩观景点观察海岸奇岩。" },
+        { "time": "1:50", "text": "沿智慧观音像与东海龙王像路段缓步前行。" },
+        { "time": "2:30", "text": "在海边咖啡与餐饮集中区休息，顺带短逛周边海滩。" }
+      ],
+      "note": "周末上午 10 点至下午 2 点最拥挤。日出刚过或日落前 2 小时相对清静。"
+    },
+    "fullDay": {
+      "title": "全日行程",
+      "duration": "约 7 小时",
+      "summary": "以休休庵为中心，串联襄阳海岸的海滩、港口与林道的行程，适合想同时安排海岸步行与生态观察的访客。",
+      "steps": [
+        { "time": "0:00", "text": "日出前 60 分钟抵达，在莲华台观赏日出。" },
+        { "time": "1:30", "text": "早餐后缓步参观庵内殿堂与奇岩段。" },
+        { "time": "3:30", "text": "沿海东自行车道与海岸公路前往附近海滩。" },
+        { "time": "5:00", "text": "在港区看看渔港风貌与水产市场类型的商圈。" },
+        { "time": "6:00", "text": "在林道或海滩步道等待日落，之后返回住宿地。" }
+      ],
+      "note": "可按交通方式调整顺序。使用公共交通时请先确认末班车时间。"
+    },
+    "footnote": "※ 以上为建议行程，请依现场管制、气象特报与日落时刻调整。本站不指定任何特定商号或商家。"
+  },
+  "visitorServices": {
+    "title": "访客服务与周边设施",
+    "subtitle": "「有没有卫生间、车停哪里、饭在哪吃」这类实务信息，按设施类型整理如下。",
+    "neutralityLabel": "中立说明 · ",
+    "neutralityText": "本站为非营利信息网站，不推荐也不广告任何特定商号或商家。以下内容说明「可以期待哪一类设施」的一般信息，实际是否运营、价格与营业时间会因到访时间而异。",
+    "groups": [
+      {
+        "icon": "🚻",
+        "name": "基本便民",
+        "items": [
+          { "icon": "🚻", "name": "卫生间", "type": "公共便民设施", "expect": "庵院内与相邻停车区设有公共卫生间。冬季可能因管道结冻而部分设施受限。", "tip": "自备湿巾与纸巾会更方便。" },
+          { "icon": "🅿️", "name": "停车", "type": "免费开放停车", "expect": "庵院附近有免费停车空间。旺季周末常提前停满，且入口道路较窄。", "tip": "建议上午 10 点前抵达，入口路段请减速慢行。" },
+          { "icon": "🚰", "name": "饮水与休息", "type": "基本便民设施", "expect": "设有部分休息空间与饮水设施，但不保证常态开放。", "tip": "自带水壶最为稳妥。" },
+          { "icon": "🗑️", "name": "垃圾处理", "type": "原则上自行带走", "expect": "海岸与寺院区域的一般垃圾桶数量不足。", "tip": "请以「个人垃圾全部带走」为原则。" }
+        ]
+      },
+      {
+        "icon": "🍽️",
+        "name": "餐饮、住宿与采购",
+        "items": [
+          { "icon": "🍜", "name": "餐饮街区类型", "type": "以海鲜与韩餐为主", "expect": "车程 10–20 分钟处有生鱼片店、韩餐馆与面馆聚集的渔村商圈，营业情况随季节变化。", "tip": "周末午餐时段可能长时间排队，建议提早用餐。" },
+          { "icon": "☕", "name": "咖啡与烘焙类型", "type": "海景咖啡", "expect": "面向大海的咖啡馆与小规模烘焙店分布在沿海公路沿线。", "tip": "日落刚结束时段翻台较慢。" },
+          { "icon": "🛒", "name": "便利店与超市类型", "type": "小型门店", "expect": "邑内与主要海滩区域有便利店与中小型超市，可购买饮用水、零食与基础日用品。", "tip": "海岸区域门店稀少，建议提前采购。" },
+          { "icon": "🛏️", "name": "住宿类型", "type": "民宿·度假屋·酒店·露营", "expect": "近海区域分布民宿、度假屋与小型酒店，附近有汽车露营地。想观赏日出以近海区域更有利。", "tip": "旺季需提早预订，价格波动较大。" }
+        ]
+      },
+      {
+        "icon": "🧭",
+        "name": "无障碍、安全与联络",
+        "items": [
+          { "icon": "♿", "name": "无障碍动线", "type": "部分无障碍", "expect": "车辆进入后的平路段较适合轮椅与婴儿车通行，但礁石与石阶段存在高差与坡度。", "tip": "有陪同辅助人员同行会更顺畅。" },
+          { "icon": "⛽", "name": "加油与充电", "type": "车辆能源补给", "expect": "邑内与国道沿线设有加油站，部分区域设有电动车充电设施。", "tip": "充电设施可能排队或故障，出行前请预留电量。" },
+          { "icon": "🚌", "name": "公交站点", "type": "市内与市际巴士", "expect": "庵院附近站点可搭乘市内巴士，并与襄阳邑、束草方向的市际巴士衔接。", "tip": "班次间隔较长，请提前确认往返时刻表。" },
+          { "icon": "🆘", "name": "应急与通信", "type": "安全网络", "expect": "紧急报警可拨 119 与 112，附近邑内有医疗机构与药房。部分海岸路段移动信号较弱。", "tip": "礁石区可能中断通话，请与同行者约定集合点。" }
+        ]
+      }
+    ],
+    "footnote": "※ 设施的运营情况、费用与营业时间会因季节与运营方而异。本站不指定任何特定商号，到访时请以现场告示为准。"
+  },
+  "visitorResponsibility": {
+    "title": "该了解的海岸科普与访客责任",
+    "subtitle": "东海岸礁石风景优美，风险也真实存在。理解自然现象的成因，既能减少事故，也能让这处地方留存更久。",
+    "scienceTitle": "海岸安全科普",
+    "science": [
+      { "icon": "🌊", "title": "涌浪与离岸流", "text": "东海常受远海外海生成的长周期涌浪影响。即使天气晴朗、海面看似平静，也可能突然出现大浪拍上礁石；在海水浴场则可能发生离岸流。有特报时请勿进入礁石下方；若被离岸流带走，请沿海岸线平行的方向游出。" },
+      { "icon": "🪨", "title": "礁石与湿滑", "text": "海岸奇岩经海浪与盐分长期侵蚀，表面光滑，遇水摩擦骤减。潮差还可能让来时的路被海水淹没。请先确认退潮时刻，不要独自下到礁石下方。" },
+      { "icon": "☀️", "title": "紫外线与日晒", "text": "海面反射会显著提高紫外线暴露。阴天紫外线指数也可能偏高，请准备防晒用品、帽子与墨镜，正午在遮阴处休息。夏季需特别注意中暑与脱水。" },
+      { "icon": "🐦", "title": "观赏野生动物的距离", "text": "海岸是水鸟的休息地与潮间带生物的栖息地。靠近会消耗鸟类体力，触摸贝类与蟹类会扰动栖息环境。请保持 5 米以上距离，不要移动或触碰生物。" }
+    ],
+    "dutyTitle": "访客责任",
+    "duties": [
+      { "icon": "🗑️", "title": "垃圾全部带走", "text": "现场垃圾桶不足。遗留的垃圾会流入海洋，直接伤害海洋生物。" },
+      { "icon": "🚫", "title": "禁止采集奇岩与潮间带生物", "text": "请勿带走石块、贝壳与海藻，也不要破坏岩体。受损的海岸地貌恢复需要很长时间。" },
+      { "icon": "🍞", "title": "禁止投喂野生动物", "text": "投喂海鸥等动物会造成对人的依赖，并传播疾病。" },
+      { "icon": "🛕", "title": "遵守寺院礼仪与安静", "text": "休休庵不是景点，而是修行场所。殿内请保持安静，法会时间请勿拍照。" },
+      { "icon": "🚁", "title": "无人机与拍摄规范", "text": "寺院与文化遗产区域可能限制无人机飞行。拍摄人物请尊重肖像权，并遵守禁止拍摄的告示。" },
+      { "icon": "🔥", "title": "禁止吸烟与明火炊事", "text": "干燥季节一个火星就可能引发山火。请勿在指定区域外吸烟或使用明火。" }
+    ],
+    "pledgeLabel": "一句话约定",
+    "pledgeText": "不留痕迹、不动风景、带走垃圾。做到这三点，休休庵的海岸就会以同样的样子留给下一位到访者。"
+  },
+  "tide": {
+    "eyebrow": "潮汐 · 海况",
+    "title": "潮位与赶海时机",
+    "subtitle": "东海潮差虽小，潮位却决定了奇岩下方能不能走。先看当前潮位与下次高低潮，再决定下礁石的时间。",
+    "nowTitle": "当前潮位",
+    "siteLabel": "休休庵近岸",
+    "cmUnit": "cm",
+    "rising": "涨潮",
+    "falling": "落潮",
+    "steady": "平潮",
+    "nextHigh": "下次高潮",
+    "nextLow": "下次低潮",
+    "hoursUnit": "小时",
+    "minutesUnit": "分",
+    "afterPrefix": "约 ",
+    "afterSuffix": "后",
+    "chartTitle": "未来 48 小时潮位",
+    "chartNow": "现在",
+    "eventHigh": "高潮",
+    "eventLow": "低潮",
+    "eventsTitle": "高潮·低潮时刻表",
+    "colKind": "类型",
+    "colTime": "时刻",
+    "colHeight": "潮位",
+    "mslNote": "※ 潮位为以平均海平面（MSL）为基准的模型推算值，按 1 cm 显示。实际海面会受气压、风与涌浪影响而变化，该数值不可用于航海或测量。",
+    "daysTitle": "逐日潮差",
+    "dayRangeLabel": "潮差",
+    "rangeTrendTitle": "潮差趋势",
+    "spring": "趋向大潮",
+    "neap": "趋向小潮",
+    "steadyTrend": "基本持平",
+    "rangeTrendNote": "未来几日潮差增大即接近大潮，减小即接近小潮。大潮时海水退得最远、涨得最高，是观察潮间带地貌的最佳时段，但涨水速度也最快。",
+    "seaTitle": "海况",
+    "waveHeight": "浪高",
+    "wavePeriod": "周期",
+    "waveDir": "浪向",
+    "sst": "表层水温",
+    "seaNote": "※ 浪高、周期、浪向与水温为邻近海域网格的模型推算值。局地涌浪与离岸流无法在网格中体现，请以现场实际浪况为准。",
+    "windowTitle": "什么时候下礁石 —— 低潮窗口",
+    "windowText": "潮水退得最低的低潮前后 1~2 小时，是观察潮间带、走到奇岩下方的时段。高潮前 1 小时起海水重新上涨，请先定好返程时刻，别让来时的路被水淹没。潮时每天推迟约 50 分钟，今天与昨天同一时刻的潮位并不相同。",
+    "safetyTitle": "潮位安全要领",
+    "safety": [
+      "同时确认低潮与下次高潮时刻，并先定好返程时间。",
+      "浪高超过 1 m，或发布涌浪、风浪警报时，即使潮位很低也不要下到礁石下方。",
+      "潮湿礁面的摩擦力会骤降，请空出一只手扶住栏杆或把手。",
+      "不要独自下去，并把返回时间与集合点告知同行者。"
+    ],
+    "scienceTitle": "潮汐科学",
+    "science": [
+      { "icon": "🌙", "title": "月球引力形成的周期", "text": "潮汐是月球与太阳引力牵引海水产生的周期性升降。月球的引潮力约为太阳的 2.2 倍，因此周期由月球主导，同一地点的满潮时刻每天推迟约 50 分钟，所以有些日子一天两次满潮，有些日子只有一次。" },
+      { "icon": "🌊", "title": "东海潮差为何很小", "text": "东海三面被陆地环抱，中央存在无潮点，潮波绕其旋转、振幅相互抵消，因此韩国东海岸潮差只有 20~40 cm，远小于西海岸的 400~900 cm。潮差虽小，垂直运动依然存在，并决定了潮间带露出的范围。" },
+      { "icon": "🔭", "title": "大潮与小潮", "text": "朔与望时，日月引力方向叠加，潮差最大，称为大潮；上弦与下弦时两力互成直角而抵消，潮差最小，称为小潮。该周期约两周。上图潮差趋势即依据未来潮差变化判断当前处于大潮还是小潮阶段。" },
+      { "icon": "⚠️", "title": "潮位与涌浪叠加", "text": "高潮位遇上长周期涌浪时，实际水位会远高于潮位表并漫过礁石；反之，气压高且风从陆地吹来时水位会偏低。因此潮位表只是参考，现场直接观察浪高与周期更为重要。" }
+    ],
+    "footnote": "※ 潮位与海况为邻近海域数值模型的推算值，约每 15 分钟更新一次，会因气象特报与现场情况与实际有所差异。到访时请以现场告示为准。",
+    "placeholder": "读取中"
   },
   "footer": {
     "siteName": "休休庵（휴휴암 · Hyuhyuam Hermitage）",
@@ -766,7 +1144,7 @@
     "cookies": "Cookie 设置",
     "officialResourcesTitle": "官方与参考资源",
     "mapsLabel": "Google 地图 →",
-    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
+    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
     "officialLinksList": [
       {
         "name": "韩国旅游发展局官方中文网（Korea Tourism Organization）",
@@ -789,6 +1167,7 @@
         "url": "https://state.gwd.go.kr"
       }
     ],
+    "imageCopyright": "图片产权：本网站所展示的所有图片产权及版权均归原摄影者所有。",
     "disclaimer": "本网站是一个独立的非营利游客信息项目。我们与任何政府机构或官方组织均无隶属关系。",
     "dataSource": "本站引用的景点信息，均对照考证自江原特别自治道、襄阳郡厅与韩国观光公社（VisitKorea）公开资料，不含任何商业性推荐。",
     "dataSourceLabel": "数据源 · Data Source"

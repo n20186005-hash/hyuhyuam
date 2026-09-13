@@ -1,0 +1,41 @@
+{
+  "name": "休休庵 Hyuhyuam Hermitage (휴휴암) Travel Guide",
+  "short_name": "Hyuhyuam",
+  "description": "Independent visitor guide to Hyuhyuam Hermitage (휴휴암 · 休休庵) in Yangyang-gun, Gangwon-do, South Korea — location map, how to visit, landmarks, history and travel tips.",
+  "id": "/",
+  "start_url": "/ko",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f2015",
+  "theme_color": "#0f2015",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": ["travel", "navigation", "education"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Location & how to visit",
+      "short_name": "Location",
+      "url": "/ko#map"
+    },
+    {
+      "name": "Visit tips & FAQ",
+      "short_name": "FAQ",
+      "url": "/ko#faq"
+    }
+  ]
+}

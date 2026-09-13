@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Hyuhyuam Hermitage app icon">
+  <rect width="512" height="512" rx="96" fill="#0f2015"/>
+  <circle cx="256" cy="212" r="118" fill="#f4d58a" opacity="0.22"/>
+  <!-- sun disc -->
+  <circle cx="256" cy="204" r="74" fill="#f4d58a"/>
+  <!-- temple pavilion roof -->
+  <path d="M120 262 L256 176 L392 262 Z" fill="#ffffff"/>
+  <rect x="150" y="262" width="212" height="14" rx="6" fill="#ffffff"/>
+  <!-- pillars -->
+  <rect x="176" y="276" width="18" height="88" rx="6" fill="#ffffff"/>
+  <rect x="247" y="276" width="18" height="88" rx="6" fill="#ffffff"/>
+  <rect x="318" y="276" width="18" height="88" rx="6" fill="#ffffff"/>
+  <!-- lotus -->
+  <path d="M256 330 C238 356 238 384 256 398 C274 384 274 356 256 330 Z" fill="#7fb2d6"/>
+  <path d="M256 348 C226 356 214 378 218 400 C240 396 254 378 256 348 Z" fill="#7fb2d6" opacity="0.85"/>
+  <path d="M256 348 C286 356 298 378 294 400 C272 396 258 378 256 348 Z" fill="#7fb2d6" opacity="0.85"/>
+  <!-- ocean waves -->
+  <path d="M56 430 C112 404 160 456 216 430 C272 404 320 456 376 430 C412 414 440 418 456 426" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <path d="M56 466 C112 440 160 492 216 466 C272 440 320 492 376 466 C412 450 440 454 456 462" fill="none" stroke="#7fb2d6" stroke-width="12" stroke-linecap="round" opacity="0.85"/>
+</svg>

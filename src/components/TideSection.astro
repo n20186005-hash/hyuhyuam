@@ -1,0 +1,653 @@
+---
+import { getI18n } from '../i18n/ui';
+import { compassText, fetchTideSnapshot, kst, type TideEvent, type TidePayload } from '../lib/tide';
+
+const { lang, messages } = getI18n(Astro.url);
+const td = messages.tide ?? {};
+
+const localeMap: Record<string, string> = {
+  ko: 'ko-KR',
+  zh: 'zh-CN',
+  en: 'en-US',
+  ja: 'ja-JP',
+};
+const locale = localeMap[lang] ?? 'en-US';
+
+/** 构建期快照：让静态 HTML 自带一份完整潮位信息（无脚本亦可阅读） */
+const snapshot: TidePayload | null = await fetchTideSnapshot();
+
+/** 图表坐标系（前端刷新脚本共用同一套参数） */
+const CW = 1000;
+const CH = 240;
+const CHART_TICKS = [0, 12, 24, 36, 47];
+
+const countdown = (iso: string): string => {
+  const diff = Math.max(0, Math.round((kst(iso).getTime() - Date.now()) / 60000));
+  const h = Math.floor(diff / 60);
+  const m = diff % 60;
+  const parts: string[] = [];
+  if (h > 0) parts.push(`${h}${td.hoursUnit ?? ''}`);
+  // 整点小时数下省略“0 分”，避免出现「9시간 0분」这类冗余
+  if (m > 0 || h === 0) parts.push(`${m}${td.minutesUnit ?? ''}`);
+  return `${td.afterPrefix ?? ''}${parts.join(' ')}${td.afterSuffix ?? ''}`;
+};
+
+const cm = (m: number | null | undefined): string =>
+  m === null || m === undefined ? '—' : String(Math.round(m * 100));
+
+const fmtClock = (iso: string): string => iso.slice(11, 16) || '—';
+
+const fmtTick = (iso: string): string => {
+  if (iso.slice(11, 16) === '00:00') {
+    const d = kst(iso);
+    return new Intl.DateTimeFormat(locale, {
+      timeZone: 'Asia/Seoul',
+      month: 'numeric',
+      day: 'numeric',
+    }).format(d);
+  }
+  return iso.slice(11, 16);
+};
+
+const fmtDay = (date: string): string => {
+  const d = new Date(`${date}T12:00:00+09:00`);
+  if (Number.isNaN(d.getTime())) return date;
+  return new Intl.DateTimeFormat(locale, {
+    timeZone: 'Asia/Seoul',
+    weekday: 'short',
+    month: 'numeric',
+    day: 'numeric',
+  }).format(d);
+};
+
+const pts = snapshot?.hourly ?? [];
+const levels = pts.map((p) => p.h);
+const lo = levels.length ? Math.min(...levels) : 0;
+const hi = levels.length ? Math.max(...levels) : 0;
+const span = Math.max(0.08, hi - lo);
+const yMin = lo - span * 0.14;
+const yMax = hi + span * 0.14;
+
+const px = (i: number): number => (pts.length > 1 ? (i / (pts.length - 1)) * CW : 0);
+const py = (h: number): number => CH - ((h - yMin) / (yMax - yMin)) * CH;
+
+const linePath = pts.map((p, i) => `${i ? 'L' : 'M'}${px(i).toFixed(1)} ${py(p.h).toFixed(1)}`).join(' ');
+const areaPath = linePath ? `${linePath} L${CW} ${CH} L0 ${CH} Z` : '';
+
+const t0 = pts.length ? kst(pts[0].t).getTime() : 0;
+const t1 = pts.length ? kst(pts[pts.length - 1].t).getTime() : 1;
+const inChart = (iso: string): number | null => {
+  const ms = kst(iso).getTime();
+  if (!pts.length || ms < t0 || ms > t1) return null;
+  return ((ms - t0) / Math.max(1, t1 - t0)) * CW;
+};
+
+const markers = (snapshot?.events ?? [])
+  .map((e) => ({ ...e, x: inChart(e.t) }))
+  .filter((e): e is TideEvent & { x: number } => e.x !== null);
+
+const zeroY = yMin <= 0 && yMax >= 0 ? py(0) : null;
+const dayList = snapshot?.days ?? [];
+const maxRange = dayList.length ? Math.max(...dayList.map((d) => d.range)) : 1;
+const trendText =
+  snapshot?.trend === 'rising' ? td.rising : snapshot?.trend === 'falling' ? td.falling : td.steady;
+const trendIcon = snapshot?.trend === 'rising' ? '▲' : snapshot?.trend === 'falling' ? '▼' : '▬';
+const rangeTrendText =
+  snapshot?.rangeTrend === 'spring'
+    ? td.spring
+    : snapshot?.rangeTrend === 'neap'
+      ? td.neap
+      : td.steadyTrend;
+
+/** 前端刷新所需的词表与坐标参数 */
+const clientConfig = {
+  cw: CW,
+  ch: CH,
+  ticks: CHART_TICKS,
+  units: {
+    cm: td.cmUnit ?? '',
+    range: td.dayRangeLabel ?? '',
+    high: td.eventHigh ?? '',
+    low: td.eventLow ?? '',
+    now: td.chartNow ?? '',
+    hours: td.hoursUnit ?? '',
+    minutes: td.minutesUnit ?? '',
+    prefix: td.afterPrefix ?? '',
+    suffix: td.afterSuffix ?? '',
+    placeholder: td.placeholder ?? '',
+    spring: td.spring ?? '',
+    neap: td.neap ?? '',
+    steady: td.steadyTrend ?? '',
+    rising: td.rising ?? '',
+    falling: td.falling ?? '',
+    steadyTrend: td.steady ?? '',
+  },
+};
+---
+
+<section id="tide" class="section-padding">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <p class="text-xs uppercase tracking-[0.2em] mb-3" style="color: var(--text-muted);">{td.eyebrow}</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{td.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{td.subtitle}</p>
+    </div>
+
+    <div class="grid lg:grid-cols-[1fr_1.6fr] gap-6">
+      <!-- 当前潮位 -->
+      <article class="rounded-3xl p-6 md:p-8 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <p class="text-xs uppercase tracking-[0.2em] mb-4" style="color: var(--text-muted);">{td.nowTitle}</p>
+
+        <div class="flex items-end gap-3">
+          <p class="font-display text-5xl sm:text-6xl font-semibold leading-none" style="color: var(--text-primary);">
+            <span data-tide="now">{cm(snapshot?.now?.h)}</span><span class="text-2xl align-top ml-1">{td.cmUnit}</span>
+          </p>
+          <span
+            class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm border mb-1"
+            style="background: color-mix(in srgb, var(--accent) 14%, transparent); border-color: color-mix(in srgb, var(--accent) 34%, transparent); color: var(--text-primary);"
+          >
+            <span aria-hidden="true" data-tide="trend-icon">{trendIcon}</span>
+            <span data-tide="trend">{trendText}</span>
+          </span>
+        </div>
+
+        <p class="mt-3 text-sm" style="color: var(--text-secondary);">
+          {td.siteLabel} · <span data-tide="updated">{snapshot ? fmtClock(snapshot.updatedAt) : '—'}</span>
+        </p>
+
+        <div class="mt-6 space-y-3">
+          {[
+            { kind: 'high', icon: '🌊', label: td.nextHigh, event: snapshot?.next?.high ?? null },
+            { kind: 'low', icon: '🪨', label: td.nextLow, event: snapshot?.next?.low ?? null },
+          ].map((row) => (
+            <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+              <div class="flex items-center justify-between gap-3">
+                <span class="flex items-center gap-2 text-sm" style="color: var(--text-muted);">
+                  <span aria-hidden="true">{row.icon}</span>{row.label}
+                </span>
+                <span class="font-semibold" style="color: var(--text-primary);" data-tide={`${row.kind}-h`}>
+                  {cm(row.event?.h)} {td.cmUnit}
+                </span>
+              </div>
+              <div class="mt-1 flex items-center justify-between gap-3">
+                <span class="text-lg font-semibold" style="color: var(--text-primary);" data-tide={`${row.kind}-time`}>
+                  {row.event ? fmtClock(row.event.t) : '—'}
+                </span>
+                <span class="text-xs" style="color: var(--text-muted);" data-tide={`${row.kind}-cd`} data-tide-at={row.event?.t ?? ''}>
+                  {row.event ? countdown(row.event.t) : '—'}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </article>
+
+      <!-- 潮位曲线 -->
+      <article class="rounded-3xl p-6 md:p-7 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <h3 class="font-semibold text-lg" style="color: var(--text-primary);">{td.chartTitle}</h3>
+          <div class="flex flex-wrap items-center gap-3 text-xs" style="color: var(--text-muted);">
+            <span class="inline-flex items-center gap-1.5">
+              <span class="inline-block w-3 h-3 rounded-full" style="background: var(--accent);" aria-hidden="true"></span>{td.eventHigh}
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <span class="inline-block w-3 h-3 rounded-full" style="background: var(--text-muted);" aria-hidden="true"></span>{td.eventLow}
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <span class="inline-block w-3 h-[2px]" style="background: var(--text-primary);" aria-hidden="true"></span>{td.chartNow}
+            </span>
+          </div>
+        </div>
+
+        <div class="relative">
+          <svg viewBox={`0 0 ${CW} ${CH}`} class="w-full h-auto" role="img" aria-label={td.chartTitle}>
+            <defs>
+              <linearGradient id="tide-fill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.02" />
+              </linearGradient>
+            </defs>
+
+            <!-- 横向参考线 -->
+            {[0.25, 0.5, 0.75].map((r) => (
+              <line x1="0" y1={CH * r} x2={CW} y2={CH * r} stroke="var(--border-color)" stroke-width="1" />
+            ))}
+
+            {zeroY !== null && (
+              <line x1="0" y1={zeroY.toFixed(1)} x2={CW} y2={zeroY.toFixed(1)} stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="6 6" data-tide="zero" />
+            )}
+
+            <path d={areaPath} fill="url(#tide-fill)" data-tide="area" />
+            <path d={linePath} fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" data-tide="line" />
+
+            <!-- 极值标记 -->
+            <g data-tide="markers">
+              {markers.map((e) => (
+                <>
+                  <circle cx={e.x.toFixed(1)} cy={py(e.h).toFixed(1)} r="5" fill={e.kind === 'high' ? 'var(--accent)' : 'var(--text-muted)'} />
+                  <text
+                    x={e.x.toFixed(1)}
+                    y={(py(e.h) + (e.kind === 'high' ? -14 : 26)).toFixed(1)}
+                    text-anchor="middle"
+                    font-size="18"
+                    fill="var(--text-secondary)"
+                  >
+                    {fmtClock(e.t)}
+                  </text>
+                </>
+              ))}
+            </g>
+
+            <!-- 当前时刻 -->
+            <line x1="0" y1="0" x2="0" y2={CH} stroke="var(--text-primary)" stroke-width="1.5" data-tide="nowline" />
+          </svg>
+
+          <div class="mt-2 flex justify-between text-xs" style="color: var(--text-muted);" data-tide="xlabels">
+            {CHART_TICKS.map((i) => (
+              <span>{pts[i] ? fmtTick(pts[i].t) : ''}</span>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-4 grid grid-cols-3 gap-3">
+          <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+            <p class="text-xs" style="color: var(--text-muted);">{td.colHeight} ↑</p>
+            <p class="mt-1 font-semibold" style="color: var(--text-primary);"><span data-tide="ymax">{cm(yMax)}</span> {td.cmUnit}</p>
+          </div>
+          <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+            <p class="text-xs" style="color: var(--text-muted);">{td.colHeight} ↓</p>
+            <p class="mt-1 font-semibold" style="color: var(--text-primary);"><span data-tide="ymin">{cm(yMin)}</span> {td.cmUnit}</p>
+          </div>
+          <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+            <p class="text-xs" style="color: var(--text-muted);">{td.rangeTrendTitle}</p>
+            <p class="mt-1 font-semibold" style="color: var(--text-primary);" data-tide="rangetrend">{rangeTrendText}</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="grid lg:grid-cols-[1fr_1.6fr] gap-6 mt-6">
+      <!-- 时刻表 -->
+      <article class="rounded-3xl p-6 md:p-7 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-semibold text-lg mb-4" style="color: var(--text-primary);">{td.eventsTitle}</h3>
+        <table class="w-full text-sm">
+          <thead>
+            <tr style="color: var(--text-muted);">
+              <th class="text-left font-normal pb-2">{td.colKind}</th>
+              <th class="text-left font-normal pb-2">{td.colTime}</th>
+              <th class="text-right font-normal pb-2">{td.colHeight}</th>
+            </tr>
+          </thead>
+          <tbody data-tide="events">
+            {(snapshot?.events ?? []).map((e) => (
+              <tr class="border-t" style="border-color: var(--border-color);">
+                <td class="py-2" style="color: var(--text-secondary);">
+                  {e.kind === 'high' ? `🌊 ${td.eventHigh}` : `🪨 ${td.eventLow}`}
+                </td>
+                <td class="py-2 font-medium" style="color: var(--text-primary);">{fmtClock(e.t)}</td>
+                <td class="py-2 text-right" style="color: var(--text-primary);">{cm(e.h)} {td.cmUnit}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="mt-4 text-xs leading-relaxed" style="color: var(--text-muted);">{td.mslNote}</p>
+      </article>
+
+      <!-- 逐日潮差 -->
+      <article class="rounded-3xl p-6 md:p-7 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-semibold text-lg mb-4" style="color: var(--text-primary);">{td.daysTitle}</h3>
+        <div class="space-y-3" data-tide="days">
+          {dayList.map((d) => (
+            <div>
+              <div class="flex items-center justify-between gap-3 text-sm">
+                <span style="color: var(--text-secondary);">{fmtDay(d.date)}</span>
+                <span style="color: var(--text-muted);">
+                  {cm(d.min)} – {cm(d.max)} {td.cmUnit} · {td.dayRangeLabel} <span class="font-semibold" style="color: var(--text-primary);">{cm(d.range)} {td.cmUnit}</span>
+                </span>
+              </div>
+              <div class="mt-1.5 h-2 rounded-full overflow-hidden" style="background: var(--bg-tertiary);">
+                <span
+                  class="block h-full rounded-full"
+                  style={`width: ${Math.max(6, Math.round((d.range / maxRange) * 100))}%; background: var(--accent);`}
+                ></span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="mt-4 text-sm leading-relaxed" style="color: var(--text-secondary);">{td.rangeTrendNote}</p>
+      </article>
+    </div>
+
+    <!-- 海况 -->
+    <div class="rounded-3xl p-6 md:p-7 border mt-6" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+      <h3 class="font-semibold text-lg mb-4" style="color: var(--text-primary);">{td.seaTitle}</h3>
+      <dl class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        {[
+          { k: 'wave', label: td.waveHeight, unit: ' m' },
+          { k: 'period', label: td.wavePeriod, unit: ' s' },
+          { k: 'dir', label: td.waveDir, unit: '' },
+          { k: 'sst', label: td.sst, unit: ' °C' },
+        ].map((item) => (
+          <div class="rounded-2xl px-4 py-3 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+            <dt class="text-xs" style="color: var(--text-muted);">{item.label}</dt>
+            <dd class="mt-1 font-semibold text-lg" style="color: var(--text-primary);">
+              <span data-tide={item.k}>
+                {item.k === 'wave'
+                  ? (snapshot?.sea.waveHeight ?? 0).toFixed(1)
+                  : item.k === 'period'
+                    ? (snapshot?.sea.wavePeriod ?? 0).toFixed(1)
+                    : item.k === 'dir'
+                      ? compassText(snapshot?.sea.waveDir ?? null)
+                      : (snapshot?.sea.sst ?? 0).toFixed(1)}
+              </span>{item.unit}
+            </dd>
+          </div>
+        ))}
+      </dl>
+      <p class="mt-4 text-xs leading-relaxed" style="color: var(--text-muted);">{td.seaNote}</p>
+    </div>
+
+    <!-- 赶海窗口 + 安全 -->
+    <div class="grid md:grid-cols-2 gap-6 mt-6">
+      <article class="rounded-3xl p-6 md:p-7 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-semibold text-lg mb-3" style="color: var(--text-primary);">{td.windowTitle}</h3>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{td.windowText}</p>
+      </article>
+      <article class="rounded-3xl p-6 md:p-7 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-semibold text-lg mb-3" style="color: var(--text-primary);">{td.safetyTitle}</h3>
+        <ul class="space-y-2 text-sm leading-relaxed" style="color: var(--text-secondary);">
+          {(td.safety ?? []).map((line: string) => (
+            <li class="flex gap-2"><span aria-hidden="true" style="color: var(--accent);">•</span><span>{line}</span></li>
+          ))}
+        </ul>
+      </article>
+    </div>
+
+    <!-- 潮汐科学 -->
+    <div class="mt-10">
+      <h3 class="font-semibold text-xl mb-4" style="color: var(--text-primary);">{td.scienceTitle}</h3>
+      <div class="grid sm:grid-cols-2 gap-5">
+        {(td.science ?? []).map((item: any) => (
+          <article class="rounded-3xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+            <p class="text-2xl mb-2" aria-hidden="true">{item.icon}</p>
+            <h4 class="font-semibold mb-2" style="color: var(--text-primary);">{item.title}</h4>
+            <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <p class="mt-6 text-xs leading-relaxed" style="color: var(--text-muted);">{td.footnote}</p>
+  </div>
+
+  <script type="application/json" id="tide-config" is:inline set:html={JSON.stringify(clientConfig)}></script>
+  <script is:inline>
+    (function () {
+      var host = document.getElementById('tide');
+      if (!host) return;
+
+      var CFG = { cw: 1000, ch: 240, ticks: [0, 12, 24, 36, 47], units: {} };
+      try {
+        CFG = JSON.parse(document.getElementById('tide-config').textContent || '{}');
+      } catch (e) {}
+
+      var U = CFG.units || {};
+
+      function num(v) {
+        return typeof v === 'number' && isFinite(v) ? v : null;
+      }
+      function cm(v) {
+        var n = num(v);
+        return n === null ? '—' : String(Math.round(n * 100));
+      }
+      function clock(iso) {
+        if (!iso) return '—';
+        return iso.slice(11, 16) || '—';
+      }
+      function ms(iso) {
+        return new Date(iso.length === 16 ? iso + ':00+09:00' : iso + '+09:00').getTime();
+      }
+      function pad2(n) {
+        return (n < 10 ? '0' : '') + n;
+      }
+      function wall(msValue) {
+        var w = new Date(msValue + 9 * 3600 * 1000);
+        return {
+          y: w.getUTCFullYear(),
+          m: pad2(w.getUTCMonth() + 1),
+          d: pad2(w.getUTCDate()),
+          hh: pad2(w.getUTCHours()),
+          mm: pad2(w.getUTCMinutes()),
+        };
+      }
+      function tickText(iso) {
+        if (iso.slice(11, 16) === '00:00') {
+          var w = wall(ms(iso));
+          return Number(w.m) + '/' + Number(w.d);
+        }
+        return iso.slice(11, 16);
+      }
+      function countdownText(iso) {
+        if (!iso) return '—';
+        var diff = Math.max(0, Math.round((ms(iso) - Date.now()) / 60000));
+        var h = Math.floor(diff / 60);
+        var m = diff % 60;
+        var parts = [];
+        if (h > 0) parts.push(h + (U.hours || ''));
+        if (m > 0 || h === 0) parts.push(m + (U.minutes || ''));
+        return (U.prefix || '') + parts.join(' ') + (U.suffix || '');
+      }
+      function set(key, value) {
+        var els = host.querySelectorAll('[data-tide="' + key + '"]');
+        Array.prototype.forEach.call(els, function (el) {
+          el.textContent = value;
+        });
+      }
+
+      function render(data) {
+        if (!data || !data.ok) return;
+
+        set('now', cm(data.now && data.now.h));
+        set(
+          'trend',
+          data.trend === 'rising' ? U.rising : data.trend === 'falling' ? U.falling : U.steadyTrend,
+        );
+        set('trend-icon', data.trend === 'rising' ? '▲' : data.trend === 'falling' ? '▼' : '▬');
+        set('updated', clock(data.updatedAt));
+        set(
+          'rangetrend',
+          data.rangeTrend === 'spring' ? U.spring : data.rangeTrend === 'neap' ? U.neap : U.steady,
+        );
+
+        var next = data.next || {};
+        [['high', next.high], ['low', next.low]].forEach(function (pair) {
+          var kind = pair[0];
+          var ev = pair[1];
+          set(kind + '-h', ev ? cm(ev.h) + ' ' + (U.cm || 'cm') : '—');
+          set(kind + '-time', ev ? clock(ev.t) : '—');
+          var cd = host.querySelector('[data-tide="' + kind + '-cd"]');
+          if (cd) {
+            cd.setAttribute('data-tide-at', ev ? ev.t : '');
+            cd.textContent = ev ? countdownText(ev.t) : '—';
+          }
+        });
+
+        var sea = data.sea || {};
+        set('wave', (num(sea.waveHeight) === null ? 0 : sea.waveHeight).toFixed(1));
+        set('period', (num(sea.wavePeriod) === null ? 0 : sea.wavePeriod).toFixed(1));
+        set('sst', (num(sea.sst) === null ? 0 : sea.sst).toFixed(1));
+        set('dir', compass(sea.waveDir));
+
+        var pts = data.hourly || [];
+        var cw = CFG.cw || 1000;
+        var ch = CFG.ch || 240;
+        var levels = [];
+        for (var i = 0; i < pts.length; i++) levels.push(pts[i].h);
+        if (!levels.length) return;
+
+        var lo = Math.min.apply(null, levels);
+        var hi = Math.max.apply(null, levels);
+        var span = Math.max(0.08, hi - lo);
+        var yMin = lo - span * 0.14;
+        var yMax = hi + span * 0.14;
+        function px(idx) {
+          return pts.length > 1 ? (idx / (pts.length - 1)) * cw : 0;
+        }
+        function py(h) {
+          return ch - ((h - yMin) / (yMax - yMin)) * ch;
+        }
+
+        var d = '';
+        for (var j = 0; j < pts.length; j++) {
+          d += (j ? 'L' : 'M') + px(j).toFixed(1) + ' ' + py(pts[j].h).toFixed(1);
+        }
+        var lineEl = host.querySelector('[data-tide="line"]');
+        var areaEl = host.querySelector('[data-tide="area"]');
+        if (lineEl) lineEl.setAttribute('d', d);
+        if (areaEl) areaEl.setAttribute('d', d + ' L' + cw + ' ' + ch + ' L0 ' + ch + ' Z');
+
+        var zeroEl = host.querySelector('[data-tide="zero"]');
+        if (zeroEl) {
+          var zy = yMin <= 0 && yMax >= 0 ? py(0) : null;
+          if (zy === null) zeroEl.setAttribute('opacity', '0');
+          else {
+            zeroEl.setAttribute('opacity', '1');
+            zeroEl.setAttribute('y1', zy.toFixed(1));
+            zeroEl.setAttribute('y2', zy.toFixed(1));
+          }
+        }
+
+        set('ymax', cm(yMax));
+        set('ymin', cm(yMin));
+
+        var t0 = ms(pts[0].t);
+        var t1 = ms(pts[pts.length - 1].t);
+        var total = Math.max(1, t1 - t0);
+        var markers = host.querySelector('[data-tide="markers"]');
+        if (markers) {
+          var markup = '';
+          var list = data.events || [];
+          for (var k = 0; k < list.length; k++) {
+            var ev = list[k];
+            var at = ms(ev.t);
+            if (at < t0 || at > t1) continue;
+            var x = ((at - t0) / total) * cw;
+            var y = py(ev.h);
+            markup +=
+              '<circle cx="' +
+              x.toFixed(1) +
+              '" cy="' +
+              y.toFixed(1) +
+              '" r="5" fill="' +
+              (ev.kind === 'high' ? 'var(--accent)' : 'var(--text-muted)') +
+              '"></circle><text x="' +
+              x.toFixed(1) +
+              '" y="' +
+              (y + (ev.kind === 'high' ? -14 : 26)).toFixed(1) +
+              '" text-anchor="middle" font-size="18" fill="var(--text-secondary)">' +
+              clock(ev.t) +
+              '</text>';
+          }
+          markers.innerHTML = markup;
+        }
+
+        var xlabels = host.querySelector('[data-tide="xlabels"]');
+        if (xlabels) {
+          var ticks = CFG.ticks || [0, 12, 24, 36, 47];
+          var html = '';
+          for (var t = 0; t < ticks.length; t++) {
+            var p = pts[ticks[t]];
+            html += '<span>' + (p ? tickText(p.t) : '') + '</span>';
+          }
+          xlabels.innerHTML = html;
+        }
+
+        var evBody = host.querySelector('[data-tide="events"]');
+        if (evBody) {
+          var rows = '';
+          var events = data.events || [];
+          for (var e = 0; e < events.length; e++) {
+            var item = events[e];
+            rows +=
+              '<tr class="border-t" style="border-color: var(--border-color);"><td class="py-2" style="color: var(--text-secondary);">' +
+              (item.kind === 'high' ? '🌊 ' + U.high : '🪨 ' + U.low) +
+              '</td><td class="py-2 font-medium" style="color: var(--text-primary);">' +
+              clock(item.t) +
+              '</td><td class="py-2 text-right" style="color: var(--text-primary);">' +
+              cm(item.h) +
+              ' ' +
+              (U.cm || 'cm') +
+              '</td></tr>';
+          }
+          evBody.innerHTML = rows;
+        }
+
+        var daysBox = host.querySelector('[data-tide="days"]');
+        if (daysBox) {
+          var days = data.days || [];
+          var maxRange = 0;
+          for (var q = 0; q < days.length; q++) maxRange = Math.max(maxRange, days[q].range);
+          if (!maxRange) maxRange = 1;
+          var out = '';
+          for (var r = 0; r < days.length; r++) {
+            var day = days[r];
+            var w2 = wall(ms(day.date + 'T12:00'));
+            out +=
+              '<div><div class="flex items-center justify-between gap-3 text-sm"><span style="color: var(--text-secondary);">' +
+              w2.m +
+              '/' +
+              w2.d +
+              '</span><span style="color: var(--text-muted);">' +
+              cm(day.min) +
+              ' – ' +
+              cm(day.max) +
+              ' ' +
+              (U.cm || 'cm') +
+              ' · ' +
+              (U.range || '') +
+              ' <span class="font-semibold" style="color: var(--text-primary);">' +
+              cm(day.range) +
+              ' ' +
+              (U.cm || 'cm') +
+              '</span></span></div><div class="mt-1.5 h-2 rounded-full overflow-hidden" style="background: var(--bg-tertiary);"><span class="block h-full rounded-full" style="width: ' +
+              Math.max(6, Math.round((day.range / maxRange) * 100)) +
+              '%; background: var(--accent);"></span></div></div>';
+          }
+          daysBox.innerHTML = out;
+        }
+      }
+
+      var DIRS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+      function compass(deg) {
+        if (typeof deg !== 'number' || !isFinite(deg)) return '—';
+        return DIRS[Math.round((((deg % 360) + 360) % 360) / 45) % 8];
+      }
+
+      function tickCountdowns() {
+        var nodes = host.querySelectorAll('[data-tide$="-cd"]');
+        Array.prototype.forEach.call(nodes, function (el) {
+          var at = el.getAttribute('data-tide-at');
+          if (at) el.textContent = countdownText(at);
+        });
+      }
+
+      function load() {
+        // 尾斜杠必须保留，见 astro.config.mjs 的 trailingSlash: 'always'
+        fetch('/api/tide/', { headers: { accept: 'application/json' } })
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+          })
+          .then(render)
+          .catch(function () {});
+      }
+
+      tickCountdowns();
+      setInterval(tickCountdowns, 60000);
+      load();
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) load();
+      });
+    })();
+  </script>
+</section>

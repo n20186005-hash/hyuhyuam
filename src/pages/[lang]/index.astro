@@ -7,6 +7,13 @@ import QuickFactsDashboard from '../../components/QuickFactsDashboard.astro';
 import ComplianceGuide from '../../components/ComplianceGuide.astro';
 import HigashiyamaRoute from '../../components/HigashiyamaRoute.astro';
 import Intro from '../../components/Intro.astro';
+import EntityGuide from '../../components/EntityGuide.astro';
+import WeatherForecast from '../../components/WeatherForecast.astro';
+import TideSection from '../../components/TideSection.astro';
+import ClimateStrategy from '../../components/ClimateStrategy.astro';
+import RoutePlanner from '../../components/RoutePlanner.astro';
+import VisitorServices from '../../components/VisitorServices.astro';
+import VisitorResponsibility from '../../components/VisitorResponsibility.astro';
 import Transport from '../../components/Transport.astro';
 import Lodging from '../../components/Lodging.astro';
 import HumanitiesDossier from '../../components/HumanitiesDossier.astro';
@@ -19,6 +26,7 @@ import MapEmbed from '../../components/MapEmbed.astro';
 import DeepDive from '../../components/DeepDive.astro';
 import Downloads from '../../components/Downloads.astro';
 import FAQ from '../../components/FAQ.astro';
+import SourcesSection from '../../components/SourcesSection.astro';
 import { getI18n, languagesList } from '../../i18n/ui';
 
 export function getStaticPaths() {
@@ -51,13 +59,19 @@ const faqLd = (() => {
   <Hero />
   <QuickFactsDashboard />
   <Intro />
+  <EntityGuide />
+  <WeatherForecast />
+  <TideSection />
+  <ClimateStrategy />
   <HumanitiesDossier />
   <DeepDive />
+  <RoutePlanner />
   <Transport />
   <HigashiyamaRoute />
   <HiddenRules />
   <ComplianceGuide />
   <Lodging />
+  <VisitorServices />
   <MapEmbed />
   <Downloads />
   <FAQ />
@@ -65,4 +79,6 @@ const faqLd = (() => {
   <Gallery />
   <FeaturedQuotes />
   <Reviews />
+  <VisitorResponsibility />
+  <SourcesSection />
 </BaseLayout>

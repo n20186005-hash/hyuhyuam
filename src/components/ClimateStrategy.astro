@@ -1,0 +1,61 @@
+---
+import { getI18n } from '../i18n/ui';
+
+const { messages } = getI18n(Astro.url);
+const c = messages.climateStrategy ?? {};
+const seasons = c.seasons ?? [];
+---
+
+<section id="climate" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{c.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{c.subtitle}</p>
+    </div>
+
+    <div class="rounded-3xl border overflow-hidden" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[52rem] text-left border-collapse">
+          <caption class="sr-only">{c.title}</caption>
+          <thead>
+            <tr style="background: var(--bg-tertiary);">
+              <th scope="col" class="px-5 py-4 text-sm font-semibold whitespace-nowrap" style="color: var(--text-primary);">{c.columns.period}</th>
+              <th scope="col" class="px-5 py-4 text-sm font-semibold" style="color: var(--text-primary);">{c.columns.weather}</th>
+              <th scope="col" class="px-5 py-4 text-sm font-semibold" style="color: var(--text-primary);">{c.columns.water}</th>
+              <th scope="col" class="px-5 py-4 text-sm font-semibold" style="color: var(--text-primary);">{c.columns.wildlife}</th>
+              <th scope="col" class="px-5 py-4 text-sm font-semibold" style="color: var(--text-primary);">{c.columns.tip}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {seasons.map((s) => (
+              <tr class="align-top border-t" style="border-color: var(--border-color);">
+                <th scope="row" class="px-5 py-5 whitespace-nowrap">
+                  <span class="block text-2xl mb-1" aria-hidden="true">{s.icon}</span>
+                  <span class="block font-semibold" style="color: var(--text-primary);">{s.season}</span>
+                  <span class="block text-xs mt-1" style="color: var(--text-muted);">{s.months}</span>
+                </th>
+                <td class="px-5 py-5 text-sm leading-relaxed" style="color: var(--text-secondary);">{s.weather}</td>
+                <td class="px-5 py-5 text-sm leading-relaxed" style="color: var(--text-secondary);">{s.water}</td>
+                <td class="px-5 py-5 text-sm leading-relaxed" style="color: var(--text-secondary);">{s.wildlife}</td>
+                <td class="px-5 py-5 text-sm leading-relaxed" style="color: var(--text-secondary);">{s.tip}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 mt-6">
+      <div class="rounded-2xl border p-6" style="background: var(--card-bg); border-color: var(--border-color);">
+        <h3 class="font-semibold mb-2" style="color: var(--text-primary);">{c.bestLabel}</h3>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{c.bestText}</p>
+      </div>
+      <div class="rounded-2xl border p-6" style="background: var(--card-bg); border-color: var(--border-color);">
+        <h3 class="font-semibold mb-2" style="color: var(--text-primary);">{c.normalsLabel}</h3>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{c.normalsText}</p>
+      </div>
+    </div>
+
+    <p class="mt-5 text-xs leading-relaxed" style="color: var(--text-muted);">{c.sourceNote}</p>
+  </div>
+</section>

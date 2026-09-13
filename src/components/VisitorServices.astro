@@ -1,0 +1,50 @@
+---
+import { getI18n } from '../i18n/ui';
+
+const { messages } = getI18n(Astro.url);
+const s = messages.visitorServices ?? {};
+const groups = s.groups ?? [];
+---
+
+<section id="services" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-8">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{s.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{s.subtitle}</p>
+    </div>
+
+    <div class="rounded-2xl border p-5 sm:p-6 mb-8" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+      <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">
+        <span class="font-semibold" style="color: var(--text-primary);">{s.neutralityLabel}</span>{s.neutralityText}
+      </p>
+    </div>
+
+    <div class="space-y-10">
+      {groups.map((g) => (
+        <div>
+          <h3 class="flex items-center gap-3 font-semibold text-xl mb-4" style="color: var(--text-primary);">
+            <span class="text-2xl" aria-hidden="true">{g.icon}</span>
+            {g.name}
+          </h3>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {(g.items ?? []).map((it) => (
+              <article class="rounded-2xl border p-5 flex flex-col h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xl" aria-hidden="true">{it.icon}</span>
+                  <h4 class="font-semibold text-sm" style="color: var(--text-primary);">{it.name}</h4>
+                </div>
+                <p class="text-xs uppercase tracking-wide mb-2" style="color: var(--accent);">{it.type}</p>
+                <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{it.expect}</p>
+                {it.tip && (
+                  <p class="mt-auto pt-3 text-xs leading-relaxed border-t mt-4" style="border-color: var(--border-color); color: var(--text-muted);">{it.tip}</p>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="mt-8 text-xs leading-relaxed" style="color: var(--text-muted);">{s.footnote}</p>
+  </div>
+</section>

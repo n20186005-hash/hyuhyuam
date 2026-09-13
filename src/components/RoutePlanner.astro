@@ -1,0 +1,78 @@
+---
+import { getI18n } from '../i18n/ui';
+
+const { messages } = getI18n(Astro.url);
+const r = messages.routePlanner ?? {};
+const audiences = r.audiences ?? [];
+const itineraries = [r.halfDay, r.fullDay].filter(Boolean);
+---
+
+<section id="routes" class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{r.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{r.subtitle}</p>
+    </div>
+
+    <!-- 按人群定制 -->
+    <h3 class="font-semibold text-xl mb-5" style="color: var(--text-primary);">{r.audienceTitle}</h3>
+    <div class="grid gap-5 lg:grid-cols-3">
+      {audiences.map((a) => (
+        <article class="rounded-3xl border p-6 flex flex-col h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl" aria-hidden="true">{a.icon}</span>
+            <div>
+              <h4 class="font-display text-lg font-semibold" style="color: var(--text-primary);">{a.group}</h4>
+              <p class="text-xs mt-0.5" style="color: var(--text-muted);">{a.duration} · {a.intensity}</p>
+            </div>
+          </div>
+
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{a.forWhom}</p>
+
+          <ol class="mt-4 space-y-2 text-sm" style="color: var(--text-secondary);">
+            {(a.steps ?? []).map((step, i) => (
+              <li class="flex gap-2">
+                <span class="shrink-0 font-semibold" style="color: var(--accent);">{i + 1}.</span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+
+          <div class="mt-5 pt-4 border-t space-y-2 text-xs" style="border-color: var(--border-color); color: var(--text-muted);">
+            <p><span class="font-semibold" style="color: var(--text-secondary);">{r.gearLabel}</span>{a.gear}</p>
+            <p><span class="font-semibold" style="color: var(--text-secondary);">{r.tipLabel}</span>{a.tip}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- 通用路线 -->
+    <h3 class="font-semibold text-xl mt-12 mb-5" style="color: var(--text-primary);">{r.itineraryTitle}</h3>
+    <div class="grid gap-5 lg:grid-cols-2">
+      {itineraries.map((it: any) => (
+        <article class="rounded-3xl border p-6 md:p-7" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="flex flex-wrap items-baseline gap-3 mb-3">
+            <h4 class="font-display text-xl font-semibold" style="color: var(--text-primary);">{it.title}</h4>
+            <span class="text-xs px-3 py-1 rounded-full" style="background: var(--bg-tertiary); color: var(--text-secondary);">{it.duration}</span>
+          </div>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{it.summary}</p>
+
+          <ol class="mt-5 space-y-3">
+            {(it.steps ?? []).map((step: any) => (
+              <li class="flex gap-3">
+                <span class="shrink-0 text-xs font-semibold w-16 pt-1" style="color: var(--accent);">{step.time}</span>
+                <span class="text-sm leading-relaxed" style="color: var(--text-secondary);">{step.text}</span>
+              </li>
+            ))}
+          </ol>
+
+          {it.note && (
+            <p class="mt-5 text-xs leading-relaxed" style="color: var(--text-muted);">{it.note}</p>
+          )}
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-6 text-xs leading-relaxed" style="color: var(--text-muted);">{r.footnote}</p>
+  </div>
+</section>
