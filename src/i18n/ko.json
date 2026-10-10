@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "양양 휴휴암 | 동해 바다 암자, 누운 관음바위 무료 관람",
-    "description": "강원도 양양 휴휴암(休休庵) 관람 가이드. 동해 바닷가의 누운 관음바위와 지혜관세음보살상, 일출 명소. 무료 입장·주차와 찾아가는 길까지 정리했습니다."
+    "title": "양양 휴휴암 방문 가이드 | 입장료·주차·가는 길·볼거리",
+    "description": "강원도 양양 휴휴암(休休庵) 방문 정보를 확인하세요. 입장료와 주차, 교통편, 누운 관음바위와 연화대, 바다 전망과 주변 볼거리를 안내합니다."
   },
   "header": {
     "siteName": "휴휴암 (Hyuhyuam Hermitage)",
@@ -58,7 +58,7 @@
     "ratingSourceTemplate": "평점·후기 수 출처: {source} 이용자 후기",
     "hours": "일출~일몰 (무료 개방)",
     "openMaps": "Google 지도에서 위치 보기",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "legend": {
       "quote": "'휴휴(休休)'는 '쉬고 또 쉬며 속세의 근심을 내려놓는다'는 뜻입니다. 홍법스님은 이 이름을 빌려, 먼 길 찾아온 이 모두가 바닷바람과 범종 소리 속에서 일상의 번뇌를 가볍게 내려놓길 바랐습니다.",
       "attribution": "— 휴휴암의 연원"
@@ -83,7 +83,7 @@
     "liveInfo": { "weather": "현재 날씨", "sunset": "오늘 일몰" },
     "sunsetPlanner": {
       "eyebrow": "Golden Hour Calculator · 빛 도구",
-      "title": "오늘 일몰을 기준으로 약 60분 전 도착을 권장합니다. 가장 부드러운 확산광과 바다의 블루아워를 동시에 담으며, 연화대 바위·누운 관음바위·동해용왕상을 가장 잘 촬영할 수 있습니다.",
+      "title": "휴휴암은 동해를 향해 열려 있어 해상 일출이 핵심 명소입니다. 첫 햇살이 누운 관음바위와 연화대에 닿는 순간을 담으려면 일출 약 60분 전 도착을 권장합니다. 해 질 무렵의 부드러운 빛과 바다의 블루아워를 함께 담고 싶다면 일몰 60분 전 도착도 좋은 선택입니다.",
       "note": "암자는 동해를 향해 열려 있어 아침부터 해 질 무렵까지 빛이 가장 따뜻합니다. 주말이나 맑은 날은 인파를 피할 여유를 더 두세요.",
       "seaGlare": "일출 팁(Sunrise): 휴휴암은 동해를 향해 있어 해상 일출 명소입니다. 누운 관음바위와 연화대에 첫 햇살이 닿는 순간이 촬영의 황금 창입니다. 초겨울 아침은 춥으니 바닷바람을 주의하세요.",
       "arriveLabel": "도착 권장",
@@ -332,15 +332,15 @@
     ],
     "localTipsTitle": "방문 실용 팁",
     "localTips": [
-      "아침과 해 질 무렵이 황금 창. 일몰 60분 전 도착이 누운 관음바위·연화대의 해상 빛에 베스트.",
+      "사진 황금 창은 일출 직후: 첫 빛이 누운 관음바위·연화대·동해용왕상에 닿는 순간이 베스트. 해 질 무렵의 부드러운 빛과 블루아워를 함께 담고 싶다면 일몰 60분 전 도착도 좋습니다.",
       "주말·맑은 날 인파 많으니 아이나 장비 있을 땐 버퍼와 피크타임 회피.",
       "휴휴암은 누운 관음바위·연화대·지혜관세음보살상을 세트로. 단점만 보면 해암·신앙 가치를 과소평가하기 쉬움."
     ],
     "mapsCta": "지도 및 경로 보기",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "bestTime": {
       "title": "최적 도착 시각",
-      "text": "휴휴암은 낮 가능하나 사진 상한을 결정하는 건 새벽 동해 일출과 해 질 무렵 빛입니다. 일몰 약 60분 전 도착을 권장하고, 날씨가 촬영에 안 맞으면 암원 수행이나 기암 조망으로 무게를."
+      "text": "휴휴암은 낮에도 언제든 갈 수 있지만, 사진의 백미는 동해 해상 일출입니다. 첫 햇살이 누운 관음바위와 연화대에 닿는 순간이 황금 창이니 일출 약 60분 전 도착을 권장합니다. 날씨가 흐려 촬영에 맞지 않으면 암원 수행이나 기암 조망으로 무게를 두세요."
     }
   },
   "officialManagement": {
@@ -501,7 +501,7 @@
     ],
     "viewAll": "Google 지도에서 위치 보기",
     "showMore": "사진 더 보기",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
   },
   "reviews": {
     "title": "방문자 후기",
@@ -509,7 +509,7 @@
     "featuredTitle": "방문자 금구",
     "featuredSubtitle": "휴휴암의 분위기를 가장 잘 담은 짧은 문장들.",
     "moreReviews": "Google 지도에서 보기",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "featured": [
       {
         "text": "해안 돌길을 천천히 걷는데 발밑은 동해의 물결, 그 바닷가 고요가 특별하고 해 질 무렵 빛은 마치 물 위에 떠 있는 듯해요.",
@@ -555,7 +555,7 @@
     "title": "오시는 길",
     "subtitle": "3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon-do, 한국 (플러스 코드: XQ69+F2) · 전화 +82 33-671-0093",
     "openMaps": "Google 지도에서 열기",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
   },
   "entityGuide": {
     "eyebrow": "관광지 실체 · 지리적 정체성",
@@ -586,7 +586,7 @@
       { "name": "양양군청 공식 홈페이지 (Yangyang-gun Government)", "url": "https://www.yangyang.go.kr" },
       { "name": "강원특별자치도 공식 관광 (Gangwon State Tourism)", "url": "https://www.gangwon.to" },
       { "name": "OpenStreetMap — 휴휴암 좌표 및 도로명 주소", "url": "https://www.openstreetmap.org/node/4340592290" },
-      { "name": "Google 지도 — 휴휴암 방문자 평점 및 후기 수", "url": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6" }
+      { "name": "Google 지도 — 휴휴암 방문자 평점 및 후기 수", "url": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7" }
     ],
     "officialNoteText": "공식 최신 정보와 지역 관광 안내는",
     "officialLinkLabel": "양양군 공식 문화관광 포털",
@@ -739,7 +739,7 @@
         "group": "아이 동반 가족",
         "duration": "약 2시간",
         "intensity": "저강도",
-        "forWhom": "걷는 거리를 줄이고 안전과 휴식을 우선한 구성입니다. 유모차 이용이 가능한 구간을 중심으로 설계했습니다.",
+        "forWhom": "걷는 거리를 줄이고 안전과 휴식을 우선한 구성입니다. 유모차가 구를 수 있는 평지 구간을 중심으로 하되, 암문과 해안 통로에는 계단·경사가 있어 현장 상황을 먼저 확인하세요.",
         "steps": [
           "주차장에서 무료 개방 구역까지 평탄한 구간으로 진입합니다.",
           "묘적전 앞에서 암자 예절과 '휴휴'의 뜻을 아이에게 짧게 설명합니다.",
@@ -769,7 +769,7 @@
         "group": "이동이 어려운 방문자",
         "duration": "약 1시간 30분",
         "intensity": "최저강도",
-        "forWhom": "경사와 계단을 최소화하고 차량 접근과 휴식 지점을 우선한 무장애 중심 구성입니다.",
+        "forWhom": "경사와 계단을 최소화하고 차량 접근과 휴식 지점을 우선한 무장애 중심 구성입니다. 다만 주 출입부에는 단차가 있고 무장애 시설이 제한적이므로, 동행 보조와 현장 안내판을 확인하며 이동하세요.",
         "steps": [
           "암자에 인접한 주차 구역에 차량을 세우고 짧은 평지 구간만 이동합니다.",
           "묘적전 앞 마당에서 지혜관세음보살상 방향의 조망을 감상합니다.",
@@ -940,7 +940,7 @@
     "cookies": "쿠키 설정",
     "officialResourcesTitle": "공식 및 참고 자료",
     "mapsLabel": "Google 지도 →",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "officialLinksList": [
       { "name": "한국관광공사 공식 중문망 (Korea Tourism Organization)", "url": "https://chinese.visitkorea.or.kr" },
       { "name": "강원특별자치도 공식 관광망 (Gangwon State Tourism)", "url": "https://www.gangwon.to" },
@@ -1039,7 +1039,7 @@
           },
           {
             "q": "휠체어나 유모차 들어가나요?",
-            "a": "휴휴암은 평탄한 돌길이 있어 휠체어·유모차도 주요 경로로 대부분 전망점 도달. 다만 바다 쪽 바람 세고 바위 미끄러우니 단단한 길을 동행과 함께."
+            "a": "휴휴암은 평탄한 돌길이 이어지나 주 출입부와 해안 통로에 계단·경사가 있어 무장애 시설은 제한적입니다. 휠체어·유모차는 차량 진입 후 평지 구간 위주로 이동 가능하나, 바다 쪽 바위는 미끄럽고 바람이 세니 동행과 함께 단단한 길로 이용하고 현장을 먼저 확인하세요."
           },
           {
             "q": "암자 내 화장실이나 식사 보충 있나요?",

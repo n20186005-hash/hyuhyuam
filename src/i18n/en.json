@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Hyuhyuam Hermitage Yangyang | Ocean Temple & Free Entry",
-    "description": "Plan a visit to Hyuhyuam Hermitage (휴휴암) in Yangyang, Gangwon: the reclining Gwaneum rock, Jihye Gwaneum statue and East Sea sunrise. Free entry."
+    "title": "Hyuhyuam Hermitage (Yangyang) | Entry, Parking & Guide",
+    "description": "Visit Hyuhyuam Hermitage (휴휴암), a seaside Buddhist temple in Yangyang, South Korea. Explore coastal viewpoints, parking, directions and visitor tips."
   },
   "header": {
     "siteName": "Hyuhyuam Hermitage (휴휴암)",
@@ -58,7 +58,7 @@
     "ratingSourceTemplate": "Rating and review count source: {source} visitor reviews",
     "hours": "Sunrise to sunset (free admission)",
     "openMaps": "View location on Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "legend": {
       "quote": "'Hyuhyu' (休休) means 'to rest again and again, setting aside worldly cares.' Ven. Hongbeop gave it this name so that all who come from afar may gently put down their daily worries amid the sea breeze and the sound of the bell.",
       "attribution": "— The origin of Hyuhyuam Hermitage"
@@ -83,7 +83,7 @@
     "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" },
     "sunsetPlanner": {
       "eyebrow": "Golden Hour Calculator · Light Tool",
-      "title": "Based on today's sunset, we recommend arriving about 60 minutes earlier to catch the softest diffuse light and the blue hour on the sea — ideal for photographing Yeonhwa Terrace, the reclining Gwaneum rock, and the East Sea Dragon King statue.",
+      "title": "Hyuhyuam faces the open East Sea, so the sea sunrise is the headline. To catch the first light on the reclining Gwaneum rock and Yeonhwa Terrace, arrive about 60 minutes before sunrise. If you also want the soft dusk light and blue hour, arriving about 60 minutes before sunset works well.",
       "note": "The hermitage faces the open East Sea, with the warmest light from dawn to dusk. On weekends or clear days, allow extra time to avoid crowds.",
       "seaGlare": "Sunrise tip: Hyuhyuam faces the East Sea and is a popular spot for sea sunrise. The moment the first light touches the reclining Gwaneum rock and Yeonhwa Terrace is the golden window for photography; early winter mornings are cold, so watch the sea breeze.",
       "arriveLabel": "Arrive by",
@@ -332,15 +332,15 @@
     ],
     "localTipsTitle": "Practical visiting tips",
     "localTips": [
-      "Mornings and dusk remain golden; set arrival about 60 minutes before sunset for the best sea light on the reclining Gwaneum rock and Yeonhwa Terrace.",
+      "Sunrise is the golden window: the first light on the reclining Gwaneum rock, Yeonhwa Terrace and East Sea Dragon King statue is best. For the soft dusk light and blue hour too, arriving about 60 minutes before sunset also works.",
       "Weekends and clear days draw crowds; with kids or gear, allow buffer and avoid peaks.",
       "Best pair Hyuhyuam with the reclining Gwaneum rock, Yeonhwa Terrace, and Jihye Gwaneum statue; a single stop underestimates its sea-rock and faith value."
     ],
     "mapsCta": "View map & route",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "bestTime": {
       "title": "Best time to arrive",
-      "text": "Hyuhyuam is reachable by day, but what truly sets the photo ceiling is the dawn East Sea sunrise and the dusk light window. Arrive about 60 minutes before sunset; if weather isn't good for photos, shift focus to hermitage practice or rock viewing."
+      "text": "Hyuhyuam is reachable by day, but the photographic peak is the dawn East Sea sunrise. The moment first light touches the reclining Gwaneum rock and Yeonhwa Terrace is the golden window — arrive about 60 minutes before sunrise. If the weather isn't right for photos, shift to the hermitage's quiet practice or rock viewing."
     }
   },
   "officialManagement": {
@@ -501,7 +501,7 @@
     ],
     "viewAll": "View location on Google Maps",
     "showMore": "Show more photos",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
   },
   "reviews": {
     "title": "Visitor Reviews",
@@ -509,7 +509,7 @@
     "featuredTitle": "Visitor Quotes",
     "featuredSubtitle": "A few short lines that capture the spirit of Hyuhyuam Hermitage.",
     "moreReviews": "View on Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "featured": [
       {
         "text": "Walking the stone path slowly, with the East Sea ripples at your feet — that seaside calm is special, and at dusk the light makes it feel like floating on the water.",
@@ -555,7 +555,7 @@
     "title": "How to Get There",
     "subtitle": "3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon-do, Korea (Plus Code: XQ69+F2) · Tel +82 33-671-0093",
     "openMaps": "Open in Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
   },
   "entityGuide": {
     "eyebrow": "Destination entity · Geographic identity",
@@ -586,7 +586,7 @@
       { "name": "Yangyang-gun Government (official)", "url": "https://www.yangyang.go.kr" },
       { "name": "Gangwon State Tourism (official)", "url": "https://www.gangwon.to" },
       { "name": "OpenStreetMap — Hyuhyuam coordinates & road-name address", "url": "https://www.openstreetmap.org/node/4340592290" },
-      { "name": "Google Maps — Hyuhyuam visitor rating and review count", "url": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6" }
+      { "name": "Google Maps — Hyuhyuam visitor rating and review count", "url": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7" }
     ],
     "officialNoteText": "For official updates and regional tourism information, visit",
     "officialLinkLabel": "the Yangyang-gun Official Tourism Portal",
@@ -739,7 +739,7 @@
         "group": "Families with children",
         "duration": "About 2 hours",
         "intensity": "Low",
-        "forWhom": "Built to shorten walking distance and prioritise safety and rest, centred on sections where a stroller can roll.",
+        "forWhom": "Built to shorten walking distance and prioritise safety and rest, centred on flatter sections a stroller can use — but note the main gate and coastal path include steps and slopes, so check on-site conditions first.",
         "steps": [
           "Enter the free open area from the car park along flat ground.",
           "In front of Myojikjeon, briefly explain temple etiquette and the meaning of 'Hyuhyu' to the children.",
@@ -769,7 +769,7 @@
         "group": "Visitors with limited mobility",
         "duration": "About 1 hour 30 minutes",
         "intensity": "Minimal",
-        "forWhom": "A step-light, accessible-oriented route that minimises gradient and stairs and prioritises vehicle access and rest points.",
+        "forWhom": "A step-light, accessible-oriented route that minimises gradient and stairs and prioritises vehicle access and rest points. Do note the main entrance has steps and accessibility facilities are limited, so travel with assistance and follow on-site signs.",
         "steps": [
           "Park in the car area adjacent to the hermitage and walk only a short flat stretch.",
           "Enjoy the view toward the Statue of Wisdom Gwaneum from the courtyard in front of Myojikjeon.",
@@ -940,7 +940,7 @@
     "cookies": "Cookie Settings",
     "officialResourcesTitle": "Official & Reference Resources",
     "mapsLabel": "Google Maps →",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "officialLinksList": [
       { "name": "Korea Tourism Organization (VisitKorea)", "url": "https://chinese.visitkorea.or.kr" },
       { "name": "Gangwon State Tourism", "url": "https://www.gangwon.to" },
@@ -1039,7 +1039,7 @@
           },
           {
             "q": "Are wheelchairs or strollers allowed?",
-            "a": "Hyuhyuam has a flat stone path; wheelchairs and strollers can reach most viewpoints via the main path. But the seafront side is windy and the rocks slippery — stay on hard ground with company."
+            "a": "Hyuhyuam has a flat stone path, but the main entrance and coastal access include steps and slopes, and accessible facilities are limited. Wheelchairs and strollers can use the flat sections after vehicle access, yet the seafront rocks are slippery and windy — stay on hard ground with company and check on-site first."
           },
           {
             "q": "Are there restrooms or food inside?",

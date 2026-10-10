@@ -53,17 +53,20 @@ export const attraction = {
 
   telephone: '+82-33-671-0093',
   ratingValue: 4.3,
-  reviewCount: 6436,
+  reviewCount: 6440,
   /**
    * 评分与评价数的来源平台。
    * 该评分是第三方平台上的访客评价汇总，并非本站自采，页面上必须明示来源，
    * 否则容易被判定为站点评分自述（self-serving review），反而有损可信度。
    */
   ratingSourceName: 'Google Maps',
-  ratingSourceUrl: 'https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6',
+  ratingSourceUrl: 'https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7',
+
+  /** Plus Code（Google Maps 短码），用于结构化数据与现场导航提示 */
+  plusCode: 'XQ69+F2',
 
   /** {{MAPS_SHARE_URL}} */
-  mapsShareUrl: 'https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6',
+  mapsShareUrl: 'https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7',
   /** {{MAPS_EMBED_SRC}} */
   mapsEmbedSrc: 'https://www.google.com/maps?q=%ED%9C%B4%ED%9C%B4%EC%95%94&z=16&output=embed',
 

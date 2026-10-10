@@ -58,7 +58,7 @@
     "ratingSourceTemplate": "評価・口コミ数の出典：{source}のユーザー口コミ",
     "hours": "24時間（年中無休）",
     "openMaps": "Google マップで場所を見る",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "legend": {
       "quote": "休休庵は東海（日本海）沿岸の庵院。『休休（휴휴）』は「休むこと重なる」を意味し、洪法僧侶がその名を冠して旅人に海風の中で心を休めるよう願った。",
       "attribution": "— 休休庵"
@@ -83,7 +83,7 @@
     "liveInfo": { "weather": "現在の天気", "sunset": "今日の日没" },
     "sunsetPlanner": {
       "eyebrow": "Golden Hour Calculator・光のツール",
-      "title": "今日の日没を基準に、約60分前の到着をおすすめします。最もやわらかな拡散光と海面のブルーアワーを同時に捉え、石径・岩・知恵観音像の撮影に最適です。",
+      "title": "休休庵は東海に面しており、海面の日の出が目玉です。朝日が臥観音岩と蓮華台に差す瞬間を捉えるには、日の出約60分前の到着をおすすめします。夕暮れのやわらかな光とブルーアワーも望むなら、日の入り60分前の到着も良い選択です。",
       "note": "庵院は東海に面し、開放的。光がいちばん暖かいのは朝から夕暮れ。週末や快晴の日は混雑するので余裕を持って。",
       "seaGlare": "日の出のヒント（Sunrise）：庵院は東海を望み、海面の日の出と朝霧を望む人気スポット。朝日が海面と岩を照らす瞬間が撮影の黄金枠。秋冬の朝は気温が低く、海風にご注意を。",
       "arriveLabel": "到着目安",
@@ -332,15 +332,15 @@
     ],
     "localTipsTitle": "訪問の実用 tips",
     "localTips": [
-      "朝と夕暮れが黄金枠。日没60分前の到着で岩と像の海面反射がベスト。",
+      "黄金枠は日の出直後：朝日が臥観音岩・蓮華台・東海龍王像に差す瞬間がベストです。夕暮れのやわらかな光とブルーアワーも望むなら、日の入り60分前の到着も良いです。",
       "週末や快晴は混む。子どもや機材がある際は余裕と混雑回避を。",
       "休休庵は臥観音岩と知恵観音像をセットで。単点だと海と岩の価値を過小評価しがち。"
     ],
     "mapsCta": "地図とルートを見る",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "bestTime": {
       "title": "最適な到着時間",
-      "text": "休休庵は24時間可だが写真の上限を決めるのは朝日と夕暮れの光。日没約60分前の到着を。天候が悪ければ石径や像の眺めへ重心を。"
+      "text": "休休庵は昼間いつでも行けますが、写真の上限を決めるのは朝の東海日の出です。朝日が臥観音岩と蓮華台に差す瞬間が黄金枠なので、日の出約60分前の到着を。天候が撮影に向かないときは、石径や像の眺めへ重心を。"
     }
   },
   "officialManagement": {
@@ -496,7 +496,7 @@
     ],
     "viewAll": "Google マップで場所を見る",
     "showMore": "写真をもっと見る",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
   },
   "reviews": {
     "title": "利用者の口コミ",
@@ -504,7 +504,7 @@
     "featuredTitle": "訪問者の金言",
     "featuredSubtitle": "休休庵の風情を最もよく表す短い言葉。",
     "moreReviews": "Google マップで見る",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "featured": [
       {
         "text": "海岸の石径をゆっくり歩くと、足元は東海の波。その臨海の静けさが特別で、夕暮れの光はまるで水に浮かぶよう。",
@@ -550,7 +550,7 @@
     "title": "アクセス",
     "subtitle": "3-16 Gwangjin 2-gil, Hyeonnam-myeon, Yangyang-gun, Gangwon State, 韓国（Plus Code：XQ69+F2）・電話 +82 33-671-0093",
     "openMaps": "Google マップで開く",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6"
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7"
   },
   "entityGuide": {
     "eyebrow": "観光スポット実体・地理的帰属",
@@ -581,7 +581,7 @@
       { "name": "襄陽郡庁 公式サイト（Yangyang-gun Government）", "url": "https://www.yangyang.go.kr" },
       { "name": "江原特別自治道 公式観光サイト（Gangwon State Tourism）", "url": "https://www.gangwon.to" },
       { "name": "OpenStreetMap — 休休庵の座標と道路名住所", "url": "https://www.openstreetmap.org/node/4340592290" },
-      { "name": "Google マップ — 休休庵の訪問者評価と口コミ数", "url": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6" }
+      { "name": "Google マップ — 休休庵の訪問者評価と口コミ数", "url": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7" }
     ],
     "officialNoteText": "公式の最新情報や地域の観光情報は",
     "officialLinkLabel": "襄陽郡 公式文化観光ポータル",
@@ -734,7 +734,7 @@
         "group": "子ども連れの家族",
         "duration": "約2時間",
         "intensity": "低強度",
-        "forWhom": "歩行距離を短くし、安全と休息を優先した構成です。ベビーカーで移動できる区間を中心に設計しました。",
+        "forWhom": "歩行距離を短くし、安全と休息を優先した構成です。ベビーカーで移動できる平坦区間を中心にしますが、庵院の門と海岸通路には段差や勾配があるため、現地の状況をまず確認してください。",
         "steps": [
           "駐車場から無料開放エリアまで平坦な区間で入ります。",
           "妙寂殿の前で、寺院の作法と「休休」の意味を子どもに短く伝えます。",
@@ -764,7 +764,7 @@
         "group": "移動が難しい方",
         "duration": "約1時間30分",
         "intensity": "最低強度",
-        "forWhom": "勾配と階段を最小限にし、車両での接近と休憩地点を優先したバリアフリー中心の構成です。",
+        "forWhom": "勾配と階段を最小限にし、車両での接近と休憩地点を優先したバリアフリー中心の構成です。ただし主入口には段差があり、バリアフリー設備は限定的なので、同行者の補助と現地の案内板を確認しながら移動してください。",
         "steps": [
           "庵に隣接する駐車区画に停め、短い平坦区間だけを移動します。",
           "妙寂殿前の中庭から智慧観世音菩薩像方向の眺めを楽しみます。",
@@ -935,7 +935,7 @@
     "cookies": "Cookie 設定",
     "officialResourcesTitle": "公式・参考リソース",
     "mapsLabel": "Google マップ →",
-    "mapsUrl": "https://maps.app.goo.gl/Fms7tDXPUZUyGCxf6",
+    "mapsUrl": "https://maps.app.goo.gl/Ba1KY2KgBgA9b4jh7",
     "officialLinksList": [
       { "name": "韓国観光公社（VisitKorea）", "url": "https://www.visitkorea.or.kr" },
       { "name": "江原特別自治道 公式観光（Gangwon State Tourism）", "url": "https://www.gangwon.to" },
@@ -1034,7 +1034,7 @@
           },
           {
             "q": "車いすやベビーカーは入れますか？",
-            "a": "休休庵はなだらかな石径。車いす・ベビーカーも主径路で大半の展望点へ。ただ海側は風強く岩滑りやすいので硬い道を同伴者と。"
+            "a": "休休庵はなだらかな石径が続きますが、主入口と海側の通路には段差や勾配があり、バリアフリー設備は限定的です。車いす・ベビーカーは車両進入後の平坦区間を中心に移動できますが、海側の岩は滑りやすく風が強いので、硬い道を同伴者と歩き、現地を先に確認してください。"
           },
           {
             "q": "庵内にトイレや食事は？",
